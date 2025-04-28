@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.dice.command;
+
+option java_outer_classname = "CommandProto";
+option java_package = "com.dice.Command";
+
+message Command {
+  string cmd = 1;
+  repeated string args = 2;
+}

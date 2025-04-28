@@ -1,0 +1,102 @@
+syntax = "proto3";
+
+package com.dice.Reponse;
+
+option java_package = "com.dice.Reponse";
+option java_outer_classname = "ResponseProto";
+option java_multiple_files = true;
+
+enum Status {
+  Status_OK = 0;
+  Status_ERR = 1;
+}
+
+message TYPERes {}
+message PINGRes {}
+message ECHORes {}
+message HANDSHAKERes {}
+message EXISTSRes {}
+message GETRes {}
+message SETRes {}
+message DELRes {}
+message KEYSRes {}
+message GETDELRes {}
+message GETEXRes {}
+message GETSETRes {}
+message INCRRes {}
+message DECRRes {}
+message INCRBYRes {}
+message DECRBYRes {}
+message FLUSHDBRes {}
+message EXPIRERes {}
+message EXPIREATRes {}
+message EXPIRETIMERes {}
+message TTLRes {}
+message GETWATCHRes {}
+message UNWATCHRes {}
+message HGETRes {}
+message HSETRes {}
+message HGETALLRes {}
+message HGETWATCHRes {}
+message HGETALLWATCHRes {}
+message ZADDRes {}
+message ZCOUNTRes {}
+message ZRANGERes {}
+message ZPOPMAXRes {}
+message ZREMRes {}
+message ZPOPMINRes {}
+message ZRANKRes {}
+message ZCARDRes {}
+message ZRANGEWATCHRes {}
+message ZCOUNTWATCHRes {}
+message ZCARDWATCHRes {}
+message ZRANKWATCHRes {}
+
+message Response {
+  Status status = 1;
+  string message = 2;
+  uint64 fingerprint64 = 3;
+
+  oneof response {
+    TYPERes TYPERes = 11;
+    PINGRes PINGRes = 12;
+    ECHORes ECHORes = 13;
+    HANDSHAKERes HANDSHAKERes = 14;
+    EXISTSRes EXISTSRes = 15;
+    GETRes GETRes = 16;
+    SETRes SETRes = 17;
+    DELRes DELRes = 18;
+    KEYSRes KEYSRes = 19;
+    GETDELRes GETDELRes = 20;
+    GETEXRes GETEXRes = 21;
+    GETSETRes GETSETRes = 22;
+    INCRRes INCRRes = 23;
+    DECRRes DECRRes = 24;
+    INCRBYRes INCRBYRes = 25;
+    DECRBYRes DECRBYRes = 26;
+    FLUSHDBRes FLUSHDBRes = 27;
+    EXPIRERes EXPIRERes = 28;
+    EXPIREATRes EXPIREATRes = 29;
+    EXPIRETIMERes EXPIRETIMERes = 30;
+    TTLRes TTLRes = 31;
+    GETWATCHRes GETWATCHRes = 32;
+    UNWATCHRes UNWATCHRes = 33;
+    HGETRes HGETRes = 34;
+    HSETRes HSETRes = 35;
+    HGETALLRes HGETALLRes = 36;
+    HGETWATCHRes HGETWATCHRes = 37;
+    HGETALLWATCHRes HGETALLWATCHRes = 38;
+    ZADDRes ZADDRes = 39;
+    ZCOUNTRes ZCOUNTRes = 40;
+    ZRANGERes ZRANGERes = 41;
+    ZPOPMAXRes ZPOPMAXRes = 42;
+    ZREMRes ZREMRes = 43;
+    ZPOPMINRes ZPOPMINRes = 44;
+    ZRANKRes ZRANKRes = 45;
+    ZCARDRes ZCARDRes = 46;
+    ZRANGEWATCHRes ZRANGEWATCHRes = 47;
+    ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;
+    ZCARDWATCHRes ZCARDWATCHRes = 49;
+    ZRANKWATCHRes ZRANKWATCHRes = 50;
+  }
+}
