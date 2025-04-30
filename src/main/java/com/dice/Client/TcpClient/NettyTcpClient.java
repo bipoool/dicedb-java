@@ -7,10 +7,11 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.timeout.IdleStateHandler;
 
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
-public class NettyTcpClient implements TcpClient{
+public class NettyTcpClient implements TcpClient {
 
     EventLoopGroup group;
     NettyTcpClientHandler tcpHandler;
@@ -40,8 +41,13 @@ public class NettyTcpClient implements TcpClient{
     }
 
     @Override
-    public byte[] send(byte[] data) throws ExecutionException, InterruptedException {
-        return tcpHandler.send(data);
+    public TcpResponse sendSync(byte[] data) throws ExecutionException, InterruptedException {
+        return tcpHandler.sendSync(data);
+    }
+
+    @Override
+    public BlockingQueue<TcpResponse> sendAsync(byte[] data) throws ExecutionException, InterruptedException {
+        return tcpHandler.sendAsync(data);
     }
 
     @Override

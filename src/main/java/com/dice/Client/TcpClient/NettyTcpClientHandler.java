@@ -7,16 +7,19 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
 
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
+import java.util.concurrent.*;
 import java.util.logging.Logger;
 
 class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     private static final Logger logger = Logger.getLogger(NettyTcpClientHandler.class.getName());
     private Channel channel;
-    private CompletableFuture<byte[]> responseFuture;
+    private final BlockingQueue<TcpResponse> responseQueue;
 
     private TcpConnectionStatus tcpConnectionStatus = TcpConnectionStatus.CLOSED;
+
+    NettyTcpClientHandler() {
+        this.responseQueue = new ArrayBlockingQueue<>(1);
+    }
 
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) {
@@ -24,12 +27,25 @@ class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
         tcpConnectionStatus = TcpConnectionStatus.ACTIVE;
     }
 
-    public byte[] send(byte[] data) throws ExecutionException, InterruptedException {
+    public BlockingQueue<TcpResponse> sendAsync(byte[] data) {
+        this.writeAndFlush(data);
+        return responseQueue;
+    }
+
+    public TcpResponse sendSync(byte[] data) throws InterruptedException, ExecutionException {
+        this.writeAndFlush(data);
+        TcpResponse tcpResponse = this.responseQueue.take();
+        if (tcpResponse.isError) {
+            throw new ExecutionException(tcpResponse.exception);
+        }
+        return tcpResponse;
+    }
+
+    private void writeAndFlush(byte[] data) {
         if (channel == null || !channel.isActive()) {
             throw new IllegalStateException("Not connected to server!");
         }
         tcpConnectionStatus = TcpConnectionStatus.ACTIVE;
-        this.responseFuture = new CompletableFuture<>();
 
         // First 4 Bytes to send with length of the content
         ByteBuf buf = channel.alloc().buffer(4 + data.length);
@@ -37,32 +53,36 @@ class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
         buf.writeBytes(data);
         channel.writeAndFlush(buf);
-
-        return this.responseFuture.get();
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) {
+    protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) throws InterruptedException {
         tcpConnectionStatus = TcpConnectionStatus.ACTIVE;
-        ByteBuf actualProtobuf = msg.slice(4, msg.readableBytes() - 4);
-        byte[] protobufBytes = new byte[actualProtobuf.readableBytes()];
-        actualProtobuf.readBytes(protobufBytes);
-        responseFuture.complete(protobufBytes);
+        if (msg.readableBytes() < 4) {
+            responseQueue.put(new TcpResponse(new IllegalStateException("Received message is too short")));
+            logger.warning("Received message is too short: " + msg.readableBytes());
+            return;
+        }
+        int length = msg.readInt();
+        byte[] protobufBytes = new byte[length];
+        msg.readBytes(protobufBytes);
+        TcpResponse tcpResponse = new TcpResponse(protobufBytes);
+        responseQueue.put(tcpResponse);
     }
 
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws InterruptedException {
         tcpConnectionStatus = TcpConnectionStatus.ERROR;
-        if (responseFuture != null) {
-            responseFuture.completeExceptionally(cause);
-        }
-        cause.printStackTrace();
+        TcpResponse tcpResponse = new TcpResponse(cause);
+        responseQueue.put(tcpResponse);
+        logger.severe("Exception caught: " + cause.getMessage());
     }
 
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
         if (evt instanceof IdleStateEvent e) {
-            if (e.state() == IdleState.READER_IDLE || e.state() == IdleState.WRITER_IDLE || e.state() == IdleState.ALL_IDLE) {
+            if (e.state() == IdleState.READER_IDLE || e.state() == IdleState.WRITER_IDLE
+                    || e.state() == IdleState.ALL_IDLE) {
                 tcpConnectionStatus = TcpConnectionStatus.IDLE;
             }
         } else {
@@ -79,7 +99,7 @@ class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
                 channel.isOpen() &&
                 channel.isActive() &&
                 (tcpConnectionStatus == TcpConnectionStatus.ACTIVE ||
-                tcpConnectionStatus == TcpConnectionStatus.IDLE);
+                        tcpConnectionStatus == TcpConnectionStatus.IDLE);
     }
 
     public void close() {
@@ -87,5 +107,6 @@ class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
         if (channel != null) {
             channel.close();
         }
+        responseQueue.offer(new TcpResponse());
     }
 }

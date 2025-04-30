@@ -2,12 +2,14 @@ package com.dice.Client.DiceDbClient;
 
 import com.dice.Client.TcpClient.NettyTcpClient;
 import com.dice.Client.TcpClient.TcpClient;
+import com.dice.Client.TcpClient.TcpResponse;
 import com.dice.Command.CommandProto;
 import com.dice.Reponse.Response;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,6 +18,8 @@ import static com.dice.Reponse.Status.Status_ERR;
 public class SimpleDiceDbClient implements DiceDbClient {
 
     private static final Logger logger = Logger.getLogger(SimpleDiceDbClient.class.getName());
+    private final ScheduledExecutorService scheduler;
+    BlockingQueue<Response> watchResponseQueue;
     TcpClient tcpClient;
     String host;
     int port;
@@ -25,12 +29,13 @@ public class SimpleDiceDbClient implements DiceDbClient {
         this.host = host;
         this.port = port;
         this.clientId = UUID.randomUUID().toString();
+        this.scheduler = Executors.newSingleThreadScheduledExecutor();
     }
 
     @Override
     public void connect() throws Exception {
         this.tcpClient = new NettyTcpClient(host, port);
-        Response resp = this.fire(getHandShakeCommand());
+        Response resp = this.fire(getHandShakeCommand("command"));
         if (resp.getStatus() == Status_ERR) {
             throw new Exception("Could not complete the handshake: " + resp.getMessage());
         }
@@ -44,7 +49,12 @@ public class SimpleDiceDbClient implements DiceDbClient {
         }
 
         byte[] data = command.toByteArray();
-        byte[] response = tcpClient.send(data);
+        TcpResponse tcpResponse = tcpClient.sendSync(data);
+
+        if (tcpResponse.isError) {
+            throw new Exception("Error while sending command: " + tcpResponse.exception);
+        }
+        byte[] response = tcpResponse.data;
         return Response.parseFrom(response);
     }
 
@@ -63,18 +73,76 @@ public class SimpleDiceDbClient implements DiceDbClient {
     }
 
     @Override
+    public BlockingQueue<Response> watch(String cmd, List<String> args) throws Exception {
+        if (args == null || args.isEmpty()) {
+            args = new ArrayList<>();
+        }
+
+        CommandProto.Command commandProto = CommandProto.Command
+                .newBuilder()
+                .setCmd(cmd)
+                .addAllArgs(args)
+                .build();
+        return this.watch(commandProto);
+    }
+
+    @Override
+    public BlockingQueue<Response> watch(CommandProto.Command command) throws Exception {
+        if (tcpClient == null) {
+            throw new IllegalStateException("Not connected to server! Please call connect() first.");
+        }
+        if (this.watchResponseQueue != null) {
+            return this.watchResponseQueue;
+        }
+        this.watchResponseQueue = new LinkedBlockingQueue<>();
+
+        Response watchResponse = this.fire(command);
+        if (watchResponse.getStatus() == Status_ERR) {
+            throw new Exception("Error while sending watch command: " + watchResponse.getMessage());
+        }
+
+        CommandProto.Command watchHandShakeCommand = getHandShakeCommand("watch");
+        BlockingQueue<TcpResponse> watchTcpResponseQueue = tcpClient.sendAsync(watchHandShakeCommand.toByteArray());
+        spinUpWatchThread(watchTcpResponseQueue);
+        return this.watchResponseQueue;
+    }
+
+    private void spinUpWatchThread(BlockingQueue<TcpResponse> watchTcpResponseQueue) {
+        scheduler.execute(() -> {
+            while (true) {
+                try {
+                    TcpResponse tcpResponse = watchTcpResponseQueue.take();
+                    if (tcpResponse.isError) {
+                        logger.log(Level.SEVERE, "Error in watch thread: " + tcpResponse.exception);
+                        break;
+                    }
+                    if (tcpResponse.sessionEnded) {
+                        logger.log(Level.INFO, "Session ended in watch thread");
+                        break;
+                    }
+                    byte[] response = tcpResponse.data;
+                    Response resp = Response.parseFrom(response);
+                    this.watchResponseQueue.put(resp);
+                } catch (Exception e) {
+                    logger.log(Level.SEVERE, "Error in watch thread: " + e.getMessage());
+                }
+            }
+        });
+    }
+
+    @Override
     public boolean isHealthy() {
         return this.tcpClient != null && this.tcpClient.isHealthy();
     }
 
-    private CommandProto.Command getHandShakeCommand() {
+    private CommandProto.Command getHandShakeCommand(String mode) {
         if (this.clientId == null) {
             this.clientId = UUID.randomUUID().toString();
         }
         return CommandProto.Command.newBuilder()
                 .setCmd("HANDSHAKE")
                 .addArgs(clientId)
-                .addArgs("command")
+                .addArgs(mode)
                 .build();
     }
 
@@ -82,8 +150,12 @@ public class SimpleDiceDbClient implements DiceDbClient {
         return clientId;
     }
 
-     @Override
+    @Override
     public void close() {
+        this.scheduler.shutdown();
+        if (this.watchResponseQueue != null) {
+            this.watchResponseQueue.clear();
+        }
         if (this.tcpClient != null) {
             this.tcpClient.close();
         }

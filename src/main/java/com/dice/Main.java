@@ -1,29 +1,36 @@
 package com.dice;
 
+import com.dice.Client.DiceDbClient.DiceDbClient;
+import com.dice.Client.DiceDbClient.SimpleDiceDbClient;
+import com.dice.Command.CommandProto;
 import com.dice.Reponse.Response;
 
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        DiceDbConnectionManager diceDbConnectionManager = new DiceDbConnectionManager("localhost", 7379, 1, 10);
-        Response response1 = diceDbConnectionManager.fire("PING", null);
+
+        DiceDbClient dice = new SimpleDiceDbClient("localhost", 7379);
+        dice.connect();
+        Response response1 = dice.fire("PING", null);
         System.out.println("Response: " + response1);
 
-        Thread.sleep(5000);
+        CommandProto.Command command = CommandProto.Command.newBuilder()
+                .setCmd("GET.WATCH")
+                .addArgs("key")
+                .build();
+        BlockingQueue<Response> response3 = dice.watch(command);
 
-        Response response2 = diceDbConnectionManager.fire("SET", List.of("Deepti", "Dalakoti"));
-        System.out.println("Response: " + response2);
+        int count = 0;
+        while (count < 3) {
+            Response resp = response3.take();
+            System.out.println("Response: " + resp);
+            count++;
+        }
 
-        Thread.sleep(5000);
-
-        Response response3 = diceDbConnectionManager.fire("GET", List.of("Deepti"));
-        System.out.println("Response: " + response3);
-
-        Thread.sleep(5000);
-
-        diceDbConnectionManager.close();
+        dice.close();
 
     }
 }

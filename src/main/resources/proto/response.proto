@@ -16,7 +16,9 @@ message PINGRes {}
 message ECHORes {}
 message HANDSHAKERes {}
 message EXISTSRes {}
-message GETRes {}
+message GETRes {
+  string Value = 1;
+}
 message SETRes {}
 message DELRes {}
 message KEYSRes {}
