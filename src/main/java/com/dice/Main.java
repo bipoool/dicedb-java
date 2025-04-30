@@ -1,6 +1,5 @@
 package com.dice;
 
-import com.dice.Client.DiceDbClient.SimpleDiceDbClient;
 import com.dice.Reponse.Response;
 
 import java.util.List;
@@ -8,15 +7,23 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        SimpleDiceDbClient dice = new SimpleDiceDbClient("localhost", 7379);
-        dice.connect();
-        dice.fire("PING", null);
-        dice.fire("SET", List.of("key", "value"));
-        Response response = dice.fire("GET", List.of("key"));
-        System.out.println("Response: " + response);
+        DiceDbConnectionManager diceDbConnectionManager = new DiceDbConnectionManager("localhost", 7379, 1, 10);
+        Response response1 = diceDbConnectionManager.fire("PING", null);
+        System.out.println("Response: " + response1);
 
-        Thread.sleep(10000);
-        dice.fire("PING", null);
-//        dice.close();
+        Thread.sleep(5000);
+
+        Response response2 = diceDbConnectionManager.fire("SET", List.of("Deepti", "Dalakoti"));
+        System.out.println("Response: " + response2);
+
+        Thread.sleep(5000);
+
+        Response response3 = diceDbConnectionManager.fire("GET", List.of("Deepti"));
+        System.out.println("Response: " + response3);
+
+        Thread.sleep(5000);
+
+        diceDbConnectionManager.close();
+
     }
 }

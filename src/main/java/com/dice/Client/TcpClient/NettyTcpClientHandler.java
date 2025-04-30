@@ -11,8 +11,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Logger;
 
-class TcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
-    private static final Logger logger = Logger.getLogger(TcpClientHandler.class.getName());
+class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
+    private static final Logger logger = Logger.getLogger(NettyTcpClientHandler.class.getName());
     private Channel channel;
     private CompletableFuture<byte[]> responseFuture;
 
