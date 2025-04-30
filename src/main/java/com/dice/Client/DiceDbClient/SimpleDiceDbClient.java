@@ -1,5 +1,6 @@
 package com.dice.Client.DiceDbClient;
 
+import com.dice.Client.TcpClient.NettyTcpClient;
 import com.dice.Client.TcpClient.TcpClient;
 import com.dice.Command.CommandProto;
 import com.dice.Reponse.Response;
@@ -28,7 +29,7 @@ public class SimpleDiceDbClient implements DiceDbClient {
 
     @Override
     public void connect() throws Exception {
-        this.tcpClient = TcpClient.connect(host, port);
+        this.tcpClient = new NettyTcpClient(host, port);
         Response resp = this.fire(getHandShakeCommand());
         if (resp.getStatus() == Status_ERR) {
             throw new Exception("Could not complete the handshake: " + resp.getMessage());
