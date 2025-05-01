@@ -9,26 +9,33 @@ public interface KEYSResOrBuilder extends
 
   /**
    * <code>repeated string keys = 1;</code>
+   *
    * @return A list containing the keys.
    */
   java.util.List<java.lang.String>
-      getKeysList();
+  getKeysList();
+
   /**
    * <code>repeated string keys = 1;</code>
+   *
    * @return The count of keys.
    */
   int getKeysCount();
+
   /**
    * <code>repeated string keys = 1;</code>
+   *
    * @param index The index of the element to return.
    * @return The keys at the given index.
    */
   java.lang.String getKeys(int index);
+
   /**
    * <code>repeated string keys = 1;</code>
+   *
    * @param index The index of the value to return.
    * @return The bytes of the keys at the given index.
    */
   com.google.protobuf.ByteString
-      getKeysBytes(int index);
+  getKeysBytes(int index);
 }

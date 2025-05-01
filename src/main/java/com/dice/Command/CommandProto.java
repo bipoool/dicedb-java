@@ -4,7 +4,10 @@
 package com.dice.Command;
 
 public final class CommandProto {
-  private CommandProto() {}
+
+  private CommandProto() {
+  }
+
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -14,47 +17,59 @@ public final class CommandProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+
   public interface CommandOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.dice.command.Command)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string cmd = 1;</code>
+     *
      * @return The cmd.
      */
     java.lang.String getCmd();
+
     /**
      * <code>string cmd = 1;</code>
+     *
      * @return The bytes for cmd.
      */
     com.google.protobuf.ByteString
-        getCmdBytes();
+    getCmdBytes();
 
     /**
      * <code>repeated string args = 2;</code>
+     *
      * @return A list containing the args.
      */
     java.util.List<java.lang.String>
-        getArgsList();
+    getArgsList();
+
     /**
      * <code>repeated string args = 2;</code>
+     *
      * @return The count of args.
      */
     int getArgsCount();
+
     /**
      * <code>repeated string args = 2;</code>
+     *
      * @param index The index of the element to return.
      * @return The args at the given index.
      */
     java.lang.String getArgs(int index);
+
     /**
      * <code>repeated string args = 2;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the args at the given index.
      */
     com.google.protobuf.ByteString
-        getArgsBytes(int index);
+    getArgsBytes(int index);
   }
+
   /**
    * Protobuf type {@code com.dice.command.Command}
    */
@@ -62,11 +77,14 @@ public final class CommandProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.dice.command.Command)
       CommandOrBuilder {
-  private static final long serialVersionUID = 0L;
+
+    private static final long serialVersionUID = 0L;
+
     // Use Command.newBuilder() to construct.
     private Command(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private Command() {
       cmd_ = "";
       args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -80,28 +98,32 @@ public final class CommandProto {
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+
+    public static com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
       return com.dice.Command.CommandProto.internal_static_com_dice_command_Command_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    internalGetFieldAccessorTable() {
       return com.dice.Command.CommandProto.internal_static_com_dice_command_Command_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.dice.Command.CommandProto.Command.class, com.dice.Command.CommandProto.Command.Builder.class);
+              com.dice.Command.CommandProto.Command.class,
+              com.dice.Command.CommandProto.Command.Builder.class);
     }
 
     public static final int CMD_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object cmd_ = "";
+
     /**
      * <code>string cmd = 1;</code>
+     *
      * @return The cmd.
      */
     @java.lang.Override
@@ -110,23 +132,25 @@ public final class CommandProto {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         cmd_ = s;
         return s;
       }
     }
+
     /**
      * <code>string cmd = 1;</code>
+     *
      * @return The bytes for cmd.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getCmdBytes() {
+    getCmdBytes() {
       java.lang.Object ref = cmd_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         cmd_ = b;
@@ -139,45 +163,58 @@ public final class CommandProto {
     public static final int ARGS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList args_;
+
     /**
      * <code>repeated string args = 2;</code>
+     *
      * @return A list containing the args.
      */
     public com.google.protobuf.ProtocolStringList
-        getArgsList() {
+    getArgsList() {
       return args_;
     }
+
     /**
      * <code>repeated string args = 2;</code>
+     *
      * @return The count of args.
      */
     public int getArgsCount() {
       return args_.size();
     }
+
     /**
      * <code>repeated string args = 2;</code>
+     *
      * @param index The index of the element to return.
      * @return The args at the given index.
      */
     public java.lang.String getArgs(int index) {
       return args_.get(index);
     }
+
     /**
      * <code>repeated string args = 2;</code>
+     *
      * @param index The index of the value to return.
      * @return The bytes of the args at the given index.
      */
     public com.google.protobuf.ByteString
-        getArgsBytes(int index) {
+    getArgsBytes(int index) {
       return args_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
-    public final boolean isInitialized() {
+    public boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
+      if (isInitialized == 1) {
+        return true;
+      }
+      if (isInitialized == 0) {
+        return false;
+      }
 
       memoizedIsInitialized = 1;
       return true;
@@ -185,7 +222,7 @@ public final class CommandProto {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+        throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cmd_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cmd_);
       }
@@ -198,7 +235,9 @@ public final class CommandProto {
     @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
-      if (size != -1) return size;
+      if (size != -1) {
+        return size;
+      }
 
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cmd_)) {
@@ -210,7 +249,7 @@ public final class CommandProto {
           dataSize += computeStringSizeNoTag(args_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getArgsList().size();
+        size += getArgsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -220,19 +259,21 @@ public final class CommandProto {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
-      if (!(obj instanceof com.dice.Command.CommandProto.Command)) {
+      if (!(obj instanceof Command other)) {
         return super.equals(obj);
       }
-      com.dice.Command.CommandProto.Command other = (com.dice.Command.CommandProto.Command) obj;
 
       if (!getCmd()
-          .equals(other.getCmd())) return false;
+          .equals(other.getCmd())) {
+        return false;
+      }
       if (!getArgsList()
-          .equals(other.getArgsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+          .equals(other.getArgsList())) {
+        return false;
+      }
+      return getUnknownFields().equals(other.getUnknownFields());
     }
 
     @java.lang.Override
@@ -258,38 +299,45 @@ public final class CommandProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.dice.Command.CommandProto.Command parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.dice.Command.CommandProto.Command parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.dice.Command.CommandProto.Command parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.dice.Command.CommandProto.Command parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.dice.Command.CommandProto.Command parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.dice.Command.CommandProto.Command parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
+
     public static com.dice.Command.CommandProto.Command parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -297,11 +345,14 @@ public final class CommandProto {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.dice.Command.CommandProto.Command parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.dice.Command.CommandProto.Command parseDelimitedFrom(
+        java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.dice.Command.CommandProto.Command parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -309,12 +360,14 @@ public final class CommandProto {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.dice.Command.CommandProto.Command parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
+
     public static com.dice.Command.CommandProto.Command parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -324,13 +377,18 @@ public final class CommandProto {
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(com.dice.Command.CommandProto.Command prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
@@ -343,6 +401,7 @@ public final class CommandProto {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      * Protobuf type {@code com.dice.command.Command}
      */
@@ -350,17 +409,19 @@ public final class CommandProto {
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:com.dice.command.Command)
         com.dice.Command.CommandProto.CommandOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
+
+      public static com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
         return com.dice.Command.CommandProto.internal_static_com_dice_command_Command_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
+      internalGetFieldAccessorTable() {
         return com.dice.Command.CommandProto.internal_static_com_dice_command_Command_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.dice.Command.CommandProto.Command.class, com.dice.Command.CommandProto.Command.Builder.class);
+                com.dice.Command.CommandProto.Command.class,
+                com.dice.Command.CommandProto.Command.Builder.class);
       }
 
       // Construct using com.dice.Command.CommandProto.Command.newBuilder()
@@ -373,6 +434,7 @@ public final class CommandProto {
         super(parent);
 
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -385,7 +447,7 @@ public final class CommandProto {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      getDescriptorForType() {
         return com.dice.Command.CommandProto.internal_static_com_dice_command_Command_descriptor;
       }
 
@@ -405,9 +467,12 @@ public final class CommandProto {
 
       @java.lang.Override
       public com.dice.Command.CommandProto.Command buildPartial() {
-        com.dice.Command.CommandProto.Command result = new com.dice.Command.CommandProto.Command(this);
+        com.dice.Command.CommandProto.Command result = new com.dice.Command.CommandProto.Command(
+            this);
         buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField0_ != 0) {
+          buildPartial0(result);
+        }
         onBuilt();
         return result;
       }
@@ -431,38 +496,44 @@ public final class CommandProto {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.dice.Command.CommandProto.Command) {
-          return mergeFrom((com.dice.Command.CommandProto.Command)other);
+          return mergeFrom((com.dice.Command.CommandProto.Command) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -470,7 +541,9 @@ public final class CommandProto {
       }
 
       public Builder mergeFrom(com.dice.Command.CommandProto.Command other) {
-        if (other == com.dice.Command.CommandProto.Command.getDefaultInstance()) return this;
+        if (other == com.dice.Command.CommandProto.Command.getDefaultInstance()) {
+          return this;
+        }
         if (!other.getCmd().isEmpty()) {
           cmd_ = other.cmd_;
           bitField0_ |= 0x00000001;
@@ -492,7 +565,7 @@ public final class CommandProto {
       }
 
       @java.lang.Override
-      public final boolean isInitialized() {
+      public boolean isInitialized() {
         return true;
       }
 
@@ -538,11 +611,14 @@ public final class CommandProto {
         } // finally
         return this;
       }
+
       private int bitField0_;
 
       private java.lang.Object cmd_ = "";
+
       /**
        * <code>string cmd = 1;</code>
+       *
        * @return The cmd.
        */
       public java.lang.String getCmd() {
@@ -557,15 +633,17 @@ public final class CommandProto {
           return (java.lang.String) ref;
         }
       }
+
       /**
        * <code>string cmd = 1;</code>
+       *
        * @return The bytes for cmd.
        */
       public com.google.protobuf.ByteString
-          getCmdBytes() {
+      getCmdBytes() {
         java.lang.Object ref = cmd_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           cmd_ = b;
@@ -574,21 +652,27 @@ public final class CommandProto {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string cmd = 1;</code>
+       *
        * @param value The cmd to set.
        * @return This builder for chaining.
        */
       public Builder setCmd(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+          throw new NullPointerException();
+        }
         cmd_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
+
       /**
        * <code>string cmd = 1;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearCmd() {
@@ -597,14 +681,18 @@ public final class CommandProto {
         onChanged();
         return this;
       }
+
       /**
        * <code>string cmd = 1;</code>
+       *
        * @param value The bytes for cmd to set.
        * @return This builder for chaining.
        */
       public Builder setCmdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+          throw new NullPointerException();
+        }
         checkByteStringIsUtf8(value);
         cmd_ = value;
         bitField0_ |= 0x00000001;
@@ -613,73 +701,92 @@ public final class CommandProto {
       }
 
       private com.google.protobuf.LazyStringList args_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+
       private void ensureArgsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if ((bitField0_ & 0x00000002) == 0) {
           args_ = new com.google.protobuf.LazyStringArrayList(args_);
           bitField0_ |= 0x00000002;
-         }
+        }
       }
+
       /**
        * <code>repeated string args = 2;</code>
+       *
        * @return A list containing the args.
        */
       public com.google.protobuf.ProtocolStringList
-          getArgsList() {
+      getArgsList() {
         return args_.getUnmodifiableView();
       }
+
       /**
        * <code>repeated string args = 2;</code>
+       *
        * @return The count of args.
        */
       public int getArgsCount() {
         return args_.size();
       }
+
       /**
        * <code>repeated string args = 2;</code>
+       *
        * @param index The index of the element to return.
        * @return The args at the given index.
        */
       public java.lang.String getArgs(int index) {
         return args_.get(index);
       }
+
       /**
        * <code>repeated string args = 2;</code>
+       *
        * @param index The index of the value to return.
        * @return The bytes of the args at the given index.
        */
       public com.google.protobuf.ByteString
-          getArgsBytes(int index) {
+      getArgsBytes(int index) {
         return args_.getByteString(index);
       }
+
       /**
        * <code>repeated string args = 2;</code>
+       *
        * @param index The index to set the value at.
        * @param value The args to set.
        * @return This builder for chaining.
        */
       public Builder setArgs(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+          throw new NullPointerException();
+        }
         ensureArgsIsMutable();
         args_.set(index, value);
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string args = 2;</code>
+       *
        * @param value The args to add.
        * @return This builder for chaining.
        */
       public Builder addArgs(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+          throw new NullPointerException();
+        }
         ensureArgsIsMutable();
         args_.add(value);
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string args = 2;</code>
+       *
        * @param values The args to add.
        * @return This builder for chaining.
        */
@@ -691,8 +798,10 @@ public final class CommandProto {
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string args = 2;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearArgs() {
@@ -701,38 +810,43 @@ public final class CommandProto {
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string args = 2;</code>
+       *
        * @param value The bytes of the args to add.
        * @return This builder for chaining.
        */
       public Builder addArgsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+          throw new NullPointerException();
+        }
         checkByteStringIsUtf8(value);
         ensureArgsIsMutable();
         args_.add(value);
         onChanged();
         return this;
       }
+
       @java.lang.Override
-      public final Builder setUnknownFields(
+      public Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
-      public final Builder mergeUnknownFields(
+      public Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
-
 
       // @@protoc_insertion_point(builder_scope:com.dice.command.Command)
     }
 
     // @@protoc_insertion_point(class_scope:com.dice.command.Command)
     private static final com.dice.Command.CommandProto.Command DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.dice.Command.CommandProto.Command();
     }
@@ -780,34 +894,36 @@ public final class CommandProto {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_dice_command_Command_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_dice_command_Command_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_dice_command_Command_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
+
+  private static final com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
+
   static {
     java.lang.String[] descriptorData = {
-      "\n&src/main/resources/proto/command.proto" +
-      "\022\020com.dice.command\"$\n\007Command\022\013\n\003cmd\030\001 \001" +
-      "(\t\022\014\n\004args\030\002 \003(\tB \n\020com.dice.CommandB\014Co" +
-      "mmandProtob\006proto3"
+        "\n&src/main/resources/proto/command.proto" +
+            "\022\020com.dice.command\"$\n\007Command\022\013\n\003cmd\030\001 \001" +
+            "(\t\022\014\n\004args\030\002 \003(\tB \n\020com.dice.CommandB\014Co" +
+            "mmandProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+        .internalBuildGeneratedFileFrom(descriptorData,
+            new com.google.protobuf.Descriptors.FileDescriptor[]{
+            });
     internal_static_com_dice_command_Command_descriptor =
-      getDescriptor().getMessageTypes().get(0);
+        getDescriptor().getMessageTypes().get(0);
     internal_static_com_dice_command_Command_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_command_Command_descriptor,
-        new java.lang.String[] { "Cmd", "Args", });
+        new java.lang.String[]{"Cmd", "Args",});
   }
 
   // @@protoc_insertion_point(outer_class_scope)

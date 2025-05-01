@@ -10,11 +10,14 @@ public final class ZElement extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:com.dice.Reponse.ZElement)
     ZElementOrBuilder {
-private static final long serialVersionUID = 0L;
+
+  private static final long serialVersionUID = 0L;
+
   // Use ZElement.newBuilder() to construct.
   private ZElement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private ZElement() {
     member_ = "";
   }
@@ -27,18 +30,19 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
+  public com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static com.google.protobuf.Descriptors.Descriptor
+  getDescriptor() {
     return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZElement_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+  internalGetFieldAccessorTable() {
     return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZElement_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.dice.Reponse.ZElement.class, com.dice.Reponse.ZElement.Builder.class);
@@ -46,8 +50,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int SCORE_FIELD_NUMBER = 1;
   private long score_ = 0L;
+
   /**
    * <code>int64 score = 1;</code>
+   *
    * @return The score.
    */
   @java.lang.Override
@@ -58,8 +64,10 @@ private static final long serialVersionUID = 0L;
   public static final int MEMBER_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object member_ = "";
+
   /**
    * <code>string member = 2;</code>
+   *
    * @return The member.
    */
   @java.lang.Override
@@ -68,23 +76,25 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
+      com.google.protobuf.ByteString bs =
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       member_ = s;
       return s;
     }
   }
+
   /**
    * <code>string member = 2;</code>
+   *
    * @return The bytes for member.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getMemberBytes() {
+  getMemberBytes() {
     java.lang.Object ref = member_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
+      com.google.protobuf.ByteString b =
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       member_ = b;
@@ -96,8 +106,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int RANK_FIELD_NUMBER = 3;
   private long rank_ = 0L;
+
   /**
    * <code>int64 rank = 3;</code>
+   *
    * @return The rank.
    */
   @java.lang.Override
@@ -106,11 +118,16 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
-  public final boolean isInitialized() {
+  public boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) return true;
-    if (isInitialized == 0) return false;
+    if (isInitialized == 1) {
+      return true;
+    }
+    if (isInitialized == 0) {
+      return false;
+    }
 
     memoizedIsInitialized = 1;
     return true;
@@ -118,7 +135,7 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+      throws java.io.IOException {
     if (score_ != 0L) {
       output.writeInt64(1, score_);
     }
@@ -134,19 +151,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
-    if (size != -1) return size;
+    if (size != -1) {
+      return size;
+    }
 
     size = 0;
     if (score_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, score_);
+          .computeInt64Size(1, score_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(member_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, member_);
     }
     if (rank_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(3, rank_);
+          .computeInt64Size(3, rank_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -156,21 +175,25 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
-    if (!(obj instanceof com.dice.Reponse.ZElement)) {
+    if (!(obj instanceof ZElement other)) {
       return super.equals(obj);
     }
-    com.dice.Reponse.ZElement other = (com.dice.Reponse.ZElement) obj;
 
     if (getScore()
-        != other.getScore()) return false;
+        != other.getScore()) {
+      return false;
+    }
     if (!getMember()
-        .equals(other.getMember())) return false;
+        .equals(other.getMember())) {
+      return false;
+    }
     if (getRank()
-        != other.getRank()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-    return true;
+        != other.getRank()) {
+      return false;
+    }
+    return getUnknownFields().equals(other.getUnknownFields());
   }
 
   @java.lang.Override
@@ -198,38 +221,45 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.dice.Reponse.ZElement parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.dice.Reponse.ZElement parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.dice.Reponse.ZElement parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.dice.Reponse.ZElement parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.dice.Reponse.ZElement parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.dice.Reponse.ZElement parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
+
   public static com.dice.Reponse.ZElement parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -237,11 +267,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.dice.Reponse.ZElement parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.dice.Reponse.ZElement parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -249,12 +281,14 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.dice.Reponse.ZElement parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
+
   public static com.dice.Reponse.ZElement parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -264,13 +298,18 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.dice.Reponse.ZElement prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
@@ -283,6 +322,7 @@ private static final long serialVersionUID = 0L;
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /**
    * Protobuf type {@code com.dice.Reponse.ZElement}
    */
@@ -290,14 +330,15 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.dice.Reponse.ZElement)
       com.dice.Reponse.ZElementOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+
+    public static com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
       return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZElement_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    internalGetFieldAccessorTable() {
       return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZElement_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.dice.Reponse.ZElement.class, com.dice.Reponse.ZElement.Builder.class);
@@ -313,6 +354,7 @@ private static final long serialVersionUID = 0L;
       super(parent);
 
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -325,7 +367,7 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    getDescriptorForType() {
       return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZElement_descriptor;
     }
 
@@ -346,7 +388,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.dice.Reponse.ZElement buildPartial() {
       com.dice.Reponse.ZElement result = new com.dice.Reponse.ZElement(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField0_ != 0) {
+        buildPartial0(result);
+      }
       onBuilt();
       return result;
     }
@@ -368,38 +412,44 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.dice.Reponse.ZElement) {
-        return mergeFrom((com.dice.Reponse.ZElement)other);
+        return mergeFrom((com.dice.Reponse.ZElement) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -407,7 +457,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public Builder mergeFrom(com.dice.Reponse.ZElement other) {
-      if (other == com.dice.Reponse.ZElement.getDefaultInstance()) return this;
+      if (other == com.dice.Reponse.ZElement.getDefaultInstance()) {
+        return this;
+      }
       if (other.getScore() != 0L) {
         setScore(other.getScore());
       }
@@ -425,7 +477,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public final boolean isInitialized() {
+    public boolean isInitialized() {
       return true;
     }
 
@@ -475,31 +527,38 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+
     private int bitField0_;
 
-    private long score_ ;
+    private long score_;
+
     /**
      * <code>int64 score = 1;</code>
+     *
      * @return The score.
      */
     @java.lang.Override
     public long getScore() {
       return score_;
     }
+
     /**
      * <code>int64 score = 1;</code>
+     *
      * @param value The score to set.
      * @return This builder for chaining.
      */
     public Builder setScore(long value) {
-      
+
       score_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
+
     /**
      * <code>int64 score = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearScore() {
@@ -510,8 +569,10 @@ private static final long serialVersionUID = 0L;
     }
 
     private java.lang.Object member_ = "";
+
     /**
      * <code>string member = 2;</code>
+     *
      * @return The member.
      */
     public java.lang.String getMember() {
@@ -526,15 +587,17 @@ private static final long serialVersionUID = 0L;
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string member = 2;</code>
+     *
      * @return The bytes for member.
      */
     public com.google.protobuf.ByteString
-        getMemberBytes() {
+    getMemberBytes() {
       java.lang.Object ref = member_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         member_ = b;
@@ -543,21 +606,27 @@ private static final long serialVersionUID = 0L;
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string member = 2;</code>
+     *
      * @param value The member to set.
      * @return This builder for chaining.
      */
     public Builder setMember(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+        throw new NullPointerException();
+      }
       member_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
+
     /**
      * <code>string member = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearMember() {
@@ -566,14 +635,18 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     /**
      * <code>string member = 2;</code>
+     *
      * @param value The bytes for member to set.
      * @return This builder for chaining.
      */
     public Builder setMemberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+        throw new NullPointerException();
+      }
       checkByteStringIsUtf8(value);
       member_ = value;
       bitField0_ |= 0x00000002;
@@ -581,29 +654,35 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long rank_ ;
+    private long rank_;
+
     /**
      * <code>int64 rank = 3;</code>
+     *
      * @return The rank.
      */
     @java.lang.Override
     public long getRank() {
       return rank_;
     }
+
     /**
      * <code>int64 rank = 3;</code>
+     *
      * @param value The rank to set.
      * @return This builder for chaining.
      */
     public Builder setRank(long value) {
-      
+
       rank_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
+
     /**
      * <code>int64 rank = 3;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearRank() {
@@ -612,24 +691,25 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
+    public Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override
-    public final Builder mergeUnknownFields(
+    public Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
-
 
     // @@protoc_insertion_point(builder_scope:com.dice.Reponse.ZElement)
   }
 
   // @@protoc_insertion_point(class_scope:com.dice.Reponse.ZElement)
   private static final com.dice.Reponse.ZElement DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.dice.Reponse.ZElement();
   }

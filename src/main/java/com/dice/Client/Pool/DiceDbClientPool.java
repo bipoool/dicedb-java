@@ -2,12 +2,10 @@ package com.dice.Client.Pool;
 
 import com.dice.Client.DiceDbClient.DiceDbClient;
 import com.dice.Client.DiceDbClient.DiceDbClientFactory;
-import com.dice.Command.CommandProto;
 import com.dice.Command.CommandProto.Command;
 import com.dice.Exceptions.DiceDbException;
 import com.dice.Reponse.Response;
 import java.util.List;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -28,7 +26,8 @@ public class DiceDbClientPool implements ClientPool {
   LinkedListPool connectionPool;
   DiceDbClientFactory clientFactory;
 
-  public DiceDbClientPool(String host, int port, int minPoolSize, int maxPoolSize) throws DiceDbException {
+  public DiceDbClientPool(String host, int port, int minPoolSize, int maxPoolSize)
+      throws DiceDbException {
     this.totalConnections = 0;
     this.minPoolSize = minPoolSize;
     this.maxPoolSize = maxPoolSize;
@@ -36,8 +35,8 @@ public class DiceDbClientPool implements ClientPool {
     this.clientFactory = new DiceDbClientFactory(host, port);
 
     for (int i = 0; i < minPoolSize; i++) {
-        connectionPool.put(this.clientFactory.createClient());
-        this.totalConnections++;
+      connectionPool.put(this.clientFactory.createClient());
+      this.totalConnections++;
     }
     this.scheduleEvictionJob();
   }

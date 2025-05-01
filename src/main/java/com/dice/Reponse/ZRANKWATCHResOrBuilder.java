@@ -6,4 +6,5 @@ package com.dice.Reponse;
 public interface ZRANKWATCHResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.ZRANKWATCHRes)
     com.google.protobuf.MessageOrBuilder {
+
 }

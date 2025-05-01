@@ -53,38 +53,44 @@ public enum Status
    */
   public static Status forNumber(int value) {
     switch (value) {
-      case 0: return Status_OK;
-      case 1: return Status_ERR;
-      default: return null;
+      case 0:
+        return Status_OK;
+      case 1:
+        return Status_ERR;
+      default:
+        return null;
     }
   }
 
   public static com.google.protobuf.Internal.EnumLiteMap<Status>
-      internalGetValueMap() {
+  internalGetValueMap() {
     return internalValueMap;
   }
+
   private static final com.google.protobuf.Internal.EnumLiteMap<
       Status> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<Status>() {
-          public Status findValueByNumber(int number) {
-            return Status.forNumber(number);
-          }
-        };
+      new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+        public Status findValueByNumber(int number) {
+          return Status.forNumber(number);
+        }
+      };
 
   public final com.google.protobuf.Descriptors.EnumValueDescriptor
-      getValueDescriptor() {
+  getValueDescriptor() {
     if (this == UNRECOGNIZED) {
       throw new java.lang.IllegalStateException(
           "Can't get the descriptor of an unrecognized enum value.");
     }
     return getDescriptor().getValues().get(ordinal());
   }
+
   public final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptorForType() {
+  getDescriptorForType() {
     return getDescriptor();
   }
+
   public static final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptor() {
+  getDescriptor() {
     return com.dice.Reponse.ResponseProto.getDescriptor().getEnumTypes().get(0);
   }
 
@@ -94,7 +100,7 @@ public enum Status
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
-        "EnumValueDescriptor is not for this type.");
+          "EnumValueDescriptor is not for this type.");
     }
     if (desc.getIndex() == -1) {
       return UNRECOGNIZED;
@@ -104,7 +110,7 @@ public enum Status
 
   private final int value;
 
-  private Status(int value) {
+  Status(int value) {
     this.value = value;
   }
 

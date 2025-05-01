@@ -10,11 +10,14 @@ public final class ECHORes extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:com.dice.Reponse.ECHORes)
     ECHOResOrBuilder {
-private static final long serialVersionUID = 0L;
+
+  private static final long serialVersionUID = 0L;
+
   // Use ECHORes.newBuilder() to construct.
   private ECHORes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private ECHORes() {
     message_ = "";
   }
@@ -27,18 +30,19 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
+  public com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+
+  public static com.google.protobuf.Descriptors.Descriptor
+  getDescriptor() {
     return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ECHORes_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+  internalGetFieldAccessorTable() {
     return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ECHORes_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.dice.Reponse.ECHORes.class, com.dice.Reponse.ECHORes.Builder.class);
@@ -47,8 +51,10 @@ private static final long serialVersionUID = 0L;
   public static final int MESSAGE_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object message_ = "";
+
   /**
    * <code>string message = 1;</code>
+   *
    * @return The message.
    */
   @java.lang.Override
@@ -57,23 +63,25 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
+      com.google.protobuf.ByteString bs =
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       message_ = s;
       return s;
     }
   }
+
   /**
    * <code>string message = 1;</code>
+   *
    * @return The bytes for message.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getMessageBytes() {
+  getMessageBytes() {
     java.lang.Object ref = message_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
+      com.google.protobuf.ByteString b =
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       message_ = b;
@@ -84,11 +92,16 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @java.lang.Override
-  public final boolean isInitialized() {
+  public boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) return true;
-    if (isInitialized == 0) return false;
+    if (isInitialized == 1) {
+      return true;
+    }
+    if (isInitialized == 0) {
+      return false;
+    }
 
     memoizedIsInitialized = 1;
     return true;
@@ -96,7 +109,7 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+      throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
     }
@@ -106,7 +119,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
-    if (size != -1) return size;
+    if (size != -1) {
+      return size;
+    }
 
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
@@ -120,17 +135,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
-    if (!(obj instanceof com.dice.Reponse.ECHORes)) {
+    if (!(obj instanceof ECHORes other)) {
       return super.equals(obj);
     }
-    com.dice.Reponse.ECHORes other = (com.dice.Reponse.ECHORes) obj;
 
     if (!getMessage()
-        .equals(other.getMessage())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-    return true;
+        .equals(other.getMessage())) {
+      return false;
+    }
+    return getUnknownFields().equals(other.getUnknownFields());
   }
 
   @java.lang.Override
@@ -152,38 +167,45 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.dice.Reponse.ECHORes parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.dice.Reponse.ECHORes parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.dice.Reponse.ECHORes parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.dice.Reponse.ECHORes parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static com.dice.Reponse.ECHORes parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static com.dice.Reponse.ECHORes parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
+
   public static com.dice.Reponse.ECHORes parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -191,11 +213,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.dice.Reponse.ECHORes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.dice.Reponse.ECHORes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -203,12 +227,14 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.dice.Reponse.ECHORes parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
+
   public static com.dice.Reponse.ECHORes parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -218,13 +244,18 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(com.dice.Reponse.ECHORes prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
@@ -237,6 +268,7 @@ private static final long serialVersionUID = 0L;
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /**
    * Protobuf type {@code com.dice.Reponse.ECHORes}
    */
@@ -244,14 +276,15 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.dice.Reponse.ECHORes)
       com.dice.Reponse.ECHOResOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+
+    public static com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
       return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ECHORes_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    internalGetFieldAccessorTable() {
       return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ECHORes_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.dice.Reponse.ECHORes.class, com.dice.Reponse.ECHORes.Builder.class);
@@ -267,6 +300,7 @@ private static final long serialVersionUID = 0L;
       super(parent);
 
     }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -277,7 +311,7 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    getDescriptorForType() {
       return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ECHORes_descriptor;
     }
 
@@ -298,7 +332,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.dice.Reponse.ECHORes buildPartial() {
       com.dice.Reponse.ECHORes result = new com.dice.Reponse.ECHORes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField0_ != 0) {
+        buildPartial0(result);
+      }
       onBuilt();
       return result;
     }
@@ -314,38 +350,44 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.dice.Reponse.ECHORes) {
-        return mergeFrom((com.dice.Reponse.ECHORes)other);
+        return mergeFrom((com.dice.Reponse.ECHORes) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -353,7 +395,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public Builder mergeFrom(com.dice.Reponse.ECHORes other) {
-      if (other == com.dice.Reponse.ECHORes.getDefaultInstance()) return this;
+      if (other == com.dice.Reponse.ECHORes.getDefaultInstance()) {
+        return this;
+      }
       if (!other.getMessage().isEmpty()) {
         message_ = other.message_;
         bitField0_ |= 0x00000001;
@@ -365,7 +409,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public final boolean isInitialized() {
+    public boolean isInitialized() {
       return true;
     }
 
@@ -405,11 +449,14 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+
     private int bitField0_;
 
     private java.lang.Object message_ = "";
+
     /**
      * <code>string message = 1;</code>
+     *
      * @return The message.
      */
     public java.lang.String getMessage() {
@@ -424,15 +471,17 @@ private static final long serialVersionUID = 0L;
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string message = 1;</code>
+     *
      * @return The bytes for message.
      */
     public com.google.protobuf.ByteString
-        getMessageBytes() {
+    getMessageBytes() {
       java.lang.Object ref = message_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         message_ = b;
@@ -441,21 +490,27 @@ private static final long serialVersionUID = 0L;
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string message = 1;</code>
+     *
      * @param value The message to set.
      * @return This builder for chaining.
      */
     public Builder setMessage(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+        throw new NullPointerException();
+      }
       message_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
+
     /**
      * <code>string message = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearMessage() {
@@ -464,38 +519,43 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     /**
      * <code>string message = 1;</code>
+     *
      * @param value The bytes for message to set.
      * @return This builder for chaining.
      */
     public Builder setMessageBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+        throw new NullPointerException();
+      }
       checkByteStringIsUtf8(value);
       message_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
+
     @java.lang.Override
-    public final Builder setUnknownFields(
+    public Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override
-    public final Builder mergeUnknownFields(
+    public Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
-
 
     // @@protoc_insertion_point(builder_scope:com.dice.Reponse.ECHORes)
   }
 
   // @@protoc_insertion_point(class_scope:com.dice.Reponse.ECHORes)
   private static final com.dice.Reponse.ECHORes DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new com.dice.Reponse.ECHORes();
   }

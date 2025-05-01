@@ -6,4 +6,5 @@ package com.dice.Reponse;
 public interface GETWATCHResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.GETWATCHRes)
     com.google.protobuf.MessageOrBuilder {
+
 }

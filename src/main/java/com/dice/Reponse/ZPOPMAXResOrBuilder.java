@@ -10,21 +10,25 @@ public interface ZPOPMAXResOrBuilder extends
   /**
    * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
    */
-  java.util.List<com.dice.Reponse.ZElement> 
-      getElementsList();
+  java.util.List<com.dice.Reponse.ZElement>
+  getElementsList();
+
   /**
    * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
    */
   com.dice.Reponse.ZElement getElements(int index);
+
   /**
    * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
    */
   int getElementsCount();
+
   /**
    * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
    */
-  java.util.List<? extends com.dice.Reponse.ZElementOrBuilder> 
-      getElementsOrBuilderList();
+  java.util.List<? extends com.dice.Reponse.ZElementOrBuilder>
+  getElementsOrBuilderList();
+
   /**
    * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
    */

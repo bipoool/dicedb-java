@@ -6,4 +6,5 @@ package com.dice.Reponse;
 public interface HANDSHAKEResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.HANDSHAKERes)
     com.google.protobuf.MessageOrBuilder {
+
 }

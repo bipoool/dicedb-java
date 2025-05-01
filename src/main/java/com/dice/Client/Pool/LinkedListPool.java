@@ -6,12 +6,13 @@ public class LinkedListPool {
 
   private final int maxSize;
 
-  private ListNode head;
-  private ListNode tail;
+  private final ListNode head;
+  private final ListNode tail;
 
   private int listSize;
 
   static class ListNode {
+
     public DiceDbClient client;
     public ListNode next;
     public ListNode prev;
@@ -19,7 +20,9 @@ public class LinkedListPool {
     public ListNode(DiceDbClient client) {
       this.client = client;
     }
-    public ListNode() {}
+
+    public ListNode() {
+    }
   }
 
   public LinkedListPool(int maxSize) {

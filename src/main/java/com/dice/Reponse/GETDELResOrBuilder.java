@@ -9,13 +9,16 @@ public interface GETDELResOrBuilder extends
 
   /**
    * <code>string value = 1;</code>
+   *
    * @return The value.
    */
   java.lang.String getValue();
+
   /**
    * <code>string value = 1;</code>
+   *
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString
-      getValueBytes();
+  getValueBytes();
 }

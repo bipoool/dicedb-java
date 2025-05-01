@@ -9,6 +9,7 @@ public interface EXPIRETIMEResOrBuilder extends
 
   /**
    * <code>int64 unixSec = 1;</code>
+   *
    * @return The unixSec.
    */
   long getUnixSec();

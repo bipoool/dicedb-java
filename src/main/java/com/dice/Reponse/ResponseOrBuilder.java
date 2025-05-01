@@ -9,43 +9,54 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.Status status = 1;</code>
+   *
    * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
+
   /**
    * <code>.com.dice.Reponse.Status status = 1;</code>
+   *
    * @return The status.
    */
   com.dice.Reponse.Status getStatus();
 
   /**
    * <code>string message = 2;</code>
+   *
    * @return The message.
    */
   java.lang.String getMessage();
+
   /**
    * <code>string message = 2;</code>
+   *
    * @return The bytes for message.
    */
   com.google.protobuf.ByteString
-      getMessageBytes();
+  getMessageBytes();
 
   /**
    * <code>uint64 fingerprint64 = 3;</code>
+   *
    * @return The fingerprint64.
    */
   long getFingerprint64();
 
   /**
    * <code>.com.dice.Reponse.TYPERes TYPERes = 11;</code>
+   *
    * @return Whether the tYPERes field is set.
    */
   boolean hasTYPERes();
+
   /**
    * <code>.com.dice.Reponse.TYPERes TYPERes = 11;</code>
+   *
    * @return The tYPERes.
    */
   com.dice.Reponse.TYPERes getTYPERes();
+
   /**
    * <code>.com.dice.Reponse.TYPERes TYPERes = 11;</code>
    */
@@ -53,14 +64,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.PINGRes PINGRes = 12;</code>
+   *
    * @return Whether the pINGRes field is set.
    */
   boolean hasPINGRes();
+
   /**
    * <code>.com.dice.Reponse.PINGRes PINGRes = 12;</code>
+   *
    * @return The pINGRes.
    */
   com.dice.Reponse.PINGRes getPINGRes();
+
   /**
    * <code>.com.dice.Reponse.PINGRes PINGRes = 12;</code>
    */
@@ -68,14 +83,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ECHORes ECHORes = 13;</code>
+   *
    * @return Whether the eCHORes field is set.
    */
   boolean hasECHORes();
+
   /**
    * <code>.com.dice.Reponse.ECHORes ECHORes = 13;</code>
+   *
    * @return The eCHORes.
    */
   com.dice.Reponse.ECHORes getECHORes();
+
   /**
    * <code>.com.dice.Reponse.ECHORes ECHORes = 13;</code>
    */
@@ -83,14 +102,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
+   *
    * @return Whether the hANDSHAKERes field is set.
    */
   boolean hasHANDSHAKERes();
+
   /**
    * <code>.com.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
+   *
    * @return The hANDSHAKERes.
    */
   com.dice.Reponse.HANDSHAKERes getHANDSHAKERes();
+
   /**
    * <code>.com.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
    */
@@ -98,14 +121,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
+   *
    * @return Whether the eXISTSRes field is set.
    */
   boolean hasEXISTSRes();
+
   /**
    * <code>.com.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
+   *
    * @return The eXISTSRes.
    */
   com.dice.Reponse.EXISTSRes getEXISTSRes();
+
   /**
    * <code>.com.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
    */
@@ -113,14 +140,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.GETRes GETRes = 16;</code>
+   *
    * @return Whether the gETRes field is set.
    */
   boolean hasGETRes();
+
   /**
    * <code>.com.dice.Reponse.GETRes GETRes = 16;</code>
+   *
    * @return The gETRes.
    */
   com.dice.Reponse.GETRes getGETRes();
+
   /**
    * <code>.com.dice.Reponse.GETRes GETRes = 16;</code>
    */
@@ -128,14 +159,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.SETRes SETRes = 17;</code>
+   *
    * @return Whether the sETRes field is set.
    */
   boolean hasSETRes();
+
   /**
    * <code>.com.dice.Reponse.SETRes SETRes = 17;</code>
+   *
    * @return The sETRes.
    */
   com.dice.Reponse.SETRes getSETRes();
+
   /**
    * <code>.com.dice.Reponse.SETRes SETRes = 17;</code>
    */
@@ -143,14 +178,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.DELRes DELRes = 18;</code>
+   *
    * @return Whether the dELRes field is set.
    */
   boolean hasDELRes();
+
   /**
    * <code>.com.dice.Reponse.DELRes DELRes = 18;</code>
+   *
    * @return The dELRes.
    */
   com.dice.Reponse.DELRes getDELRes();
+
   /**
    * <code>.com.dice.Reponse.DELRes DELRes = 18;</code>
    */
@@ -158,14 +197,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.KEYSRes KEYSRes = 19;</code>
+   *
    * @return Whether the kEYSRes field is set.
    */
   boolean hasKEYSRes();
+
   /**
    * <code>.com.dice.Reponse.KEYSRes KEYSRes = 19;</code>
+   *
    * @return The kEYSRes.
    */
   com.dice.Reponse.KEYSRes getKEYSRes();
+
   /**
    * <code>.com.dice.Reponse.KEYSRes KEYSRes = 19;</code>
    */
@@ -173,14 +216,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.GETDELRes GETDELRes = 20;</code>
+   *
    * @return Whether the gETDELRes field is set.
    */
   boolean hasGETDELRes();
+
   /**
    * <code>.com.dice.Reponse.GETDELRes GETDELRes = 20;</code>
+   *
    * @return The gETDELRes.
    */
   com.dice.Reponse.GETDELRes getGETDELRes();
+
   /**
    * <code>.com.dice.Reponse.GETDELRes GETDELRes = 20;</code>
    */
@@ -188,14 +235,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.GETEXRes GETEXRes = 21;</code>
+   *
    * @return Whether the gETEXRes field is set.
    */
   boolean hasGETEXRes();
+
   /**
    * <code>.com.dice.Reponse.GETEXRes GETEXRes = 21;</code>
+   *
    * @return The gETEXRes.
    */
   com.dice.Reponse.GETEXRes getGETEXRes();
+
   /**
    * <code>.com.dice.Reponse.GETEXRes GETEXRes = 21;</code>
    */
@@ -203,14 +254,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.GETSETRes GETSETRes = 22;</code>
+   *
    * @return Whether the gETSETRes field is set.
    */
   boolean hasGETSETRes();
+
   /**
    * <code>.com.dice.Reponse.GETSETRes GETSETRes = 22;</code>
+   *
    * @return The gETSETRes.
    */
   com.dice.Reponse.GETSETRes getGETSETRes();
+
   /**
    * <code>.com.dice.Reponse.GETSETRes GETSETRes = 22;</code>
    */
@@ -218,14 +273,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.INCRRes INCRRes = 23;</code>
+   *
    * @return Whether the iNCRRes field is set.
    */
   boolean hasINCRRes();
+
   /**
    * <code>.com.dice.Reponse.INCRRes INCRRes = 23;</code>
+   *
    * @return The iNCRRes.
    */
   com.dice.Reponse.INCRRes getINCRRes();
+
   /**
    * <code>.com.dice.Reponse.INCRRes INCRRes = 23;</code>
    */
@@ -233,14 +292,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.DECRRes DECRRes = 24;</code>
+   *
    * @return Whether the dECRRes field is set.
    */
   boolean hasDECRRes();
+
   /**
    * <code>.com.dice.Reponse.DECRRes DECRRes = 24;</code>
+   *
    * @return The dECRRes.
    */
   com.dice.Reponse.DECRRes getDECRRes();
+
   /**
    * <code>.com.dice.Reponse.DECRRes DECRRes = 24;</code>
    */
@@ -248,14 +311,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
+   *
    * @return Whether the iNCRBYRes field is set.
    */
   boolean hasINCRBYRes();
+
   /**
    * <code>.com.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
+   *
    * @return The iNCRBYRes.
    */
   com.dice.Reponse.INCRBYRes getINCRBYRes();
+
   /**
    * <code>.com.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
    */
@@ -263,14 +330,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
+   *
    * @return Whether the dECRBYRes field is set.
    */
   boolean hasDECRBYRes();
+
   /**
    * <code>.com.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
+   *
    * @return The dECRBYRes.
    */
   com.dice.Reponse.DECRBYRes getDECRBYRes();
+
   /**
    * <code>.com.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
    */
@@ -278,14 +349,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
+   *
    * @return Whether the fLUSHDBRes field is set.
    */
   boolean hasFLUSHDBRes();
+
   /**
    * <code>.com.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
+   *
    * @return The fLUSHDBRes.
    */
   com.dice.Reponse.FLUSHDBRes getFLUSHDBRes();
+
   /**
    * <code>.com.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
    */
@@ -293,14 +368,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
+   *
    * @return Whether the eXPIRERes field is set.
    */
   boolean hasEXPIRERes();
+
   /**
    * <code>.com.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
+   *
    * @return The eXPIRERes.
    */
   com.dice.Reponse.EXPIRERes getEXPIRERes();
+
   /**
    * <code>.com.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
    */
@@ -308,14 +387,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
+   *
    * @return Whether the eXPIREATRes field is set.
    */
   boolean hasEXPIREATRes();
+
   /**
    * <code>.com.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
+   *
    * @return The eXPIREATRes.
    */
   com.dice.Reponse.EXPIREATRes getEXPIREATRes();
+
   /**
    * <code>.com.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
    */
@@ -323,14 +406,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
+   *
    * @return Whether the eXPIRETIMERes field is set.
    */
   boolean hasEXPIRETIMERes();
+
   /**
    * <code>.com.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
+   *
    * @return The eXPIRETIMERes.
    */
   com.dice.Reponse.EXPIRETIMERes getEXPIRETIMERes();
+
   /**
    * <code>.com.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
    */
@@ -338,14 +425,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.TTLRes TTLRes = 31;</code>
+   *
    * @return Whether the tTLRes field is set.
    */
   boolean hasTTLRes();
+
   /**
    * <code>.com.dice.Reponse.TTLRes TTLRes = 31;</code>
+   *
    * @return The tTLRes.
    */
   com.dice.Reponse.TTLRes getTTLRes();
+
   /**
    * <code>.com.dice.Reponse.TTLRes TTLRes = 31;</code>
    */
@@ -353,14 +444,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
+   *
    * @return Whether the gETWATCHRes field is set.
    */
   boolean hasGETWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
+   *
    * @return The gETWATCHRes.
    */
   com.dice.Reponse.GETWATCHRes getGETWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
    */
@@ -368,14 +463,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
+   *
    * @return Whether the uNWATCHRes field is set.
    */
   boolean hasUNWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
+   *
    * @return The uNWATCHRes.
    */
   com.dice.Reponse.UNWATCHRes getUNWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
    */
@@ -383,14 +482,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.HGETRes HGETRes = 34;</code>
+   *
    * @return Whether the hGETRes field is set.
    */
   boolean hasHGETRes();
+
   /**
    * <code>.com.dice.Reponse.HGETRes HGETRes = 34;</code>
+   *
    * @return The hGETRes.
    */
   com.dice.Reponse.HGETRes getHGETRes();
+
   /**
    * <code>.com.dice.Reponse.HGETRes HGETRes = 34;</code>
    */
@@ -398,14 +501,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.HSETRes HSETRes = 35;</code>
+   *
    * @return Whether the hSETRes field is set.
    */
   boolean hasHSETRes();
+
   /**
    * <code>.com.dice.Reponse.HSETRes HSETRes = 35;</code>
+   *
    * @return The hSETRes.
    */
   com.dice.Reponse.HSETRes getHSETRes();
+
   /**
    * <code>.com.dice.Reponse.HSETRes HSETRes = 35;</code>
    */
@@ -413,14 +520,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
+   *
    * @return Whether the hGETALLRes field is set.
    */
   boolean hasHGETALLRes();
+
   /**
    * <code>.com.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
+   *
    * @return The hGETALLRes.
    */
   com.dice.Reponse.HGETALLRes getHGETALLRes();
+
   /**
    * <code>.com.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
    */
@@ -428,14 +539,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
+   *
    * @return Whether the hGETWATCHRes field is set.
    */
   boolean hasHGETWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
+   *
    * @return The hGETWATCHRes.
    */
   com.dice.Reponse.HGETWATCHRes getHGETWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
    */
@@ -443,14 +558,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
+   *
    * @return Whether the hGETALLWATCHRes field is set.
    */
   boolean hasHGETALLWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
+   *
    * @return The hGETALLWATCHRes.
    */
   com.dice.Reponse.HGETALLWATCHRes getHGETALLWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
    */
@@ -458,14 +577,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZADDRes ZADDRes = 39;</code>
+   *
    * @return Whether the zADDRes field is set.
    */
   boolean hasZADDRes();
+
   /**
    * <code>.com.dice.Reponse.ZADDRes ZADDRes = 39;</code>
+   *
    * @return The zADDRes.
    */
   com.dice.Reponse.ZADDRes getZADDRes();
+
   /**
    * <code>.com.dice.Reponse.ZADDRes ZADDRes = 39;</code>
    */
@@ -473,14 +596,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
+   *
    * @return Whether the zCOUNTRes field is set.
    */
   boolean hasZCOUNTRes();
+
   /**
    * <code>.com.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
+   *
    * @return The zCOUNTRes.
    */
   com.dice.Reponse.ZCOUNTRes getZCOUNTRes();
+
   /**
    * <code>.com.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
    */
@@ -488,14 +615,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
+   *
    * @return Whether the zRANGERes field is set.
    */
   boolean hasZRANGERes();
+
   /**
    * <code>.com.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
+   *
    * @return The zRANGERes.
    */
   com.dice.Reponse.ZRANGERes getZRANGERes();
+
   /**
    * <code>.com.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
    */
@@ -503,14 +634,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
+   *
    * @return Whether the zPOPMAXRes field is set.
    */
   boolean hasZPOPMAXRes();
+
   /**
    * <code>.com.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
+   *
    * @return The zPOPMAXRes.
    */
   com.dice.Reponse.ZPOPMAXRes getZPOPMAXRes();
+
   /**
    * <code>.com.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
    */
@@ -518,14 +653,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZREMRes ZREMRes = 43;</code>
+   *
    * @return Whether the zREMRes field is set.
    */
   boolean hasZREMRes();
+
   /**
    * <code>.com.dice.Reponse.ZREMRes ZREMRes = 43;</code>
+   *
    * @return The zREMRes.
    */
   com.dice.Reponse.ZREMRes getZREMRes();
+
   /**
    * <code>.com.dice.Reponse.ZREMRes ZREMRes = 43;</code>
    */
@@ -533,14 +672,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
+   *
    * @return Whether the zPOPMINRes field is set.
    */
   boolean hasZPOPMINRes();
+
   /**
    * <code>.com.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
+   *
    * @return The zPOPMINRes.
    */
   com.dice.Reponse.ZPOPMINRes getZPOPMINRes();
+
   /**
    * <code>.com.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
    */
@@ -548,14 +691,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
+   *
    * @return Whether the zRANKRes field is set.
    */
   boolean hasZRANKRes();
+
   /**
    * <code>.com.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
+   *
    * @return The zRANKRes.
    */
   com.dice.Reponse.ZRANKRes getZRANKRes();
+
   /**
    * <code>.com.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
    */
@@ -563,14 +710,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
+   *
    * @return Whether the zCARDRes field is set.
    */
   boolean hasZCARDRes();
+
   /**
    * <code>.com.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
+   *
    * @return The zCARDRes.
    */
   com.dice.Reponse.ZCARDRes getZCARDRes();
+
   /**
    * <code>.com.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
    */
@@ -578,14 +729,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
+   *
    * @return Whether the zRANGEWATCHRes field is set.
    */
   boolean hasZRANGEWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
+   *
    * @return The zRANGEWATCHRes.
    */
   com.dice.Reponse.ZRANGEWATCHRes getZRANGEWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
    */
@@ -593,14 +748,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
+   *
    * @return Whether the zCOUNTWATCHRes field is set.
    */
   boolean hasZCOUNTWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
+   *
    * @return The zCOUNTWATCHRes.
    */
   com.dice.Reponse.ZCOUNTWATCHRes getZCOUNTWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
    */
@@ -608,14 +767,18 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
+   *
    * @return Whether the zCARDWATCHRes field is set.
    */
   boolean hasZCARDWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
+   *
    * @return The zCARDWATCHRes.
    */
   com.dice.Reponse.ZCARDWATCHRes getZCARDWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
    */
@@ -623,18 +786,22 @@ public interface ResponseOrBuilder extends
 
   /**
    * <code>.com.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
+   *
    * @return Whether the zRANKWATCHRes field is set.
    */
   boolean hasZRANKWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
+   *
    * @return The zRANKWATCHRes.
    */
   com.dice.Reponse.ZRANKWATCHRes getZRANKWATCHRes();
+
   /**
    * <code>.com.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
    */
   com.dice.Reponse.ZRANKWATCHResOrBuilder getZRANKWATCHResOrBuilder();
 
-  public com.dice.Reponse.Response.ResponseCase getResponseCase();
+  com.dice.Reponse.Response.ResponseCase getResponseCase();
 }

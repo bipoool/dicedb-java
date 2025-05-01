@@ -9,6 +9,7 @@ public interface DECRBYResOrBuilder extends
 
   /**
    * <code>int64 value = 1;</code>
+   *
    * @return The value.
    */
   long getValue();
