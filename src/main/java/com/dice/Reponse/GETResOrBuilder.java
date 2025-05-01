@@ -8,12 +8,12 @@ public interface GETResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string Value = 1;</code>
+   * <code>string value = 1;</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
-   * <code>string Value = 1;</code>
+   * <code>string value = 1;</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString

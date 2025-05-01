@@ -6,4 +6,10 @@ package com.dice.Reponse;
 public interface TTLResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.TTLRes)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>int64 seconds = 1;</code>
+   * @return The seconds.
+   */
+  long getSeconds();
 }

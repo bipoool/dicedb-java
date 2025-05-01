@@ -6,4 +6,10 @@ package com.dice.Reponse;
 public interface EXPIRETIMEResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.EXPIRETIMERes)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>int64 unixSec = 1;</code>
+   * @return The unixSec.
+   */
+  long getUnixSec();
 }

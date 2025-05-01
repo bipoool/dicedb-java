@@ -43,6 +43,17 @@ private static final long serialVersionUID = 0L;
             com.dice.Reponse.TTLRes.class, com.dice.Reponse.TTLRes.Builder.class);
   }
 
+  public static final int SECONDS_FIELD_NUMBER = 1;
+  private long seconds_ = 0L;
+  /**
+   * <code>int64 seconds = 1;</code>
+   * @return The seconds.
+   */
+  @java.lang.Override
+  public long getSeconds() {
+    return seconds_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -57,6 +68,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (seconds_ != 0L) {
+      output.writeInt64(1, seconds_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -66,6 +80,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (seconds_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, seconds_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -81,6 +99,8 @@ private static final long serialVersionUID = 0L;
     }
     com.dice.Reponse.TTLRes other = (com.dice.Reponse.TTLRes) obj;
 
+    if (getSeconds()
+        != other.getSeconds()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -92,6 +112,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + SECONDS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getSeconds());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -220,6 +243,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      seconds_ = 0L;
       return this;
     }
 
@@ -246,8 +271,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.dice.Reponse.TTLRes buildPartial() {
       com.dice.Reponse.TTLRes result = new com.dice.Reponse.TTLRes(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.dice.Reponse.TTLRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.seconds_ = seconds_;
+      }
     }
 
     @java.lang.Override
@@ -294,6 +327,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.dice.Reponse.TTLRes other) {
       if (other == com.dice.Reponse.TTLRes.getDefaultInstance()) return this;
+      if (other.getSeconds() != 0L) {
+        setSeconds(other.getSeconds());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -320,6 +356,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              seconds_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -333,6 +374,39 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private long seconds_ ;
+    /**
+     * <code>int64 seconds = 1;</code>
+     * @return The seconds.
+     */
+    @java.lang.Override
+    public long getSeconds() {
+      return seconds_;
+    }
+    /**
+     * <code>int64 seconds = 1;</code>
+     * @param value The seconds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSeconds(long value) {
+      
+      seconds_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 seconds = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSeconds() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      seconds_ = 0L;
+      onChanged();
       return this;
     }
     @java.lang.Override

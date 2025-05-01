@@ -6,4 +6,19 @@ package com.dice.Reponse;
 public interface ZRANKResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.ZRANKRes)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>.com.dice.Reponse.ZElement element = 2;</code>
+   * @return Whether the element field is set.
+   */
+  boolean hasElement();
+  /**
+   * <code>.com.dice.Reponse.ZElement element = 2;</code>
+   * @return The element.
+   */
+  com.dice.Reponse.ZElement getElement();
+  /**
+   * <code>.com.dice.Reponse.ZElement element = 2;</code>
+   */
+  com.dice.Reponse.ZElementOrBuilder getElementOrBuilder();
 }

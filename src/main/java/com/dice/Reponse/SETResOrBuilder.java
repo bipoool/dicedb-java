@@ -6,4 +6,16 @@ package com.dice.Reponse;
 public interface SETResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.SETRes)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>string value = 1;</code>
+   * @return The value.
+   */
+  java.lang.String getValue();
+  /**
+   * <code>string value = 1;</code>
+   * @return The bytes for value.
+   */
+  com.google.protobuf.ByteString
+      getValueBytes();
 }

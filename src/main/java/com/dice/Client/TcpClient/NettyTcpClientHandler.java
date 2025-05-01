@@ -1,6 +1,5 @@
 package com.dice.Client.TcpClient;
 
-import com.dice.Client.DiceDbClient.SimpleDiceDbClient;
 import com.dice.Exceptions.DiceDbException;
 import com.dice.Exceptions.DiceDbTcpException;
 import io.netty.buffer.ByteBuf;

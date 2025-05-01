@@ -10,45 +10,112 @@ enum Status {
   Status_OK = 0;
   Status_ERR = 1;
 }
-
-message TYPERes {}
-message PINGRes {}
-message ECHORes {}
-message HANDSHAKERes {}
-message EXISTSRes {}
-message GETRes {
-  string Value = 1;
+message HElement {
+  string key = 1;
+  string value = 2;
 }
-message SETRes {}
-message DELRes {}
-message KEYSRes {}
-message GETDELRes {}
-message GETEXRes {}
-message GETSETRes {}
-message INCRRes {}
-message DECRRes {}
-message INCRBYRes {}
-message DECRBYRes {}
+message ZElement {
+  int64 score = 1;
+  string member = 2;
+  int64 rank = 3;
+}
+
+message TYPERes {
+  string type = 1;
+}
+message PINGRes {
+  string message = 1;
+}
+message ECHORes {
+  string message = 1;
+}
+message HANDSHAKERes {}
+message EXISTSRes {
+  int64 count = 1;
+}
+message GETRes {
+  string value = 1;
+}
+message SETRes {
+  string value = 1;
+}
+message DELRes {
+  int64 count = 1;
+}
+message KEYSRes {
+  repeated string keys = 1;
+}
+message GETDELRes {
+  string value = 1;
+}
+message GETEXRes {
+  string value = 1;
+}
+message GETSETRes {
+  string value = 1;
+}
+message INCRRes {
+  int64 value = 1;
+}
+message DECRRes {
+  int64 value = 1;
+}
+message INCRBYRes {
+  int64 value = 1;
+}
+message DECRBYRes {
+  int64 value = 1;
+}
 message FLUSHDBRes {}
-message EXPIRERes {}
-message EXPIREATRes {}
-message EXPIRETIMERes {}
-message TTLRes {}
+message EXPIRERes {
+  bool isChanged = 1;
+}
+message EXPIREATRes {
+  bool isChanged = 1;
+}
+message EXPIRETIMERes {
+  int64 unixSec = 1;
+}
+message TTLRes {
+  int64 seconds = 1;
+}
 message GETWATCHRes {}
 message UNWATCHRes {}
-message HGETRes {}
-message HSETRes {}
-message HGETALLRes {}
+message HGETRes {
+  string value = 1;
+}
+message HSETRes {
+  int64 count = 1;
+}
+message HGETALLRes {
+  repeated HElement elements = 1;
+}
 message HGETWATCHRes {}
 message HGETALLWATCHRes {}
-message ZADDRes {}
-message ZCOUNTRes {}
-message ZRANGERes {}
-message ZPOPMAXRes {}
-message ZREMRes {}
-message ZPOPMINRes {}
-message ZRANKRes {}
-message ZCARDRes {}
+message ZADDRes {
+  int64 count = 1;
+}
+message ZCOUNTRes {
+  int64 count = 1;
+}
+message ZRANGERes {
+  repeated ZElement elements = 1;
+}
+message ZPOPMAXRes {
+  repeated ZElement elements = 1;
+}
+message ZREMRes {
+  int64 count = 1;
+}
+message ZPOPMINRes {
+  repeated ZElement elements = 1;
+}
+message ZRANKRes {
+  ZElement element = 2;
+}
+message ZCARDRes {
+  int64 count = 1;
+}
 message ZRANGEWATCHRes {}
 message ZCOUNTWATCHRes {}
 message ZCARDWATCHRes {}

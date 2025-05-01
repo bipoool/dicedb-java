@@ -6,4 +6,16 @@ package com.dice.Reponse;
 public interface PINGResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.PINGRes)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>string message = 1;</code>
+   * @return The message.
+   */
+  java.lang.String getMessage();
+  /**
+   * <code>string message = 1;</code>
+   * @return The bytes for message.
+   */
+  com.google.protobuf.ByteString
+      getMessageBytes();
 }

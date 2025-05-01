@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ZPOPMAXRes() {
+    elements_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -43,6 +44,47 @@ private static final long serialVersionUID = 0L;
             com.dice.Reponse.ZPOPMAXRes.class, com.dice.Reponse.ZPOPMAXRes.Builder.class);
   }
 
+  public static final int ELEMENTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private java.util.List<com.dice.Reponse.ZElement> elements_;
+  /**
+   * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.dice.Reponse.ZElement> getElementsList() {
+    return elements_;
+  }
+  /**
+   * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.dice.Reponse.ZElementOrBuilder> 
+      getElementsOrBuilderList() {
+    return elements_;
+  }
+  /**
+   * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+   */
+  @java.lang.Override
+  public int getElementsCount() {
+    return elements_.size();
+  }
+  /**
+   * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+   */
+  @java.lang.Override
+  public com.dice.Reponse.ZElement getElements(int index) {
+    return elements_.get(index);
+  }
+  /**
+   * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+   */
+  @java.lang.Override
+  public com.dice.Reponse.ZElementOrBuilder getElementsOrBuilder(
+      int index) {
+    return elements_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -57,6 +99,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    for (int i = 0; i < elements_.size(); i++) {
+      output.writeMessage(1, elements_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -66,6 +111,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    for (int i = 0; i < elements_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, elements_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -81,6 +130,8 @@ private static final long serialVersionUID = 0L;
     }
     com.dice.Reponse.ZPOPMAXRes other = (com.dice.Reponse.ZPOPMAXRes) obj;
 
+    if (!getElementsList()
+        .equals(other.getElementsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -92,6 +143,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (getElementsCount() > 0) {
+      hash = (37 * hash) + ELEMENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getElementsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -220,6 +275,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      if (elementsBuilder_ == null) {
+        elements_ = java.util.Collections.emptyList();
+      } else {
+        elements_ = null;
+        elementsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -246,8 +309,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.dice.Reponse.ZPOPMAXRes buildPartial() {
       com.dice.Reponse.ZPOPMAXRes result = new com.dice.Reponse.ZPOPMAXRes(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.dice.Reponse.ZPOPMAXRes result) {
+      if (elementsBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          elements_ = java.util.Collections.unmodifiableList(elements_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.elements_ = elements_;
+      } else {
+        result.elements_ = elementsBuilder_.build();
+      }
+    }
+
+    private void buildPartial0(com.dice.Reponse.ZPOPMAXRes result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -294,6 +375,32 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.dice.Reponse.ZPOPMAXRes other) {
       if (other == com.dice.Reponse.ZPOPMAXRes.getDefaultInstance()) return this;
+      if (elementsBuilder_ == null) {
+        if (!other.elements_.isEmpty()) {
+          if (elements_.isEmpty()) {
+            elements_ = other.elements_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureElementsIsMutable();
+            elements_.addAll(other.elements_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.elements_.isEmpty()) {
+          if (elementsBuilder_.isEmpty()) {
+            elementsBuilder_.dispose();
+            elementsBuilder_ = null;
+            elements_ = other.elements_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            elementsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getElementsFieldBuilder() : null;
+          } else {
+            elementsBuilder_.addAllMessages(other.elements_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -320,6 +427,19 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              com.dice.Reponse.ZElement m =
+                  input.readMessage(
+                      com.dice.Reponse.ZElement.parser(),
+                      extensionRegistry);
+              if (elementsBuilder_ == null) {
+                ensureElementsIsMutable();
+                elements_.add(m);
+              } else {
+                elementsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -334,6 +454,247 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int bitField0_;
+
+    private java.util.List<com.dice.Reponse.ZElement> elements_ =
+      java.util.Collections.emptyList();
+    private void ensureElementsIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        elements_ = new java.util.ArrayList<com.dice.Reponse.ZElement>(elements_);
+        bitField0_ |= 0x00000001;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.dice.Reponse.ZElement, com.dice.Reponse.ZElement.Builder, com.dice.Reponse.ZElementOrBuilder> elementsBuilder_;
+
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public java.util.List<com.dice.Reponse.ZElement> getElementsList() {
+      if (elementsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(elements_);
+      } else {
+        return elementsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public int getElementsCount() {
+      if (elementsBuilder_ == null) {
+        return elements_.size();
+      } else {
+        return elementsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public com.dice.Reponse.ZElement getElements(int index) {
+      if (elementsBuilder_ == null) {
+        return elements_.get(index);
+      } else {
+        return elementsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public Builder setElements(
+        int index, com.dice.Reponse.ZElement value) {
+      if (elementsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureElementsIsMutable();
+        elements_.set(index, value);
+        onChanged();
+      } else {
+        elementsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public Builder setElements(
+        int index, com.dice.Reponse.ZElement.Builder builderForValue) {
+      if (elementsBuilder_ == null) {
+        ensureElementsIsMutable();
+        elements_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        elementsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public Builder addElements(com.dice.Reponse.ZElement value) {
+      if (elementsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureElementsIsMutable();
+        elements_.add(value);
+        onChanged();
+      } else {
+        elementsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public Builder addElements(
+        int index, com.dice.Reponse.ZElement value) {
+      if (elementsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureElementsIsMutable();
+        elements_.add(index, value);
+        onChanged();
+      } else {
+        elementsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public Builder addElements(
+        com.dice.Reponse.ZElement.Builder builderForValue) {
+      if (elementsBuilder_ == null) {
+        ensureElementsIsMutable();
+        elements_.add(builderForValue.build());
+        onChanged();
+      } else {
+        elementsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public Builder addElements(
+        int index, com.dice.Reponse.ZElement.Builder builderForValue) {
+      if (elementsBuilder_ == null) {
+        ensureElementsIsMutable();
+        elements_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        elementsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public Builder addAllElements(
+        java.lang.Iterable<? extends com.dice.Reponse.ZElement> values) {
+      if (elementsBuilder_ == null) {
+        ensureElementsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, elements_);
+        onChanged();
+      } else {
+        elementsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public Builder clearElements() {
+      if (elementsBuilder_ == null) {
+        elements_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        elementsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public Builder removeElements(int index) {
+      if (elementsBuilder_ == null) {
+        ensureElementsIsMutable();
+        elements_.remove(index);
+        onChanged();
+      } else {
+        elementsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public com.dice.Reponse.ZElement.Builder getElementsBuilder(
+        int index) {
+      return getElementsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public com.dice.Reponse.ZElementOrBuilder getElementsOrBuilder(
+        int index) {
+      if (elementsBuilder_ == null) {
+        return elements_.get(index);  } else {
+        return elementsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public java.util.List<? extends com.dice.Reponse.ZElementOrBuilder> 
+         getElementsOrBuilderList() {
+      if (elementsBuilder_ != null) {
+        return elementsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(elements_);
+      }
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public com.dice.Reponse.ZElement.Builder addElementsBuilder() {
+      return getElementsFieldBuilder().addBuilder(
+          com.dice.Reponse.ZElement.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public com.dice.Reponse.ZElement.Builder addElementsBuilder(
+        int index) {
+      return getElementsFieldBuilder().addBuilder(
+          index, com.dice.Reponse.ZElement.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .com.dice.Reponse.ZElement elements = 1;</code>
+     */
+    public java.util.List<com.dice.Reponse.ZElement.Builder> 
+         getElementsBuilderList() {
+      return getElementsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.dice.Reponse.ZElement, com.dice.Reponse.ZElement.Builder, com.dice.Reponse.ZElementOrBuilder> 
+        getElementsFieldBuilder() {
+      if (elementsBuilder_ == null) {
+        elementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.dice.Reponse.ZElement, com.dice.Reponse.ZElement.Builder, com.dice.Reponse.ZElementOrBuilder>(
+                elements_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        elements_ = null;
+      }
+      return elementsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -4,18 +4,19 @@
 package com.dice.Reponse;
 
 /**
- * Protobuf type {@code com.dice.Reponse.GETEXRes}
+ * Protobuf type {@code com.dice.Reponse.HElement}
  */
-public final class GETEXRes extends
+public final class HElement extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.dice.Reponse.GETEXRes)
-    GETEXResOrBuilder {
+    // @@protoc_insertion_point(message_implements:com.dice.Reponse.HElement)
+    HElementOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GETEXRes.newBuilder() to construct.
-  private GETEXRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use HElement.newBuilder() to construct.
+  private HElement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GETEXRes() {
+  private HElement() {
+    key_ = "";
     value_ = "";
   }
 
@@ -23,7 +24,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GETEXRes();
+    return new HElement();
   }
 
   @java.lang.Override
@@ -33,22 +34,61 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_GETEXRes_descriptor;
+    return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_HElement_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_GETEXRes_fieldAccessorTable
+    return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_HElement_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.dice.Reponse.GETEXRes.class, com.dice.Reponse.GETEXRes.Builder.class);
+            com.dice.Reponse.HElement.class, com.dice.Reponse.HElement.Builder.class);
   }
 
-  public static final int VALUE_FIELD_NUMBER = 1;
+  public static final int KEY_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object key_ = "";
+  /**
+   * <code>string key = 1;</code>
+   * @return The key.
+   */
+  @java.lang.Override
+  public java.lang.String getKey() {
+    java.lang.Object ref = key_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      key_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string key = 1;</code>
+   * @return The bytes for key.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getKeyBytes() {
+    java.lang.Object ref = key_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      key_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int VALUE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object value_ = "";
   /**
-   * <code>string value = 1;</code>
+   * <code>string value = 2;</code>
    * @return The value.
    */
   @java.lang.Override
@@ -65,7 +105,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string value = 1;</code>
+   * <code>string value = 2;</code>
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -97,8 +137,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -109,8 +152,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -122,11 +168,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.dice.Reponse.GETEXRes)) {
+    if (!(obj instanceof com.dice.Reponse.HElement)) {
       return super.equals(obj);
     }
-    com.dice.Reponse.GETEXRes other = (com.dice.Reponse.GETEXRes) obj;
+    com.dice.Reponse.HElement other = (com.dice.Reponse.HElement) obj;
 
+    if (!getKey()
+        .equals(other.getKey())) return false;
     if (!getValue()
         .equals(other.getValue())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -140,6 +188,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + KEY_FIELD_NUMBER;
+    hash = (53 * hash) + getKey().hashCode();
     hash = (37 * hash) + VALUE_FIELD_NUMBER;
     hash = (53 * hash) + getValue().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -147,69 +197,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.dice.Reponse.GETEXRes parseFrom(
+  public static com.dice.Reponse.HElement parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.dice.Reponse.GETEXRes parseFrom(
+  public static com.dice.Reponse.HElement parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.dice.Reponse.GETEXRes parseFrom(
+  public static com.dice.Reponse.HElement parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.dice.Reponse.GETEXRes parseFrom(
+  public static com.dice.Reponse.HElement parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.dice.Reponse.GETEXRes parseFrom(byte[] data)
+  public static com.dice.Reponse.HElement parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.dice.Reponse.GETEXRes parseFrom(
+  public static com.dice.Reponse.HElement parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.dice.Reponse.GETEXRes parseFrom(java.io.InputStream input)
+  public static com.dice.Reponse.HElement parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.dice.Reponse.GETEXRes parseFrom(
+  public static com.dice.Reponse.HElement parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.dice.Reponse.GETEXRes parseDelimitedFrom(java.io.InputStream input)
+  public static com.dice.Reponse.HElement parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.dice.Reponse.GETEXRes parseDelimitedFrom(
+  public static com.dice.Reponse.HElement parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.dice.Reponse.GETEXRes parseFrom(
+  public static com.dice.Reponse.HElement parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.dice.Reponse.GETEXRes parseFrom(
+  public static com.dice.Reponse.HElement parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -222,7 +272,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.dice.Reponse.GETEXRes prototype) {
+  public static Builder newBuilder(com.dice.Reponse.HElement prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -238,26 +288,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.dice.Reponse.GETEXRes}
+   * Protobuf type {@code com.dice.Reponse.HElement}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.dice.Reponse.GETEXRes)
-      com.dice.Reponse.GETEXResOrBuilder {
+      // @@protoc_insertion_point(builder_implements:com.dice.Reponse.HElement)
+      com.dice.Reponse.HElementOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_GETEXRes_descriptor;
+      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_HElement_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_GETEXRes_fieldAccessorTable
+      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_HElement_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.dice.Reponse.GETEXRes.class, com.dice.Reponse.GETEXRes.Builder.class);
+              com.dice.Reponse.HElement.class, com.dice.Reponse.HElement.Builder.class);
     }
 
-    // Construct using com.dice.Reponse.GETEXRes.newBuilder()
+    // Construct using com.dice.Reponse.HElement.newBuilder()
     private Builder() {
 
     }
@@ -271,6 +321,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      key_ = "";
       value_ = "";
       return this;
     }
@@ -278,17 +329,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_GETEXRes_descriptor;
+      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_HElement_descriptor;
     }
 
     @java.lang.Override
-    public com.dice.Reponse.GETEXRes getDefaultInstanceForType() {
-      return com.dice.Reponse.GETEXRes.getDefaultInstance();
+    public com.dice.Reponse.HElement getDefaultInstanceForType() {
+      return com.dice.Reponse.HElement.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.dice.Reponse.GETEXRes build() {
-      com.dice.Reponse.GETEXRes result = buildPartial();
+    public com.dice.Reponse.HElement build() {
+      com.dice.Reponse.HElement result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -296,16 +347,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.dice.Reponse.GETEXRes buildPartial() {
-      com.dice.Reponse.GETEXRes result = new com.dice.Reponse.GETEXRes(this);
+    public com.dice.Reponse.HElement buildPartial() {
+      com.dice.Reponse.HElement result = new com.dice.Reponse.HElement(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.dice.Reponse.GETEXRes result) {
+    private void buildPartial0(com.dice.Reponse.HElement result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.key_ = key_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.value_ = value_;
       }
     }
@@ -344,19 +398,24 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.dice.Reponse.GETEXRes) {
-        return mergeFrom((com.dice.Reponse.GETEXRes)other);
+      if (other instanceof com.dice.Reponse.HElement) {
+        return mergeFrom((com.dice.Reponse.HElement)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.dice.Reponse.GETEXRes other) {
-      if (other == com.dice.Reponse.GETEXRes.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.dice.Reponse.HElement other) {
+      if (other == com.dice.Reponse.HElement.getDefaultInstance()) return this;
+      if (!other.getKey().isEmpty()) {
+        key_ = other.key_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (!other.getValue().isEmpty()) {
         value_ = other.value_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -386,10 +445,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              value_ = input.readStringRequireUtf8();
+              key_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              value_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -407,9 +471,81 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object key_ = "";
+    /**
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @param value The key to set.
+     * @return This builder for chaining.
+     */
+    public Builder setKey(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      key_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearKey() {
+      key_ = getDefaultInstance().getKey();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @param value The bytes for key to set.
+     * @return This builder for chaining.
+     */
+    public Builder setKeyBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      key_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object value_ = "";
     /**
-     * <code>string value = 1;</code>
+     * <code>string value = 2;</code>
      * @return The value.
      */
     public java.lang.String getValue() {
@@ -425,7 +561,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 1;</code>
+     * <code>string value = 2;</code>
      * @return The bytes for value.
      */
     public com.google.protobuf.ByteString
@@ -442,7 +578,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 1;</code>
+     * <code>string value = 2;</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -450,22 +586,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       value_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string value = 1;</code>
+     * <code>string value = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {
       value_ = getDefaultInstance().getValue();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string value = 1;</code>
+     * <code>string value = 2;</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */
@@ -474,7 +610,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       value_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -491,23 +627,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.dice.Reponse.GETEXRes)
+    // @@protoc_insertion_point(builder_scope:com.dice.Reponse.HElement)
   }
 
-  // @@protoc_insertion_point(class_scope:com.dice.Reponse.GETEXRes)
-  private static final com.dice.Reponse.GETEXRes DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:com.dice.Reponse.HElement)
+  private static final com.dice.Reponse.HElement DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.dice.Reponse.GETEXRes();
+    DEFAULT_INSTANCE = new com.dice.Reponse.HElement();
   }
 
-  public static com.dice.Reponse.GETEXRes getDefaultInstance() {
+  public static com.dice.Reponse.HElement getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GETEXRes>
-      PARSER = new com.google.protobuf.AbstractParser<GETEXRes>() {
+  private static final com.google.protobuf.Parser<HElement>
+      PARSER = new com.google.protobuf.AbstractParser<HElement>() {
     @java.lang.Override
-    public GETEXRes parsePartialFrom(
+    public HElement parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -526,17 +662,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GETEXRes> parser() {
+  public static com.google.protobuf.Parser<HElement> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GETEXRes> getParserForType() {
+  public com.google.protobuf.Parser<HElement> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.dice.Reponse.GETEXRes getDefaultInstanceForType() {
+  public com.dice.Reponse.HElement getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

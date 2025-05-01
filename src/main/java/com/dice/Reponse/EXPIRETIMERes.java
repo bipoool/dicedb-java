@@ -43,6 +43,17 @@ private static final long serialVersionUID = 0L;
             com.dice.Reponse.EXPIRETIMERes.class, com.dice.Reponse.EXPIRETIMERes.Builder.class);
   }
 
+  public static final int UNIXSEC_FIELD_NUMBER = 1;
+  private long unixSec_ = 0L;
+  /**
+   * <code>int64 unixSec = 1;</code>
+   * @return The unixSec.
+   */
+  @java.lang.Override
+  public long getUnixSec() {
+    return unixSec_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -57,6 +68,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (unixSec_ != 0L) {
+      output.writeInt64(1, unixSec_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -66,6 +80,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (unixSec_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, unixSec_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -81,6 +99,8 @@ private static final long serialVersionUID = 0L;
     }
     com.dice.Reponse.EXPIRETIMERes other = (com.dice.Reponse.EXPIRETIMERes) obj;
 
+    if (getUnixSec()
+        != other.getUnixSec()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -92,6 +112,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + UNIXSEC_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getUnixSec());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -220,6 +243,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      unixSec_ = 0L;
       return this;
     }
 
@@ -246,8 +271,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.dice.Reponse.EXPIRETIMERes buildPartial() {
       com.dice.Reponse.EXPIRETIMERes result = new com.dice.Reponse.EXPIRETIMERes(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.dice.Reponse.EXPIRETIMERes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.unixSec_ = unixSec_;
+      }
     }
 
     @java.lang.Override
@@ -294,6 +327,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.dice.Reponse.EXPIRETIMERes other) {
       if (other == com.dice.Reponse.EXPIRETIMERes.getDefaultInstance()) return this;
+      if (other.getUnixSec() != 0L) {
+        setUnixSec(other.getUnixSec());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -320,6 +356,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              unixSec_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -333,6 +374,39 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private long unixSec_ ;
+    /**
+     * <code>int64 unixSec = 1;</code>
+     * @return The unixSec.
+     */
+    @java.lang.Override
+    public long getUnixSec() {
+      return unixSec_;
+    }
+    /**
+     * <code>int64 unixSec = 1;</code>
+     * @param value The unixSec to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUnixSec(long value) {
+      
+      unixSec_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 unixSec = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUnixSec() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      unixSec_ = 0L;
+      onChanged();
       return this;
     }
     @java.lang.Override

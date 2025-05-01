@@ -15,6 +15,16 @@ public final class ResponseProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_dice_Reponse_HElement_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_dice_Reponse_HElement_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_dice_Reponse_ZElement_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_dice_Reponse_ZElement_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_dice_Reponse_TYPERes_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -229,323 +239,352 @@ public final class ResponseProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\'src/main/resources/proto/response.prot" +
-      "o\022\020com.dice.Reponse\"\t\n\007TYPERes\"\t\n\007PINGRe" +
-      "s\"\t\n\007ECHORes\"\016\n\014HANDSHAKERes\"\013\n\tEXISTSRe" +
-      "s\"\027\n\006GETRes\022\r\n\005Value\030\001 \001(\t\"\010\n\006SETRes\"\010\n\006" +
-      "DELRes\"\t\n\007KEYSRes\"\013\n\tGETDELRes\"\n\n\010GETEXR" +
-      "es\"\013\n\tGETSETRes\"\t\n\007INCRRes\"\t\n\007DECRRes\"\013\n" +
-      "\tINCRBYRes\"\013\n\tDECRBYRes\"\014\n\nFLUSHDBRes\"\013\n" +
-      "\tEXPIRERes\"\r\n\013EXPIREATRes\"\017\n\rEXPIRETIMER" +
-      "es\"\010\n\006TTLRes\"\r\n\013GETWATCHRes\"\014\n\nUNWATCHRe" +
-      "s\"\t\n\007HGETRes\"\t\n\007HSETRes\"\014\n\nHGETALLRes\"\016\n" +
-      "\014HGETWATCHRes\"\021\n\017HGETALLWATCHRes\"\t\n\007ZADD" +
-      "Res\"\013\n\tZCOUNTRes\"\013\n\tZRANGERes\"\014\n\nZPOPMAX" +
-      "Res\"\t\n\007ZREMRes\"\014\n\nZPOPMINRes\"\n\n\010ZRANKRes" +
-      "\"\n\n\010ZCARDRes\"\020\n\016ZRANGEWATCHRes\"\020\n\016ZCOUNT" +
-      "WATCHRes\"\017\n\rZCARDWATCHRes\"\017\n\rZRANKWATCHR" +
-      "es\"\310\020\n\010Response\022(\n\006status\030\001 \001(\0162\030.com.di" +
-      "ce.Reponse.Status\022\017\n\007message\030\002 \001(\t\022\025\n\rfi" +
-      "ngerprint64\030\003 \001(\004\022,\n\007TYPERes\030\013 \001(\0132\031.com" +
-      ".dice.Reponse.TYPEResH\000\022,\n\007PINGRes\030\014 \001(\013" +
-      "2\031.com.dice.Reponse.PINGResH\000\022,\n\007ECHORes" +
-      "\030\r \001(\0132\031.com.dice.Reponse.ECHOResH\000\0226\n\014H" +
-      "ANDSHAKERes\030\016 \001(\0132\036.com.dice.Reponse.HAN" +
-      "DSHAKEResH\000\0220\n\tEXISTSRes\030\017 \001(\0132\033.com.dic" +
-      "e.Reponse.EXISTSResH\000\022*\n\006GETRes\030\020 \001(\0132\030." +
-      "com.dice.Reponse.GETResH\000\022*\n\006SETRes\030\021 \001(" +
-      "\0132\030.com.dice.Reponse.SETResH\000\022*\n\006DELRes\030" +
-      "\022 \001(\0132\030.com.dice.Reponse.DELResH\000\022,\n\007KEY" +
-      "SRes\030\023 \001(\0132\031.com.dice.Reponse.KEYSResH\000\022" +
-      "0\n\tGETDELRes\030\024 \001(\0132\033.com.dice.Reponse.GE" +
-      "TDELResH\000\022.\n\010GETEXRes\030\025 \001(\0132\032.com.dice.R" +
-      "eponse.GETEXResH\000\0220\n\tGETSETRes\030\026 \001(\0132\033.c" +
-      "om.dice.Reponse.GETSETResH\000\022,\n\007INCRRes\030\027" +
-      " \001(\0132\031.com.dice.Reponse.INCRResH\000\022,\n\007DEC" +
-      "RRes\030\030 \001(\0132\031.com.dice.Reponse.DECRResH\000\022" +
-      "0\n\tINCRBYRes\030\031 \001(\0132\033.com.dice.Reponse.IN" +
-      "CRBYResH\000\0220\n\tDECRBYRes\030\032 \001(\0132\033.com.dice." +
-      "Reponse.DECRBYResH\000\0222\n\nFLUSHDBRes\030\033 \001(\0132" +
-      "\034.com.dice.Reponse.FLUSHDBResH\000\0220\n\tEXPIR" +
-      "ERes\030\034 \001(\0132\033.com.dice.Reponse.EXPIREResH" +
-      "\000\0224\n\013EXPIREATRes\030\035 \001(\0132\035.com.dice.Repons" +
-      "e.EXPIREATResH\000\0228\n\rEXPIRETIMERes\030\036 \001(\0132\037" +
-      ".com.dice.Reponse.EXPIRETIMEResH\000\022*\n\006TTL" +
-      "Res\030\037 \001(\0132\030.com.dice.Reponse.TTLResH\000\0224\n" +
-      "\013GETWATCHRes\030  \001(\0132\035.com.dice.Reponse.GE" +
-      "TWATCHResH\000\0222\n\nUNWATCHRes\030! \001(\0132\034.com.di" +
-      "ce.Reponse.UNWATCHResH\000\022,\n\007HGETRes\030\" \001(\013" +
-      "2\031.com.dice.Reponse.HGETResH\000\022,\n\007HSETRes" +
-      "\030# \001(\0132\031.com.dice.Reponse.HSETResH\000\0222\n\nH" +
-      "GETALLRes\030$ \001(\0132\034.com.dice.Reponse.HGETA" +
-      "LLResH\000\0226\n\014HGETWATCHRes\030% \001(\0132\036.com.dice" +
-      ".Reponse.HGETWATCHResH\000\022<\n\017HGETALLWATCHR" +
-      "es\030& \001(\0132!.com.dice.Reponse.HGETALLWATCH" +
-      "ResH\000\022,\n\007ZADDRes\030\' \001(\0132\031.com.dice.Repons" +
-      "e.ZADDResH\000\0220\n\tZCOUNTRes\030( \001(\0132\033.com.dic" +
-      "e.Reponse.ZCOUNTResH\000\0220\n\tZRANGERes\030) \001(\013" +
-      "2\033.com.dice.Reponse.ZRANGEResH\000\0222\n\nZPOPM" +
-      "AXRes\030* \001(\0132\034.com.dice.Reponse.ZPOPMAXRe" +
-      "sH\000\022,\n\007ZREMRes\030+ \001(\0132\031.com.dice.Reponse." +
-      "ZREMResH\000\0222\n\nZPOPMINRes\030, \001(\0132\034.com.dice" +
-      ".Reponse.ZPOPMINResH\000\022.\n\010ZRANKRes\030- \001(\0132" +
-      "\032.com.dice.Reponse.ZRANKResH\000\022.\n\010ZCARDRe" +
-      "s\030. \001(\0132\032.com.dice.Reponse.ZCARDResH\000\022:\n" +
-      "\016ZRANGEWATCHRes\030/ \001(\0132 .com.dice.Reponse" +
-      ".ZRANGEWATCHResH\000\022:\n\016ZCOUNTWATCHRes\0300 \001(" +
-      "\0132 .com.dice.Reponse.ZCOUNTWATCHResH\000\0228\n" +
-      "\rZCARDWATCHRes\0301 \001(\0132\037.com.dice.Reponse." +
-      "ZCARDWATCHResH\000\0228\n\rZRANKWATCHRes\0302 \001(\0132\037" +
-      ".com.dice.Reponse.ZRANKWATCHResH\000B\n\n\010res" +
-      "ponse*\'\n\006Status\022\r\n\tStatus_OK\020\000\022\016\n\nStatus" +
-      "_ERR\020\001B#\n\020com.dice.ReponseB\rResponseProt" +
-      "oP\001b\006proto3"
+      "o\022\020com.dice.Reponse\"&\n\010HElement\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t\"7\n\010ZElement\022\r\n\005score" +
+      "\030\001 \001(\003\022\016\n\006member\030\002 \001(\t\022\014\n\004rank\030\003 \001(\003\"\027\n\007" +
+      "TYPERes\022\014\n\004type\030\001 \001(\t\"\032\n\007PINGRes\022\017\n\007mess" +
+      "age\030\001 \001(\t\"\032\n\007ECHORes\022\017\n\007message\030\001 \001(\t\"\016\n" +
+      "\014HANDSHAKERes\"\032\n\tEXISTSRes\022\r\n\005count\030\001 \001(" +
+      "\003\"\027\n\006GETRes\022\r\n\005value\030\001 \001(\t\"\027\n\006SETRes\022\r\n\005" +
+      "value\030\001 \001(\t\"\027\n\006DELRes\022\r\n\005count\030\001 \001(\003\"\027\n\007" +
+      "KEYSRes\022\014\n\004keys\030\001 \003(\t\"\032\n\tGETDELRes\022\r\n\005va" +
+      "lue\030\001 \001(\t\"\031\n\010GETEXRes\022\r\n\005value\030\001 \001(\t\"\032\n\t" +
+      "GETSETRes\022\r\n\005value\030\001 \001(\t\"\030\n\007INCRRes\022\r\n\005v" +
+      "alue\030\001 \001(\003\"\030\n\007DECRRes\022\r\n\005value\030\001 \001(\003\"\032\n\t" +
+      "INCRBYRes\022\r\n\005value\030\001 \001(\003\"\032\n\tDECRBYRes\022\r\n" +
+      "\005value\030\001 \001(\003\"\014\n\nFLUSHDBRes\"\036\n\tEXPIRERes\022" +
+      "\021\n\tisChanged\030\001 \001(\010\" \n\013EXPIREATRes\022\021\n\tisC" +
+      "hanged\030\001 \001(\010\" \n\rEXPIRETIMERes\022\017\n\007unixSec" +
+      "\030\001 \001(\003\"\031\n\006TTLRes\022\017\n\007seconds\030\001 \001(\003\"\r\n\013GET" +
+      "WATCHRes\"\014\n\nUNWATCHRes\"\030\n\007HGETRes\022\r\n\005val" +
+      "ue\030\001 \001(\t\"\030\n\007HSETRes\022\r\n\005count\030\001 \001(\003\":\n\nHG" +
+      "ETALLRes\022,\n\010elements\030\001 \003(\0132\032.com.dice.Re" +
+      "ponse.HElement\"\016\n\014HGETWATCHRes\"\021\n\017HGETAL" +
+      "LWATCHRes\"\030\n\007ZADDRes\022\r\n\005count\030\001 \001(\003\"\032\n\tZ" +
+      "COUNTRes\022\r\n\005count\030\001 \001(\003\"9\n\tZRANGERes\022,\n\010" +
+      "elements\030\001 \003(\0132\032.com.dice.Reponse.ZEleme" +
+      "nt\":\n\nZPOPMAXRes\022,\n\010elements\030\001 \003(\0132\032.com" +
+      ".dice.Reponse.ZElement\"\030\n\007ZREMRes\022\r\n\005cou" +
+      "nt\030\001 \001(\003\":\n\nZPOPMINRes\022,\n\010elements\030\001 \003(\013" +
+      "2\032.com.dice.Reponse.ZElement\"7\n\010ZRANKRes" +
+      "\022+\n\007element\030\002 \001(\0132\032.com.dice.Reponse.ZEl" +
+      "ement\"\031\n\010ZCARDRes\022\r\n\005count\030\001 \001(\003\"\020\n\016ZRAN" +
+      "GEWATCHRes\"\020\n\016ZCOUNTWATCHRes\"\017\n\rZCARDWAT" +
+      "CHRes\"\017\n\rZRANKWATCHRes\"\310\020\n\010Response\022(\n\006s" +
+      "tatus\030\001 \001(\0162\030.com.dice.Reponse.Status\022\017\n" +
+      "\007message\030\002 \001(\t\022\025\n\rfingerprint64\030\003 \001(\004\022,\n" +
+      "\007TYPERes\030\013 \001(\0132\031.com.dice.Reponse.TYPERe" +
+      "sH\000\022,\n\007PINGRes\030\014 \001(\0132\031.com.dice.Reponse." +
+      "PINGResH\000\022,\n\007ECHORes\030\r \001(\0132\031.com.dice.Re" +
+      "ponse.ECHOResH\000\0226\n\014HANDSHAKERes\030\016 \001(\0132\036." +
+      "com.dice.Reponse.HANDSHAKEResH\000\0220\n\tEXIST" +
+      "SRes\030\017 \001(\0132\033.com.dice.Reponse.EXISTSResH" +
+      "\000\022*\n\006GETRes\030\020 \001(\0132\030.com.dice.Reponse.GET" +
+      "ResH\000\022*\n\006SETRes\030\021 \001(\0132\030.com.dice.Reponse" +
+      ".SETResH\000\022*\n\006DELRes\030\022 \001(\0132\030.com.dice.Rep" +
+      "onse.DELResH\000\022,\n\007KEYSRes\030\023 \001(\0132\031.com.dic" +
+      "e.Reponse.KEYSResH\000\0220\n\tGETDELRes\030\024 \001(\0132\033" +
+      ".com.dice.Reponse.GETDELResH\000\022.\n\010GETEXRe" +
+      "s\030\025 \001(\0132\032.com.dice.Reponse.GETEXResH\000\0220\n" +
+      "\tGETSETRes\030\026 \001(\0132\033.com.dice.Reponse.GETS" +
+      "ETResH\000\022,\n\007INCRRes\030\027 \001(\0132\031.com.dice.Repo" +
+      "nse.INCRResH\000\022,\n\007DECRRes\030\030 \001(\0132\031.com.dic" +
+      "e.Reponse.DECRResH\000\0220\n\tINCRBYRes\030\031 \001(\0132\033" +
+      ".com.dice.Reponse.INCRBYResH\000\0220\n\tDECRBYR" +
+      "es\030\032 \001(\0132\033.com.dice.Reponse.DECRBYResH\000\022" +
+      "2\n\nFLUSHDBRes\030\033 \001(\0132\034.com.dice.Reponse.F" +
+      "LUSHDBResH\000\0220\n\tEXPIRERes\030\034 \001(\0132\033.com.dic" +
+      "e.Reponse.EXPIREResH\000\0224\n\013EXPIREATRes\030\035 \001" +
+      "(\0132\035.com.dice.Reponse.EXPIREATResH\000\0228\n\rE" +
+      "XPIRETIMERes\030\036 \001(\0132\037.com.dice.Reponse.EX" +
+      "PIRETIMEResH\000\022*\n\006TTLRes\030\037 \001(\0132\030.com.dice" +
+      ".Reponse.TTLResH\000\0224\n\013GETWATCHRes\030  \001(\0132\035" +
+      ".com.dice.Reponse.GETWATCHResH\000\0222\n\nUNWAT" +
+      "CHRes\030! \001(\0132\034.com.dice.Reponse.UNWATCHRe" +
+      "sH\000\022,\n\007HGETRes\030\" \001(\0132\031.com.dice.Reponse." +
+      "HGETResH\000\022,\n\007HSETRes\030# \001(\0132\031.com.dice.Re" +
+      "ponse.HSETResH\000\0222\n\nHGETALLRes\030$ \001(\0132\034.co" +
+      "m.dice.Reponse.HGETALLResH\000\0226\n\014HGETWATCH" +
+      "Res\030% \001(\0132\036.com.dice.Reponse.HGETWATCHRe" +
+      "sH\000\022<\n\017HGETALLWATCHRes\030& \001(\0132!.com.dice." +
+      "Reponse.HGETALLWATCHResH\000\022,\n\007ZADDRes\030\' \001" +
+      "(\0132\031.com.dice.Reponse.ZADDResH\000\0220\n\tZCOUN" +
+      "TRes\030( \001(\0132\033.com.dice.Reponse.ZCOUNTResH" +
+      "\000\0220\n\tZRANGERes\030) \001(\0132\033.com.dice.Reponse." +
+      "ZRANGEResH\000\0222\n\nZPOPMAXRes\030* \001(\0132\034.com.di" +
+      "ce.Reponse.ZPOPMAXResH\000\022,\n\007ZREMRes\030+ \001(\013" +
+      "2\031.com.dice.Reponse.ZREMResH\000\0222\n\nZPOPMIN" +
+      "Res\030, \001(\0132\034.com.dice.Reponse.ZPOPMINResH" +
+      "\000\022.\n\010ZRANKRes\030- \001(\0132\032.com.dice.Reponse.Z" +
+      "RANKResH\000\022.\n\010ZCARDRes\030. \001(\0132\032.com.dice.R" +
+      "eponse.ZCARDResH\000\022:\n\016ZRANGEWATCHRes\030/ \001(" +
+      "\0132 .com.dice.Reponse.ZRANGEWATCHResH\000\022:\n" +
+      "\016ZCOUNTWATCHRes\0300 \001(\0132 .com.dice.Reponse" +
+      ".ZCOUNTWATCHResH\000\0228\n\rZCARDWATCHRes\0301 \001(\013" +
+      "2\037.com.dice.Reponse.ZCARDWATCHResH\000\0228\n\rZ" +
+      "RANKWATCHRes\0302 \001(\0132\037.com.dice.Reponse.ZR" +
+      "ANKWATCHResH\000B\n\n\010response*\'\n\006Status\022\r\n\tS" +
+      "tatus_OK\020\000\022\016\n\nStatus_ERR\020\001B#\n\020com.dice.R" +
+      "eponseB\rResponseProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_com_dice_Reponse_TYPERes_descriptor =
+    internal_static_com_dice_Reponse_HElement_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_com_dice_Reponse_HElement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_dice_Reponse_HElement_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_com_dice_Reponse_ZElement_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_dice_Reponse_ZElement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_dice_Reponse_ZElement_descriptor,
+        new java.lang.String[] { "Score", "Member", "Rank", });
+    internal_static_com_dice_Reponse_TYPERes_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_com_dice_Reponse_TYPERes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_TYPERes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Type", });
     internal_static_com_dice_Reponse_PINGRes_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_com_dice_Reponse_PINGRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_PINGRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Message", });
     internal_static_com_dice_Reponse_ECHORes_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_com_dice_Reponse_ECHORes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ECHORes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Message", });
     internal_static_com_dice_Reponse_HANDSHAKERes_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_com_dice_Reponse_HANDSHAKERes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_HANDSHAKERes_descriptor,
         new java.lang.String[] { });
     internal_static_com_dice_Reponse_EXISTSRes_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_com_dice_Reponse_EXISTSRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_EXISTSRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Count", });
     internal_static_com_dice_Reponse_GETRes_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_com_dice_Reponse_GETRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_GETRes_descriptor,
         new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_SETRes_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_com_dice_Reponse_SETRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_SETRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_DELRes_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_com_dice_Reponse_DELRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_DELRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Count", });
     internal_static_com_dice_Reponse_KEYSRes_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_com_dice_Reponse_KEYSRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_KEYSRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Keys", });
     internal_static_com_dice_Reponse_GETDELRes_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_com_dice_Reponse_GETDELRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_GETDELRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_GETEXRes_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_com_dice_Reponse_GETEXRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_GETEXRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_GETSETRes_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_com_dice_Reponse_GETSETRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_GETSETRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_INCRRes_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_com_dice_Reponse_INCRRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_INCRRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_DECRRes_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_com_dice_Reponse_DECRRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_DECRRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_INCRBYRes_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_com_dice_Reponse_INCRBYRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_INCRBYRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_DECRBYRes_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_com_dice_Reponse_DECRBYRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_DECRBYRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_FLUSHDBRes_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_com_dice_Reponse_FLUSHDBRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_FLUSHDBRes_descriptor,
         new java.lang.String[] { });
     internal_static_com_dice_Reponse_EXPIRERes_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_com_dice_Reponse_EXPIRERes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_EXPIRERes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "IsChanged", });
     internal_static_com_dice_Reponse_EXPIREATRes_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_com_dice_Reponse_EXPIREATRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_EXPIREATRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "IsChanged", });
     internal_static_com_dice_Reponse_EXPIRETIMERes_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_com_dice_Reponse_EXPIRETIMERes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_EXPIRETIMERes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "UnixSec", });
     internal_static_com_dice_Reponse_TTLRes_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_com_dice_Reponse_TTLRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_TTLRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Seconds", });
     internal_static_com_dice_Reponse_GETWATCHRes_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_com_dice_Reponse_GETWATCHRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_GETWATCHRes_descriptor,
         new java.lang.String[] { });
     internal_static_com_dice_Reponse_UNWATCHRes_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_com_dice_Reponse_UNWATCHRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_UNWATCHRes_descriptor,
         new java.lang.String[] { });
     internal_static_com_dice_Reponse_HGETRes_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_com_dice_Reponse_HGETRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_HGETRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_HSETRes_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_com_dice_Reponse_HSETRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_HSETRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Count", });
     internal_static_com_dice_Reponse_HGETALLRes_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_com_dice_Reponse_HGETALLRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_HGETALLRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Elements", });
     internal_static_com_dice_Reponse_HGETWATCHRes_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_com_dice_Reponse_HGETWATCHRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_HGETWATCHRes_descriptor,
         new java.lang.String[] { });
     internal_static_com_dice_Reponse_HGETALLWATCHRes_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_com_dice_Reponse_HGETALLWATCHRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_HGETALLWATCHRes_descriptor,
         new java.lang.String[] { });
     internal_static_com_dice_Reponse_ZADDRes_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_com_dice_Reponse_ZADDRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZADDRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Count", });
     internal_static_com_dice_Reponse_ZCOUNTRes_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_com_dice_Reponse_ZCOUNTRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZCOUNTRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Count", });
     internal_static_com_dice_Reponse_ZRANGERes_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_com_dice_Reponse_ZRANGERes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZRANGERes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Elements", });
     internal_static_com_dice_Reponse_ZPOPMAXRes_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_com_dice_Reponse_ZPOPMAXRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZPOPMAXRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Elements", });
     internal_static_com_dice_Reponse_ZREMRes_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_com_dice_Reponse_ZREMRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZREMRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Count", });
     internal_static_com_dice_Reponse_ZPOPMINRes_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_com_dice_Reponse_ZPOPMINRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZPOPMINRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Elements", });
     internal_static_com_dice_Reponse_ZRANKRes_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_com_dice_Reponse_ZRANKRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZRANKRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Element", });
     internal_static_com_dice_Reponse_ZCARDRes_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_com_dice_Reponse_ZCARDRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZCARDRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Count", });
     internal_static_com_dice_Reponse_ZRANGEWATCHRes_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_com_dice_Reponse_ZRANGEWATCHRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZRANGEWATCHRes_descriptor,
         new java.lang.String[] { });
     internal_static_com_dice_Reponse_ZCOUNTWATCHRes_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_com_dice_Reponse_ZCOUNTWATCHRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZCOUNTWATCHRes_descriptor,
         new java.lang.String[] { });
     internal_static_com_dice_Reponse_ZCARDWATCHRes_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_com_dice_Reponse_ZCARDWATCHRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZCARDWATCHRes_descriptor,
         new java.lang.String[] { });
     internal_static_com_dice_Reponse_ZRANKWATCHRes_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_com_dice_Reponse_ZRANKWATCHRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_ZRANKWATCHRes_descriptor,
         new java.lang.String[] { });
     internal_static_com_dice_Reponse_Response_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_com_dice_Reponse_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_Response_descriptor,

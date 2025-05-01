@@ -43,6 +43,17 @@ private static final long serialVersionUID = 0L;
             com.dice.Reponse.EXISTSRes.class, com.dice.Reponse.EXISTSRes.Builder.class);
   }
 
+  public static final int COUNT_FIELD_NUMBER = 1;
+  private long count_ = 0L;
+  /**
+   * <code>int64 count = 1;</code>
+   * @return The count.
+   */
+  @java.lang.Override
+  public long getCount() {
+    return count_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -57,6 +68,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (count_ != 0L) {
+      output.writeInt64(1, count_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -66,6 +80,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (count_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, count_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -81,6 +99,8 @@ private static final long serialVersionUID = 0L;
     }
     com.dice.Reponse.EXISTSRes other = (com.dice.Reponse.EXISTSRes) obj;
 
+    if (getCount()
+        != other.getCount()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -92,6 +112,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCount());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -220,6 +243,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      count_ = 0L;
       return this;
     }
 
@@ -246,8 +271,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.dice.Reponse.EXISTSRes buildPartial() {
       com.dice.Reponse.EXISTSRes result = new com.dice.Reponse.EXISTSRes(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.dice.Reponse.EXISTSRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.count_ = count_;
+      }
     }
 
     @java.lang.Override
@@ -294,6 +327,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.dice.Reponse.EXISTSRes other) {
       if (other == com.dice.Reponse.EXISTSRes.getDefaultInstance()) return this;
+      if (other.getCount() != 0L) {
+        setCount(other.getCount());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -320,6 +356,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              count_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -333,6 +374,39 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private long count_ ;
+    /**
+     * <code>int64 count = 1;</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public long getCount() {
+      return count_;
+    }
+    /**
+     * <code>int64 count = 1;</code>
+     * @param value The count to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCount(long value) {
+      
+      count_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 count = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCount() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      count_ = 0L;
+      onChanged();
       return this;
     }
     @java.lang.Override

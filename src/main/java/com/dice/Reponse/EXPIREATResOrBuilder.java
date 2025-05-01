@@ -6,4 +6,10 @@ package com.dice.Reponse;
 public interface EXPIREATResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.EXPIREATRes)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>bool isChanged = 1;</code>
+   * @return The isChanged.
+   */
+  boolean getIsChanged();
 }

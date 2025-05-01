@@ -6,4 +6,10 @@ package com.dice.Reponse;
 public interface INCRResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.INCRRes)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>int64 value = 1;</code>
+   * @return The value.
+   */
+  long getValue();
 }

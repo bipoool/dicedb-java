@@ -43,6 +43,32 @@ private static final long serialVersionUID = 0L;
             com.dice.Reponse.ZRANKRes.class, com.dice.Reponse.ZRANKRes.Builder.class);
   }
 
+  public static final int ELEMENT_FIELD_NUMBER = 2;
+  private com.dice.Reponse.ZElement element_;
+  /**
+   * <code>.com.dice.Reponse.ZElement element = 2;</code>
+   * @return Whether the element field is set.
+   */
+  @java.lang.Override
+  public boolean hasElement() {
+    return element_ != null;
+  }
+  /**
+   * <code>.com.dice.Reponse.ZElement element = 2;</code>
+   * @return The element.
+   */
+  @java.lang.Override
+  public com.dice.Reponse.ZElement getElement() {
+    return element_ == null ? com.dice.Reponse.ZElement.getDefaultInstance() : element_;
+  }
+  /**
+   * <code>.com.dice.Reponse.ZElement element = 2;</code>
+   */
+  @java.lang.Override
+  public com.dice.Reponse.ZElementOrBuilder getElementOrBuilder() {
+    return element_ == null ? com.dice.Reponse.ZElement.getDefaultInstance() : element_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -57,6 +83,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (element_ != null) {
+      output.writeMessage(2, getElement());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -66,6 +95,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (element_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getElement());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -81,6 +114,11 @@ private static final long serialVersionUID = 0L;
     }
     com.dice.Reponse.ZRANKRes other = (com.dice.Reponse.ZRANKRes) obj;
 
+    if (hasElement() != other.hasElement()) return false;
+    if (hasElement()) {
+      if (!getElement()
+          .equals(other.getElement())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -92,6 +130,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasElement()) {
+      hash = (37 * hash) + ELEMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getElement().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -220,6 +262,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      element_ = null;
+      if (elementBuilder_ != null) {
+        elementBuilder_.dispose();
+        elementBuilder_ = null;
+      }
       return this;
     }
 
@@ -246,8 +294,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.dice.Reponse.ZRANKRes buildPartial() {
       com.dice.Reponse.ZRANKRes result = new com.dice.Reponse.ZRANKRes(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.dice.Reponse.ZRANKRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.element_ = elementBuilder_ == null
+            ? element_
+            : elementBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -294,6 +352,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.dice.Reponse.ZRANKRes other) {
       if (other == com.dice.Reponse.ZRANKRes.getDefaultInstance()) return this;
+      if (other.hasElement()) {
+        mergeElement(other.getElement());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -320,6 +381,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 18: {
+              input.readMessage(
+                  getElementFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -334,6 +402,126 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int bitField0_;
+
+    private com.dice.Reponse.ZElement element_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.dice.Reponse.ZElement, com.dice.Reponse.ZElement.Builder, com.dice.Reponse.ZElementOrBuilder> elementBuilder_;
+    /**
+     * <code>.com.dice.Reponse.ZElement element = 2;</code>
+     * @return Whether the element field is set.
+     */
+    public boolean hasElement() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.com.dice.Reponse.ZElement element = 2;</code>
+     * @return The element.
+     */
+    public com.dice.Reponse.ZElement getElement() {
+      if (elementBuilder_ == null) {
+        return element_ == null ? com.dice.Reponse.ZElement.getDefaultInstance() : element_;
+      } else {
+        return elementBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.com.dice.Reponse.ZElement element = 2;</code>
+     */
+    public Builder setElement(com.dice.Reponse.ZElement value) {
+      if (elementBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        element_ = value;
+      } else {
+        elementBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.dice.Reponse.ZElement element = 2;</code>
+     */
+    public Builder setElement(
+        com.dice.Reponse.ZElement.Builder builderForValue) {
+      if (elementBuilder_ == null) {
+        element_ = builderForValue.build();
+      } else {
+        elementBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.dice.Reponse.ZElement element = 2;</code>
+     */
+    public Builder mergeElement(com.dice.Reponse.ZElement value) {
+      if (elementBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          element_ != null &&
+          element_ != com.dice.Reponse.ZElement.getDefaultInstance()) {
+          getElementBuilder().mergeFrom(value);
+        } else {
+          element_ = value;
+        }
+      } else {
+        elementBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.dice.Reponse.ZElement element = 2;</code>
+     */
+    public Builder clearElement() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      element_ = null;
+      if (elementBuilder_ != null) {
+        elementBuilder_.dispose();
+        elementBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.com.dice.Reponse.ZElement element = 2;</code>
+     */
+    public com.dice.Reponse.ZElement.Builder getElementBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getElementFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.com.dice.Reponse.ZElement element = 2;</code>
+     */
+    public com.dice.Reponse.ZElementOrBuilder getElementOrBuilder() {
+      if (elementBuilder_ != null) {
+        return elementBuilder_.getMessageOrBuilder();
+      } else {
+        return element_ == null ?
+            com.dice.Reponse.ZElement.getDefaultInstance() : element_;
+      }
+    }
+    /**
+     * <code>.com.dice.Reponse.ZElement element = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.dice.Reponse.ZElement, com.dice.Reponse.ZElement.Builder, com.dice.Reponse.ZElementOrBuilder> 
+        getElementFieldBuilder() {
+      if (elementBuilder_ == null) {
+        elementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.dice.Reponse.ZElement, com.dice.Reponse.ZElement.Builder, com.dice.Reponse.ZElementOrBuilder>(
+                getElement(),
+                getParentForChildren(),
+                isClean());
+        element_ = null;
+      }
+      return elementBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

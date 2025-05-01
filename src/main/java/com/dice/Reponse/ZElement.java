@@ -4,25 +4,26 @@
 package com.dice.Reponse;
 
 /**
- * Protobuf type {@code com.dice.Reponse.ZREMRes}
+ * Protobuf type {@code com.dice.Reponse.ZElement}
  */
-public final class ZREMRes extends
+public final class ZElement extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:com.dice.Reponse.ZREMRes)
-    ZREMResOrBuilder {
+    // @@protoc_insertion_point(message_implements:com.dice.Reponse.ZElement)
+    ZElementOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ZREMRes.newBuilder() to construct.
-  private ZREMRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ZElement.newBuilder() to construct.
+  private ZElement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ZREMRes() {
+  private ZElement() {
+    member_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ZREMRes();
+    return new ZElement();
   }
 
   @java.lang.Override
@@ -32,26 +33,76 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZREMRes_descriptor;
+    return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZElement_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZREMRes_fieldAccessorTable
+    return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZElement_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.dice.Reponse.ZREMRes.class, com.dice.Reponse.ZREMRes.Builder.class);
+            com.dice.Reponse.ZElement.class, com.dice.Reponse.ZElement.Builder.class);
   }
 
-  public static final int COUNT_FIELD_NUMBER = 1;
-  private long count_ = 0L;
+  public static final int SCORE_FIELD_NUMBER = 1;
+  private long score_ = 0L;
   /**
-   * <code>int64 count = 1;</code>
-   * @return The count.
+   * <code>int64 score = 1;</code>
+   * @return The score.
    */
   @java.lang.Override
-  public long getCount() {
-    return count_;
+  public long getScore() {
+    return score_;
+  }
+
+  public static final int MEMBER_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object member_ = "";
+  /**
+   * <code>string member = 2;</code>
+   * @return The member.
+   */
+  @java.lang.Override
+  public java.lang.String getMember() {
+    java.lang.Object ref = member_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      member_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string member = 2;</code>
+   * @return The bytes for member.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getMemberBytes() {
+    java.lang.Object ref = member_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      member_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int RANK_FIELD_NUMBER = 3;
+  private long rank_ = 0L;
+  /**
+   * <code>int64 rank = 3;</code>
+   * @return The rank.
+   */
+  @java.lang.Override
+  public long getRank() {
+    return rank_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -68,8 +119,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (count_ != 0L) {
-      output.writeInt64(1, count_);
+    if (score_ != 0L) {
+      output.writeInt64(1, score_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(member_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, member_);
+    }
+    if (rank_ != 0L) {
+      output.writeInt64(3, rank_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -80,9 +137,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (count_ != 0L) {
+    if (score_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, count_);
+        .computeInt64Size(1, score_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(member_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, member_);
+    }
+    if (rank_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, rank_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -94,13 +158,17 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.dice.Reponse.ZREMRes)) {
+    if (!(obj instanceof com.dice.Reponse.ZElement)) {
       return super.equals(obj);
     }
-    com.dice.Reponse.ZREMRes other = (com.dice.Reponse.ZREMRes) obj;
+    com.dice.Reponse.ZElement other = (com.dice.Reponse.ZElement) obj;
 
-    if (getCount()
-        != other.getCount()) return false;
+    if (getScore()
+        != other.getScore()) return false;
+    if (!getMember()
+        .equals(other.getMember())) return false;
+    if (getRank()
+        != other.getRank()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -112,77 +180,82 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + COUNT_FIELD_NUMBER;
+    hash = (37 * hash) + SCORE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getCount());
+        getScore());
+    hash = (37 * hash) + MEMBER_FIELD_NUMBER;
+    hash = (53 * hash) + getMember().hashCode();
+    hash = (37 * hash) + RANK_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getRank());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.dice.Reponse.ZREMRes parseFrom(
+  public static com.dice.Reponse.ZElement parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.dice.Reponse.ZREMRes parseFrom(
+  public static com.dice.Reponse.ZElement parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.dice.Reponse.ZREMRes parseFrom(
+  public static com.dice.Reponse.ZElement parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.dice.Reponse.ZREMRes parseFrom(
+  public static com.dice.Reponse.ZElement parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.dice.Reponse.ZREMRes parseFrom(byte[] data)
+  public static com.dice.Reponse.ZElement parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.dice.Reponse.ZREMRes parseFrom(
+  public static com.dice.Reponse.ZElement parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.dice.Reponse.ZREMRes parseFrom(java.io.InputStream input)
+  public static com.dice.Reponse.ZElement parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.dice.Reponse.ZREMRes parseFrom(
+  public static com.dice.Reponse.ZElement parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.dice.Reponse.ZREMRes parseDelimitedFrom(java.io.InputStream input)
+  public static com.dice.Reponse.ZElement parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.dice.Reponse.ZREMRes parseDelimitedFrom(
+  public static com.dice.Reponse.ZElement parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.dice.Reponse.ZREMRes parseFrom(
+  public static com.dice.Reponse.ZElement parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.dice.Reponse.ZREMRes parseFrom(
+  public static com.dice.Reponse.ZElement parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -195,7 +268,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.dice.Reponse.ZREMRes prototype) {
+  public static Builder newBuilder(com.dice.Reponse.ZElement prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -211,26 +284,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code com.dice.Reponse.ZREMRes}
+   * Protobuf type {@code com.dice.Reponse.ZElement}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:com.dice.Reponse.ZREMRes)
-      com.dice.Reponse.ZREMResOrBuilder {
+      // @@protoc_insertion_point(builder_implements:com.dice.Reponse.ZElement)
+      com.dice.Reponse.ZElementOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZREMRes_descriptor;
+      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZElement_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZREMRes_fieldAccessorTable
+      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZElement_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.dice.Reponse.ZREMRes.class, com.dice.Reponse.ZREMRes.Builder.class);
+              com.dice.Reponse.ZElement.class, com.dice.Reponse.ZElement.Builder.class);
     }
 
-    // Construct using com.dice.Reponse.ZREMRes.newBuilder()
+    // Construct using com.dice.Reponse.ZElement.newBuilder()
     private Builder() {
 
     }
@@ -244,24 +317,26 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      count_ = 0L;
+      score_ = 0L;
+      member_ = "";
+      rank_ = 0L;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZREMRes_descriptor;
+      return com.dice.Reponse.ResponseProto.internal_static_com_dice_Reponse_ZElement_descriptor;
     }
 
     @java.lang.Override
-    public com.dice.Reponse.ZREMRes getDefaultInstanceForType() {
-      return com.dice.Reponse.ZREMRes.getDefaultInstance();
+    public com.dice.Reponse.ZElement getDefaultInstanceForType() {
+      return com.dice.Reponse.ZElement.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.dice.Reponse.ZREMRes build() {
-      com.dice.Reponse.ZREMRes result = buildPartial();
+    public com.dice.Reponse.ZElement build() {
+      com.dice.Reponse.ZElement result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -269,17 +344,23 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.dice.Reponse.ZREMRes buildPartial() {
-      com.dice.Reponse.ZREMRes result = new com.dice.Reponse.ZREMRes(this);
+    public com.dice.Reponse.ZElement buildPartial() {
+      com.dice.Reponse.ZElement result = new com.dice.Reponse.ZElement(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.dice.Reponse.ZREMRes result) {
+    private void buildPartial0(com.dice.Reponse.ZElement result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.count_ = count_;
+        result.score_ = score_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.member_ = member_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.rank_ = rank_;
       }
     }
 
@@ -317,18 +398,26 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.dice.Reponse.ZREMRes) {
-        return mergeFrom((com.dice.Reponse.ZREMRes)other);
+      if (other instanceof com.dice.Reponse.ZElement) {
+        return mergeFrom((com.dice.Reponse.ZElement)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.dice.Reponse.ZREMRes other) {
-      if (other == com.dice.Reponse.ZREMRes.getDefaultInstance()) return this;
-      if (other.getCount() != 0L) {
-        setCount(other.getCount());
+    public Builder mergeFrom(com.dice.Reponse.ZElement other) {
+      if (other == com.dice.Reponse.ZElement.getDefaultInstance()) return this;
+      if (other.getScore() != 0L) {
+        setScore(other.getScore());
+      }
+      if (!other.getMember().isEmpty()) {
+        member_ = other.member_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.getRank() != 0L) {
+        setRank(other.getRank());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -357,10 +446,20 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              count_ = input.readInt64();
+              score_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
+            case 18: {
+              member_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              rank_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -378,34 +477,138 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long count_ ;
+    private long score_ ;
     /**
-     * <code>int64 count = 1;</code>
-     * @return The count.
+     * <code>int64 score = 1;</code>
+     * @return The score.
      */
     @java.lang.Override
-    public long getCount() {
-      return count_;
+    public long getScore() {
+      return score_;
     }
     /**
-     * <code>int64 count = 1;</code>
-     * @param value The count to set.
+     * <code>int64 score = 1;</code>
+     * @param value The score to set.
      * @return This builder for chaining.
      */
-    public Builder setCount(long value) {
+    public Builder setScore(long value) {
       
-      count_ = value;
+      score_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 count = 1;</code>
+     * <code>int64 score = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearCount() {
+    public Builder clearScore() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      count_ = 0L;
+      score_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object member_ = "";
+    /**
+     * <code>string member = 2;</code>
+     * @return The member.
+     */
+    public java.lang.String getMember() {
+      java.lang.Object ref = member_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        member_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string member = 2;</code>
+     * @return The bytes for member.
+     */
+    public com.google.protobuf.ByteString
+        getMemberBytes() {
+      java.lang.Object ref = member_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        member_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string member = 2;</code>
+     * @param value The member to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMember(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      member_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string member = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMember() {
+      member_ = getDefaultInstance().getMember();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string member = 2;</code>
+     * @param value The bytes for member to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMemberBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      member_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private long rank_ ;
+    /**
+     * <code>int64 rank = 3;</code>
+     * @return The rank.
+     */
+    @java.lang.Override
+    public long getRank() {
+      return rank_;
+    }
+    /**
+     * <code>int64 rank = 3;</code>
+     * @param value The rank to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRank(long value) {
+      
+      rank_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 rank = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRank() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      rank_ = 0L;
       onChanged();
       return this;
     }
@@ -422,23 +625,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:com.dice.Reponse.ZREMRes)
+    // @@protoc_insertion_point(builder_scope:com.dice.Reponse.ZElement)
   }
 
-  // @@protoc_insertion_point(class_scope:com.dice.Reponse.ZREMRes)
-  private static final com.dice.Reponse.ZREMRes DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:com.dice.Reponse.ZElement)
+  private static final com.dice.Reponse.ZElement DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.dice.Reponse.ZREMRes();
+    DEFAULT_INSTANCE = new com.dice.Reponse.ZElement();
   }
 
-  public static com.dice.Reponse.ZREMRes getDefaultInstance() {
+  public static com.dice.Reponse.ZElement getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ZREMRes>
-      PARSER = new com.google.protobuf.AbstractParser<ZREMRes>() {
+  private static final com.google.protobuf.Parser<ZElement>
+      PARSER = new com.google.protobuf.AbstractParser<ZElement>() {
     @java.lang.Override
-    public ZREMRes parsePartialFrom(
+    public ZElement parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -457,17 +660,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ZREMRes> parser() {
+  public static com.google.protobuf.Parser<ZElement> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ZREMRes> getParserForType() {
+  public com.google.protobuf.Parser<ZElement> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.dice.Reponse.ZREMRes getDefaultInstanceForType() {
+  public com.dice.Reponse.ZElement getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

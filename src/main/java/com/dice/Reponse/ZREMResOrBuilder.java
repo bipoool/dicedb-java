@@ -6,4 +6,10 @@ package com.dice.Reponse;
 public interface ZREMResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:com.dice.Reponse.ZREMRes)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>int64 count = 1;</code>
+   * @return The count.
+   */
+  long getCount();
 }
