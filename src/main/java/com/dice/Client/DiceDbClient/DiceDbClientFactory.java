@@ -1,17 +1,17 @@
 package com.dice.Client.DiceDbClient;
 
+import com.dice.Exceptions.DiceDbException;
+
 public class DiceDbClientFactory {
-    private String host;
-    private int port;
+    private final String host;
+    private final int port;
 
     public DiceDbClientFactory(String host, int port) {
         this.host = host;
         this.port = port;
     }
 
-    public DiceDbClient createClient() throws Exception {
-        DiceDbClient client = new SimpleDiceDbClient(host, port);
-        client.connect();
-        return client;
+    public DiceDbClient createClient() throws DiceDbException {
+        return new SimpleDiceDbClient(host, port);
     }
 }

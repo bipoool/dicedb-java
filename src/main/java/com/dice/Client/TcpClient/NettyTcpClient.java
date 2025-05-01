@@ -1,5 +1,6 @@
 package com.dice.Client.TcpClient;
 
+import com.dice.Exceptions.DiceDbException;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -8,7 +9,6 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.timeout.IdleStateHandler;
 
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 public class NettyTcpClient implements TcpClient {
@@ -41,12 +41,12 @@ public class NettyTcpClient implements TcpClient {
     }
 
     @Override
-    public TcpResponse sendSync(byte[] data) throws ExecutionException, InterruptedException {
+    public TcpResponse sendSync(byte[] data) throws InterruptedException, DiceDbException {
         return tcpHandler.sendSync(data);
     }
 
     @Override
-    public BlockingQueue<TcpResponse> sendAsync(byte[] data) throws ExecutionException, InterruptedException {
+    public BlockingQueue<TcpResponse> sendAsync(byte[] data) throws DiceDbException {
         return tcpHandler.sendAsync(data);
     }
 

@@ -4,20 +4,23 @@ import com.dice.Client.TcpClient.NettyTcpClient;
 import com.dice.Client.TcpClient.TcpClient;
 import com.dice.Client.TcpClient.TcpResponse;
 import com.dice.Command.CommandProto;
+import com.dice.Exceptions.DiceDbException;
 import com.dice.Reponse.Response;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import com.google.protobuf.InvalidProtocolBufferException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static com.dice.Reponse.Status.Status_ERR;
 
 public class SimpleDiceDbClient implements DiceDbClient {
 
-    private static final Logger logger = Logger.getLogger(SimpleDiceDbClient.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(SimpleDiceDbClient.class);
     private final ScheduledExecutorService scheduler;
     BlockingQueue<Response> watchResponseQueue;
     TcpClient tcpClient;
@@ -25,41 +28,53 @@ public class SimpleDiceDbClient implements DiceDbClient {
     int port;
     String clientId;
 
-    public SimpleDiceDbClient(String host, int port) {
+    public SimpleDiceDbClient(String host, int port) throws DiceDbException {
         this.host = host;
         this.port = port;
         this.clientId = UUID.randomUUID().toString();
         this.scheduler = Executors.newSingleThreadScheduledExecutor();
+        this.init();
     }
 
-    @Override
-    public void connect() throws Exception {
-        this.tcpClient = new NettyTcpClient(host, port);
-        Response resp = this.fire(getHandShakeCommand("command"));
-        if (resp.getStatus() == Status_ERR) {
-            throw new Exception("Could not complete the handshake: " + resp.getMessage());
+    private void init() throws DiceDbException {
+        try {
+            this.tcpClient = new NettyTcpClient(host, port);
+            Response resp = this.fire(this.getHandShakeCommand("command"));
+            if (resp.getStatus() == Status_ERR) {
+                throw new DiceDbException(resp.getMessage());
+            }
+            logger.info("Connected to server: {}:{}", host, port);
+        } catch (InterruptedException e) {
+            throw new DiceDbException("Thread interrupted while connecting to server", e);
         }
-        logger.log(Level.INFO, "Connected to server: " + host + ":" + port);
     }
 
     @Override
-    public Response fire(CommandProto.Command command) throws Exception {
+    public Response fire(CommandProto.Command command) throws DiceDbException {
         if (tcpClient == null) {
-            throw new IllegalStateException("Not connected to server! Please call connect() first.");
+            throw new DiceDbException("Not connected to server! Please call connect() first.");
         }
+        try {
+            byte[] data = command.toByteArray();
+            TcpResponse tcpResponse = tcpClient.sendSync(data);
 
-        byte[] data = command.toByteArray();
-        TcpResponse tcpResponse = tcpClient.sendSync(data);
-
-        if (tcpResponse.isError) {
-            throw new Exception("Error while sending command: " + tcpResponse.exception);
+            if (tcpResponse.isError) {
+                throw new DiceDbException("Error while sending command: " + tcpResponse.exception);
+            }
+            byte[] response = tcpResponse.data;
+            return Response.parseFrom(response);
         }
-        byte[] response = tcpResponse.data;
-        return Response.parseFrom(response);
+        catch (InterruptedException e) {
+            throw new DiceDbException("Thread interrupted while sending command", e);
+        } catch (InvalidProtocolBufferException e) {
+            throw new DiceDbException("Failed to parse response from server", e);
+        } catch (Exception e) {
+            throw new DiceDbException("Unexpected error occurred", e);
+        }
     }
 
     @Override
-    public Response fire(String cmd, List<String> args) throws Exception {
+    public Response fire(String cmd, List<String> args) throws DiceDbException {
         if (args == null || args.isEmpty()) {
             args = new ArrayList<>();
         }
@@ -73,7 +88,7 @@ public class SimpleDiceDbClient implements DiceDbClient {
     }
 
     @Override
-    public BlockingQueue<Response> watch(String cmd, List<String> args) throws Exception {
+    public BlockingQueue<Response> watch(String cmd, List<String> args) throws DiceDbException {
         if (args == null || args.isEmpty()) {
             args = new ArrayList<>();
         }
@@ -87,9 +102,9 @@ public class SimpleDiceDbClient implements DiceDbClient {
     }
 
     @Override
-    public BlockingQueue<Response> watch(CommandProto.Command command) throws Exception {
+    public BlockingQueue<Response> watch(CommandProto.Command command) throws DiceDbException {
         if (tcpClient == null) {
-            throw new IllegalStateException("Not connected to server! Please call connect() first.");
+            throw new DiceDbException("Not connected to server! Please call connect() first.");
         }
         if (this.watchResponseQueue != null) {
             return this.watchResponseQueue;
@@ -98,7 +113,7 @@ public class SimpleDiceDbClient implements DiceDbClient {
 
         Response watchResponse = this.fire(command);
         if (watchResponse.getStatus() == Status_ERR) {
-            throw new Exception("Error while sending watch command: " + watchResponse.getMessage());
+            throw new DiceDbException("Error while sending watch command: " + watchResponse.getMessage());
         }
 
         CommandProto.Command watchHandShakeCommand = getHandShakeCommand("watch");
@@ -113,18 +128,19 @@ public class SimpleDiceDbClient implements DiceDbClient {
                 try {
                     TcpResponse tcpResponse = watchTcpResponseQueue.take();
                     if (tcpResponse.isError) {
-                        logger.log(Level.SEVERE, "Error in watch thread: " + tcpResponse.exception);
+                        logger.error("Error in watch thread: {}", String.valueOf(tcpResponse.exception));
                         break;
                     }
                     if (tcpResponse.sessionEnded) {
-                        logger.log(Level.INFO, "Session ended in watch thread");
+                        logger.info("Session ended in watch thread");
                         break;
                     }
                     byte[] response = tcpResponse.data;
                     Response resp = Response.parseFrom(response);
                     this.watchResponseQueue.put(resp);
                 } catch (Exception e) {
-                    logger.log(Level.SEVERE, "Error in watch thread: " + e.getMessage());
+                    logger.error("Error in watch thread", e);
+                    break;
                 }
             }
         });

@@ -1,17 +1,21 @@
 package com.dice.Client.TcpClient;
 
+import com.dice.Client.DiceDbClient.SimpleDiceDbClient;
+import com.dice.Exceptions.DiceDbException;
+import com.dice.Exceptions.DiceDbTcpException;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.*;
-import java.util.logging.Logger;
 
 class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
-    private static final Logger logger = Logger.getLogger(NettyTcpClientHandler.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(NettyTcpClientHandler.class);
     private Channel channel;
     private final BlockingQueue<TcpResponse> responseQueue;
 
@@ -27,23 +31,19 @@ class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
         tcpConnectionStatus = TcpConnectionStatus.ACTIVE;
     }
 
-    public BlockingQueue<TcpResponse> sendAsync(byte[] data) {
+    public BlockingQueue<TcpResponse> sendAsync(byte[] data) throws DiceDbException {
         this.writeAndFlush(data);
         return responseQueue;
     }
 
-    public TcpResponse sendSync(byte[] data) throws InterruptedException, ExecutionException {
+    public TcpResponse sendSync(byte[] data) throws InterruptedException, DiceDbException {
         this.writeAndFlush(data);
-        TcpResponse tcpResponse = this.responseQueue.take();
-        if (tcpResponse.isError) {
-            throw new ExecutionException(tcpResponse.exception);
-        }
-        return tcpResponse;
+        return this.responseQueue.take();
     }
 
-    private void writeAndFlush(byte[] data) {
+    private void writeAndFlush(byte[] data) throws DiceDbException {
         if (channel == null || !channel.isActive()) {
-            throw new IllegalStateException("Not connected to server!");
+            throw new DiceDbException("Not connected to server!");
         }
         tcpConnectionStatus = TcpConnectionStatus.ACTIVE;
 
@@ -59,8 +59,8 @@ class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) throws InterruptedException {
         tcpConnectionStatus = TcpConnectionStatus.ACTIVE;
         if (msg.readableBytes() < 4) {
-            responseQueue.put(new TcpResponse(new IllegalStateException("Received message is too short")));
-            logger.warning("Received message is too short: " + msg.readableBytes());
+            responseQueue.put(new TcpResponse(new DiceDbTcpException("Received message is too short")));
+            logger.warn("Received message is too short: {}", msg.readableBytes());
             return;
         }
         int length = msg.readInt();
@@ -72,10 +72,11 @@ class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws InterruptedException {
-        tcpConnectionStatus = TcpConnectionStatus.ERROR;
         TcpResponse tcpResponse = new TcpResponse(cause);
         responseQueue.put(tcpResponse);
-        logger.severe("Exception caught: " + cause.getMessage());
+        logger.error("Exception Caught in TCP connection: {}", cause.getMessage());
+        this.close();
+        tcpConnectionStatus = TcpConnectionStatus.ERROR;
     }
 
     @Override

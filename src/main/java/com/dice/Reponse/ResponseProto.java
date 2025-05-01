@@ -231,73 +231,74 @@ public final class ResponseProto {
       "\n\'src/main/resources/proto/response.prot" +
       "o\022\020com.dice.Reponse\"\t\n\007TYPERes\"\t\n\007PINGRe" +
       "s\"\t\n\007ECHORes\"\016\n\014HANDSHAKERes\"\013\n\tEXISTSRe" +
-      "s\"\010\n\006GETRes\"\010\n\006SETRes\"\010\n\006DELRes\"\t\n\007KEYSR" +
-      "es\"\013\n\tGETDELRes\"\n\n\010GETEXRes\"\013\n\tGETSETRes" +
-      "\"\t\n\007INCRRes\"\t\n\007DECRRes\"\013\n\tINCRBYRes\"\013\n\tD" +
-      "ECRBYRes\"\014\n\nFLUSHDBRes\"\013\n\tEXPIRERes\"\r\n\013E" +
-      "XPIREATRes\"\017\n\rEXPIRETIMERes\"\010\n\006TTLRes\"\r\n" +
-      "\013GETWATCHRes\"\014\n\nUNWATCHRes\"\t\n\007HGETRes\"\t\n" +
-      "\007HSETRes\"\014\n\nHGETALLRes\"\016\n\014HGETWATCHRes\"\021" +
-      "\n\017HGETALLWATCHRes\"\t\n\007ZADDRes\"\013\n\tZCOUNTRe" +
-      "s\"\013\n\tZRANGERes\"\014\n\nZPOPMAXRes\"\t\n\007ZREMRes\"" +
-      "\014\n\nZPOPMINRes\"\n\n\010ZRANKRes\"\n\n\010ZCARDRes\"\020\n" +
-      "\016ZRANGEWATCHRes\"\020\n\016ZCOUNTWATCHRes\"\017\n\rZCA" +
-      "RDWATCHRes\"\017\n\rZRANKWATCHRes\"\310\020\n\010Response" +
-      "\022(\n\006status\030\001 \001(\0162\030.com.dice.Reponse.Stat" +
-      "us\022\017\n\007message\030\002 \001(\t\022\025\n\rfingerprint64\030\003 \001" +
-      "(\004\022,\n\007TYPERes\030\013 \001(\0132\031.com.dice.Reponse.T" +
-      "YPEResH\000\022,\n\007PINGRes\030\014 \001(\0132\031.com.dice.Rep" +
-      "onse.PINGResH\000\022,\n\007ECHORes\030\r \001(\0132\031.com.di" +
-      "ce.Reponse.ECHOResH\000\0226\n\014HANDSHAKERes\030\016 \001" +
-      "(\0132\036.com.dice.Reponse.HANDSHAKEResH\000\0220\n\t" +
-      "EXISTSRes\030\017 \001(\0132\033.com.dice.Reponse.EXIST" +
-      "SResH\000\022*\n\006GETRes\030\020 \001(\0132\030.com.dice.Repons" +
-      "e.GETResH\000\022*\n\006SETRes\030\021 \001(\0132\030.com.dice.Re" +
-      "ponse.SETResH\000\022*\n\006DELRes\030\022 \001(\0132\030.com.dic" +
-      "e.Reponse.DELResH\000\022,\n\007KEYSRes\030\023 \001(\0132\031.co" +
-      "m.dice.Reponse.KEYSResH\000\0220\n\tGETDELRes\030\024 " +
-      "\001(\0132\033.com.dice.Reponse.GETDELResH\000\022.\n\010GE" +
-      "TEXRes\030\025 \001(\0132\032.com.dice.Reponse.GETEXRes" +
-      "H\000\0220\n\tGETSETRes\030\026 \001(\0132\033.com.dice.Reponse" +
-      ".GETSETResH\000\022,\n\007INCRRes\030\027 \001(\0132\031.com.dice" +
-      ".Reponse.INCRResH\000\022,\n\007DECRRes\030\030 \001(\0132\031.co" +
-      "m.dice.Reponse.DECRResH\000\0220\n\tINCRBYRes\030\031 " +
-      "\001(\0132\033.com.dice.Reponse.INCRBYResH\000\0220\n\tDE" +
-      "CRBYRes\030\032 \001(\0132\033.com.dice.Reponse.DECRBYR" +
-      "esH\000\0222\n\nFLUSHDBRes\030\033 \001(\0132\034.com.dice.Repo" +
-      "nse.FLUSHDBResH\000\0220\n\tEXPIRERes\030\034 \001(\0132\033.co" +
-      "m.dice.Reponse.EXPIREResH\000\0224\n\013EXPIREATRe" +
-      "s\030\035 \001(\0132\035.com.dice.Reponse.EXPIREATResH\000" +
-      "\0228\n\rEXPIRETIMERes\030\036 \001(\0132\037.com.dice.Repon" +
-      "se.EXPIRETIMEResH\000\022*\n\006TTLRes\030\037 \001(\0132\030.com" +
-      ".dice.Reponse.TTLResH\000\0224\n\013GETWATCHRes\030  " +
-      "\001(\0132\035.com.dice.Reponse.GETWATCHResH\000\0222\n\n" +
-      "UNWATCHRes\030! \001(\0132\034.com.dice.Reponse.UNWA" +
-      "TCHResH\000\022,\n\007HGETRes\030\" \001(\0132\031.com.dice.Rep" +
-      "onse.HGETResH\000\022,\n\007HSETRes\030# \001(\0132\031.com.di" +
-      "ce.Reponse.HSETResH\000\0222\n\nHGETALLRes\030$ \001(\013" +
-      "2\034.com.dice.Reponse.HGETALLResH\000\0226\n\014HGET" +
-      "WATCHRes\030% \001(\0132\036.com.dice.Reponse.HGETWA" +
-      "TCHResH\000\022<\n\017HGETALLWATCHRes\030& \001(\0132!.com." +
-      "dice.Reponse.HGETALLWATCHResH\000\022,\n\007ZADDRe" +
-      "s\030\' \001(\0132\031.com.dice.Reponse.ZADDResH\000\0220\n\t" +
-      "ZCOUNTRes\030( \001(\0132\033.com.dice.Reponse.ZCOUN" +
-      "TResH\000\0220\n\tZRANGERes\030) \001(\0132\033.com.dice.Rep" +
-      "onse.ZRANGEResH\000\0222\n\nZPOPMAXRes\030* \001(\0132\034.c" +
-      "om.dice.Reponse.ZPOPMAXResH\000\022,\n\007ZREMRes\030" +
-      "+ \001(\0132\031.com.dice.Reponse.ZREMResH\000\0222\n\nZP" +
-      "OPMINRes\030, \001(\0132\034.com.dice.Reponse.ZPOPMI" +
-      "NResH\000\022.\n\010ZRANKRes\030- \001(\0132\032.com.dice.Repo" +
-      "nse.ZRANKResH\000\022.\n\010ZCARDRes\030. \001(\0132\032.com.d" +
-      "ice.Reponse.ZCARDResH\000\022:\n\016ZRANGEWATCHRes" +
-      "\030/ \001(\0132 .com.dice.Reponse.ZRANGEWATCHRes" +
-      "H\000\022:\n\016ZCOUNTWATCHRes\0300 \001(\0132 .com.dice.Re" +
-      "ponse.ZCOUNTWATCHResH\000\0228\n\rZCARDWATCHRes\030" +
-      "1 \001(\0132\037.com.dice.Reponse.ZCARDWATCHResH\000" +
-      "\0228\n\rZRANKWATCHRes\0302 \001(\0132\037.com.dice.Repon" +
-      "se.ZRANKWATCHResH\000B\n\n\010response*\'\n\006Status" +
-      "\022\r\n\tStatus_OK\020\000\022\016\n\nStatus_ERR\020\001B#\n\020com.d" +
-      "ice.ReponseB\rResponseProtoP\001b\006proto3"
+      "s\"\027\n\006GETRes\022\r\n\005Value\030\001 \001(\t\"\010\n\006SETRes\"\010\n\006" +
+      "DELRes\"\t\n\007KEYSRes\"\013\n\tGETDELRes\"\n\n\010GETEXR" +
+      "es\"\013\n\tGETSETRes\"\t\n\007INCRRes\"\t\n\007DECRRes\"\013\n" +
+      "\tINCRBYRes\"\013\n\tDECRBYRes\"\014\n\nFLUSHDBRes\"\013\n" +
+      "\tEXPIRERes\"\r\n\013EXPIREATRes\"\017\n\rEXPIRETIMER" +
+      "es\"\010\n\006TTLRes\"\r\n\013GETWATCHRes\"\014\n\nUNWATCHRe" +
+      "s\"\t\n\007HGETRes\"\t\n\007HSETRes\"\014\n\nHGETALLRes\"\016\n" +
+      "\014HGETWATCHRes\"\021\n\017HGETALLWATCHRes\"\t\n\007ZADD" +
+      "Res\"\013\n\tZCOUNTRes\"\013\n\tZRANGERes\"\014\n\nZPOPMAX" +
+      "Res\"\t\n\007ZREMRes\"\014\n\nZPOPMINRes\"\n\n\010ZRANKRes" +
+      "\"\n\n\010ZCARDRes\"\020\n\016ZRANGEWATCHRes\"\020\n\016ZCOUNT" +
+      "WATCHRes\"\017\n\rZCARDWATCHRes\"\017\n\rZRANKWATCHR" +
+      "es\"\310\020\n\010Response\022(\n\006status\030\001 \001(\0162\030.com.di" +
+      "ce.Reponse.Status\022\017\n\007message\030\002 \001(\t\022\025\n\rfi" +
+      "ngerprint64\030\003 \001(\004\022,\n\007TYPERes\030\013 \001(\0132\031.com" +
+      ".dice.Reponse.TYPEResH\000\022,\n\007PINGRes\030\014 \001(\013" +
+      "2\031.com.dice.Reponse.PINGResH\000\022,\n\007ECHORes" +
+      "\030\r \001(\0132\031.com.dice.Reponse.ECHOResH\000\0226\n\014H" +
+      "ANDSHAKERes\030\016 \001(\0132\036.com.dice.Reponse.HAN" +
+      "DSHAKEResH\000\0220\n\tEXISTSRes\030\017 \001(\0132\033.com.dic" +
+      "e.Reponse.EXISTSResH\000\022*\n\006GETRes\030\020 \001(\0132\030." +
+      "com.dice.Reponse.GETResH\000\022*\n\006SETRes\030\021 \001(" +
+      "\0132\030.com.dice.Reponse.SETResH\000\022*\n\006DELRes\030" +
+      "\022 \001(\0132\030.com.dice.Reponse.DELResH\000\022,\n\007KEY" +
+      "SRes\030\023 \001(\0132\031.com.dice.Reponse.KEYSResH\000\022" +
+      "0\n\tGETDELRes\030\024 \001(\0132\033.com.dice.Reponse.GE" +
+      "TDELResH\000\022.\n\010GETEXRes\030\025 \001(\0132\032.com.dice.R" +
+      "eponse.GETEXResH\000\0220\n\tGETSETRes\030\026 \001(\0132\033.c" +
+      "om.dice.Reponse.GETSETResH\000\022,\n\007INCRRes\030\027" +
+      " \001(\0132\031.com.dice.Reponse.INCRResH\000\022,\n\007DEC" +
+      "RRes\030\030 \001(\0132\031.com.dice.Reponse.DECRResH\000\022" +
+      "0\n\tINCRBYRes\030\031 \001(\0132\033.com.dice.Reponse.IN" +
+      "CRBYResH\000\0220\n\tDECRBYRes\030\032 \001(\0132\033.com.dice." +
+      "Reponse.DECRBYResH\000\0222\n\nFLUSHDBRes\030\033 \001(\0132" +
+      "\034.com.dice.Reponse.FLUSHDBResH\000\0220\n\tEXPIR" +
+      "ERes\030\034 \001(\0132\033.com.dice.Reponse.EXPIREResH" +
+      "\000\0224\n\013EXPIREATRes\030\035 \001(\0132\035.com.dice.Repons" +
+      "e.EXPIREATResH\000\0228\n\rEXPIRETIMERes\030\036 \001(\0132\037" +
+      ".com.dice.Reponse.EXPIRETIMEResH\000\022*\n\006TTL" +
+      "Res\030\037 \001(\0132\030.com.dice.Reponse.TTLResH\000\0224\n" +
+      "\013GETWATCHRes\030  \001(\0132\035.com.dice.Reponse.GE" +
+      "TWATCHResH\000\0222\n\nUNWATCHRes\030! \001(\0132\034.com.di" +
+      "ce.Reponse.UNWATCHResH\000\022,\n\007HGETRes\030\" \001(\013" +
+      "2\031.com.dice.Reponse.HGETResH\000\022,\n\007HSETRes" +
+      "\030# \001(\0132\031.com.dice.Reponse.HSETResH\000\0222\n\nH" +
+      "GETALLRes\030$ \001(\0132\034.com.dice.Reponse.HGETA" +
+      "LLResH\000\0226\n\014HGETWATCHRes\030% \001(\0132\036.com.dice" +
+      ".Reponse.HGETWATCHResH\000\022<\n\017HGETALLWATCHR" +
+      "es\030& \001(\0132!.com.dice.Reponse.HGETALLWATCH" +
+      "ResH\000\022,\n\007ZADDRes\030\' \001(\0132\031.com.dice.Repons" +
+      "e.ZADDResH\000\0220\n\tZCOUNTRes\030( \001(\0132\033.com.dic" +
+      "e.Reponse.ZCOUNTResH\000\0220\n\tZRANGERes\030) \001(\013" +
+      "2\033.com.dice.Reponse.ZRANGEResH\000\0222\n\nZPOPM" +
+      "AXRes\030* \001(\0132\034.com.dice.Reponse.ZPOPMAXRe" +
+      "sH\000\022,\n\007ZREMRes\030+ \001(\0132\031.com.dice.Reponse." +
+      "ZREMResH\000\0222\n\nZPOPMINRes\030, \001(\0132\034.com.dice" +
+      ".Reponse.ZPOPMINResH\000\022.\n\010ZRANKRes\030- \001(\0132" +
+      "\032.com.dice.Reponse.ZRANKResH\000\022.\n\010ZCARDRe" +
+      "s\030. \001(\0132\032.com.dice.Reponse.ZCARDResH\000\022:\n" +
+      "\016ZRANGEWATCHRes\030/ \001(\0132 .com.dice.Reponse" +
+      ".ZRANGEWATCHResH\000\022:\n\016ZCOUNTWATCHRes\0300 \001(" +
+      "\0132 .com.dice.Reponse.ZCOUNTWATCHResH\000\0228\n" +
+      "\rZCARDWATCHRes\0301 \001(\0132\037.com.dice.Reponse." +
+      "ZCARDWATCHResH\000\0228\n\rZRANKWATCHRes\0302 \001(\0132\037" +
+      ".com.dice.Reponse.ZRANKWATCHResH\000B\n\n\010res" +
+      "ponse*\'\n\006Status\022\r\n\tStatus_OK\020\000\022\016\n\nStatus" +
+      "_ERR\020\001B#\n\020com.dice.ReponseB\rResponseProt" +
+      "oP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -338,7 +339,7 @@ public final class ResponseProto {
     internal_static_com_dice_Reponse_GETRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_dice_Reponse_GETRes_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Value", });
     internal_static_com_dice_Reponse_SETRes_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_dice_Reponse_SETRes_fieldAccessorTable = new

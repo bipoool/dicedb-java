@@ -1,9 +1,11 @@
 package com.dice.Client.TcpClient;
 
+import com.dice.Exceptions.DiceDbTcpException;
+
 public class TcpResponse {
     public final byte[] data;
     public final boolean isError;
-    public final Exception exception;
+    public final DiceDbTcpException exception;
     public final boolean sessionEnded;
 
     public TcpResponse(byte[] data) {
@@ -13,17 +15,10 @@ public class TcpResponse {
         this.sessionEnded = false;
     }
 
-    public TcpResponse(Exception exception) {
-        this.data = null;
-        this.isError = true;
-        this.exception = exception;
-        this.sessionEnded = false;
-    }
-
     public TcpResponse(Throwable throwable) {
         this.data = null;
         this.isError = true;
-        this.exception = new Exception(throwable);
+        this.exception = new DiceDbTcpException(throwable);
         this.sessionEnded = false;
     }
 
