@@ -6,10 +6,6 @@ Designed for simplicity and performance, this SDK allows you to interact with Di
 
 ---
 
-## ⚙️ Requirements
-- Java 21
-- Maven (for dependency management)
-
 ## 🔧 Installation
 Add the following dependency to your `pom.xml` if you're using Maven:
 
