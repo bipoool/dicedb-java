@@ -41,9 +41,12 @@ public static void main(String[] args) throws DiceDbException, InterruptedExcept
     System.out.println("Response: " + zRankResp.getZRANKRes().getElement());
 
     BlockingQueue<Response> watchResp = dice.watch("GET.WATCH", List.of("key"));
-    while (true) {
+    
+    int count = 0;
+    while (count<10) {
         Response resp = watchResp.take();
         System.out.println("Response: " + resp.getGETRes().getValue());
+        count++;
     }
     dice.close();
 

@@ -23,19 +23,22 @@ public class Main {
         Response getResp = dice.fire("GET", List.of("key"));
         System.out.println("Response: " + getResp.getGETRes().getValue());
 
-        Response zAddResp1 = dice.fire("ZADD", List.of("users","30", "u1"));
+        Response zAddResp1 = dice.fire("ZADD", List.of("users", "30", "u1"));
         System.out.println("Response: " + zAddResp1.getZADDRes().getCount());
 
-        Response zAddResp2 = dice.fire("ZADD", List.of("users","50", "u2"));
+        Response zAddResp2 = dice.fire("ZADD", List.of("users", "50", "u2"));
         System.out.println("Response: " + zAddResp2.getZADDRes().getCount());
 
-        Response zRankResp = dice.fire("ZRANK", List.of("users",  "u2"));
+        Response zRankResp = dice.fire("ZRANK", List.of("users", "u2"));
         System.out.println("Response: " + zRankResp.getZRANKRes().getElement());
 
         BlockingQueue<Response> watchResp = dice.watch("GET.WATCH", List.of("key"));
-        while (true) {
+
+        int count = 0;
+        while (count < 10) {
             Response resp = watchResp.take();
             System.out.println("Response: " + resp.getGETRes().getValue());
+            count++;
         }
         dice.close();
 
