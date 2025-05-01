@@ -4,7 +4,6 @@
 It features easy-to-use API and built-in connection pooling (currently under testing). 
 Designed for simplicity and performance, this SDK allows you to interact with DiceDB using native Java constructs.
 
----
 
 ## 🔧 Installation
 Add the following dependency to your `pom.xml` if you're using Maven:
