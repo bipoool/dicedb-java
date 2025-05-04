@@ -99,5 +99,5 @@ public static void main(String[] args) throws DiceDbException, InterruptedExcept
 
 ## 📌 Notes
 1. Connection pooling is under testing and not yet validated. 
-2. This SDK is not thread safe and uses blocking queues to manage client-server communication. 
+2. It uses blocking queues to manage client-server communication. 
 3. Contributions and feedback are welcome.
