@@ -5,6 +5,7 @@ import com.dice.Command.CommandProto;
 import com.dice.Exceptions.DiceDbException;
 import com.dice.Reponse.Response;
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
 
 public interface ClientPool {
 
@@ -12,8 +13,10 @@ public interface ClientPool {
 
   Response fire(String cmd, List<String> args) throws DiceDbException;
 
-  //  BlockingQueue<Response> watch(String cmd, List<String> args) throws DiceDbException;
-//  BlockingQueue<Response> watch(CommandProto.Command command) throws DiceDbException;
+  BlockingQueue<Response> watch(String cmd, List<String> args) throws DiceDbException;
+
+  BlockingQueue<Response> watch(CommandProto.Command command) throws DiceDbException;
+
   DiceDbClient getConnection() throws DiceDbException;
 
   void returnConnection(DiceDbClient client);

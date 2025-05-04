@@ -12,9 +12,19 @@ public interface DiceDbClient {
 
   Response fire(String cmd, List<String> args) throws DiceDbException;
 
-  BlockingQueue<Response> watch(String cmd, List<String> args) throws DiceDbException;
+  BlockingQueue<Response> watch(String cmd, List<String> args,
+      DiceDbCallBack callBackAtConnectionClose) throws DiceDbException;
 
-  BlockingQueue<Response> watch(CommandProto.Command command) throws DiceDbException;
+  default BlockingQueue<Response> watch(String cmd, List<String> args) throws DiceDbException {
+    return watch(cmd, args, null);
+  }
+
+  BlockingQueue<Response> watch(CommandProto.Command command,
+      DiceDbCallBack callBackAtConnectionClose) throws DiceDbException;
+
+  default BlockingQueue<Response> watch(CommandProto.Command command) throws DiceDbException {
+    return watch(command, null);
+  }
 
   boolean isHealthy();
 

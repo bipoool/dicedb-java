@@ -2,21 +2,25 @@ package com.dice.Client.Pool;
 
 import com.dice.Client.DiceDbClient.DiceDbClient;
 import com.dice.Client.DiceDbClient.DiceDbClientFactory;
+import com.dice.Command.CommandProto;
 import com.dice.Command.CommandProto.Command;
 import com.dice.Exceptions.DiceDbException;
 import com.dice.Reponse.Response;
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public class DiceDbClientPool implements ClientPool {
 
-  private static final Logger logger = Logger.getLogger(DiceDbClientPool.class.getName());
+  private static final Logger logger = LoggerFactory.getLogger(DiceDbClientPool.class.getName());
   private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
-  private final int EVICTION_INTERVAL_IN_SECONDS = 10;
+  private final int JOB_INTERVAL_IN_SECONDS = 10;
 
   private final ReentrantLock lock = new ReentrantLock();
 
@@ -45,14 +49,34 @@ public class DiceDbClientPool implements ClientPool {
   public Response fire(Command command) throws DiceDbException {
     DiceDbClient client = this.getConnection();
     Response resp = client.fire(command);
-    this.connectionPool.put(client);
+    this.returnConnection(client);
     return resp;
   }
 
   @Override
   public Response fire(String cmd, List<String> args) throws DiceDbException {
+    CommandProto.Command commandProto = CommandProto.Command
+        .newBuilder()
+        .setCmd(cmd)
+        .addAllArgs(args)
+        .build();
+    return this.fire(commandProto);
+  }
+
+  @Override
+  public BlockingQueue<Response> watch(String cmd, List<String> args) throws DiceDbException {
+    CommandProto.Command commandProto = CommandProto.Command
+        .newBuilder()
+        .setCmd(cmd)
+        .addAllArgs(args)
+        .build();
+    return this.watch(commandProto);
+  }
+
+  @Override
+  public BlockingQueue<Response> watch(Command command) throws DiceDbException {
     DiceDbClient client = this.getConnection();
-    Response resp = client.fire(cmd, args);
+    BlockingQueue<Response> resp = client.watch(command, () -> this.returnConnection(client));
     this.returnConnection(client);
     return resp;
   }
@@ -63,9 +87,11 @@ public class DiceDbClientPool implements ClientPool {
     DiceDbClient client = null;
     try {
       if (this.connectionPool.isEmpty()) {
-        if (this.totalConnections <= this.maxPoolSize) {
+        if (this.totalConnections < this.maxPoolSize) {
           this.connectionPool.put(this.clientFactory.createClient());
           this.totalConnections++;
+          logger.debug("Created a new connection. Total connections: {}",
+              this.connectionPool.getSize());
         } else {
           throw new DiceDbException("No connection left in pool");
         }
@@ -75,6 +101,8 @@ public class DiceDbClientPool implements ClientPool {
         client.close();
         client = this.clientFactory.createClient();
       }
+      logger.debug("Got a connection from pool. Total connections: {}",
+          this.connectionPool.getSize());
       return client;
     } finally {
       this.lock.unlock();
@@ -87,9 +115,13 @@ public class DiceDbClientPool implements ClientPool {
     try {
       if (client.isHealthy()) {
         this.connectionPool.put(client);
+        logger.debug("Returned connection to pool. Total connections: {}",
+            this.connectionPool.getSize());
       } else {
         client.close();
         this.totalConnections--;
+        logger.debug("Connection is unhealthy. Total connections: {}",
+            this.connectionPool.getSize());
       }
     } finally {
       this.lock.unlock();
@@ -99,7 +131,7 @@ public class DiceDbClientPool implements ClientPool {
   @Override
   public void evict() {
     int connectionsEvicted = 0;
-    while (this.totalConnections > this.minPoolSize) {
+    while (this.connectionPool.getSize() > this.minPoolSize) {
       DiceDbClient client = this.connectionPool.get();
       client.close();
       this.totalConnections--;
@@ -107,7 +139,9 @@ public class DiceDbClientPool implements ClientPool {
     }
 
     if (connectionsEvicted > 0) {
-      logger.info("Evicted " + connectionsEvicted + " connections from the pool.");
+      logger.debug("Evicted {} connections from the pool.", connectionsEvicted);
+    } else {
+      logger.debug("No connections to evict from the pool.");
     }
   }
 
@@ -121,7 +155,9 @@ public class DiceDbClientPool implements ClientPool {
     }
 
     if (connectionsCreated > 0) {
-      logger.info("Filled up the pool with " + connectionsCreated + " connections.");
+      logger.debug("Filled up the pool with " + connectionsCreated + " connections.");
+    } else {
+      logger.debug("No connections needed to be filled up.");
     }
   }
 
@@ -131,15 +167,15 @@ public class DiceDbClientPool implements ClientPool {
         evict();
         fillUp();
       } catch (Exception e) {
-        logger.warning("Error during eviction: " + e.getMessage());
+        logger.warn("Error during eviction: {}", e.getMessage());
       }
-    }, 0, EVICTION_INTERVAL_IN_SECONDS, TimeUnit.SECONDS);
+    }, 0, JOB_INTERVAL_IN_SECONDS, TimeUnit.SECONDS);
   }
 
   @Override
   public void close() {
     scheduler.shutdown();
-    while (this.totalConnections > 0) {
+    while (!(this.totalConnections == 0 && this.connectionPool.getSize() == 0)) {
       DiceDbClient client = this.connectionPool.get();
       client.close();
       this.totalConnections--;

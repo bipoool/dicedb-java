@@ -2,16 +2,11 @@ package com.dice.Client.TcpClient;
 
 import com.dice.Exceptions.DiceDbException;
 import io.netty.bootstrap.Bootstrap;
-import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
-import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.timeout.IdleStateHandler;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.TimeUnit;
 
 public class NettyTcpClient implements TcpClient {
 
@@ -21,7 +16,6 @@ public class NettyTcpClient implements TcpClient {
   public NettyTcpClient(String host, int port) throws InterruptedException {
 
     int CONNECT_TIMEOUT_MILLIS = 5000;
-    int READ_TIMEOUT_MILLIS = 5000;
 
     this.tcpHandler = new NettyTcpClientHandler();
     this.group = new NioEventLoopGroup();
@@ -31,14 +25,7 @@ public class NettyTcpClient implements TcpClient {
         .channel(NioSocketChannel.class)
         .option(ChannelOption.SO_KEEPALIVE, true)
         .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, CONNECT_TIMEOUT_MILLIS)
-        .handler(new ChannelInitializer<SocketChannel>() {
-          @Override
-          protected void initChannel(SocketChannel ch) {
-            ChannelPipeline p = ch.pipeline();
-            p.addLast(new IdleStateHandler(READ_TIMEOUT_MILLIS, 0, 0, TimeUnit.MILLISECONDS));
-            p.addLast(tcpHandler);
-          }
-        });
+        .handler(new NettyChannelInitializer(tcpHandler));
     bootstrap.connect(host, port).sync();
   }
 

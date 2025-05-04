@@ -63,6 +63,7 @@ public class SimpleDiceDbClient implements DiceDbClient {
         throw new DiceDbException("Error while sending command: " + tcpResponse.exception);
       }
       byte[] response = tcpResponse.data;
+      Thread.sleep(2000);
       return Response.parseFrom(response);
     } catch (InterruptedException e) {
       throw new DiceDbException("Thread interrupted while sending command", e);
@@ -88,7 +89,8 @@ public class SimpleDiceDbClient implements DiceDbClient {
   }
 
   @Override
-  public BlockingQueue<Response> watch(String cmd, List<String> args) throws DiceDbException {
+  public BlockingQueue<Response> watch(String cmd, List<String> args, DiceDbCallBack callBack)
+      throws DiceDbException {
     if (args == null || args.isEmpty()) {
       args = new ArrayList<>();
     }
@@ -102,7 +104,8 @@ public class SimpleDiceDbClient implements DiceDbClient {
   }
 
   @Override
-  public BlockingQueue<Response> watch(CommandProto.Command command) throws DiceDbException {
+  public BlockingQueue<Response> watch(CommandProto.Command command,
+      DiceDbCallBack callBackAtConnectionClose) throws DiceDbException {
     if (tcpClient == null) {
       throw new DiceDbException("Not connected to server! Please call connect() first.");
     }
@@ -119,20 +122,28 @@ public class SimpleDiceDbClient implements DiceDbClient {
     CommandProto.Command watchHandShakeCommand = getHandShakeCommand("watch");
     BlockingQueue<TcpResponse> watchTcpResponseQueue = tcpClient.sendAsync(
         watchHandShakeCommand.toByteArray());
-    spinUpWatchThread(watchTcpResponseQueue);
+    spinUpWatchThread(watchTcpResponseQueue, callBackAtConnectionClose);
     return this.watchResponseQueue;
   }
 
-  private void spinUpWatchThread(BlockingQueue<TcpResponse> watchTcpResponseQueue) {
+  private void spinUpWatchThread(BlockingQueue<TcpResponse> watchTcpResponseQueue,
+      DiceDbCallBack callBack) {
     scheduler.execute(() -> {
       while (true) {
         try {
           TcpResponse tcpResponse = watchTcpResponseQueue.take();
           if (tcpResponse.isError) {
             logger.error("Error in watch thread: {}", String.valueOf(tcpResponse.exception));
+            if (callBack != null) {
+              callBack.call();
+            }
             break;
           }
           if (tcpResponse.sessionEnded) {
+            this.watchResponseQueue = null;
+            if (callBack != null) {
+              callBack.call();
+            }
             logger.info("Session ended in watch thread");
             break;
           }

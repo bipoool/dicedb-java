@@ -11,20 +11,6 @@ public class LinkedListPool {
 
   private int listSize;
 
-  static class ListNode {
-
-    public DiceDbClient client;
-    public ListNode next;
-    public ListNode prev;
-
-    public ListNode(DiceDbClient client) {
-      this.client = client;
-    }
-
-    public ListNode() {
-    }
-  }
-
   public LinkedListPool(int maxSize) {
 
     this.maxSize = maxSize;
@@ -86,5 +72,19 @@ public class LinkedListPool {
 
   public boolean isFull() {
     return this.listSize >= this.maxSize;
+  }
+
+  static class ListNode {
+
+    public DiceDbClient client;
+    public ListNode next;
+    public ListNode prev;
+
+    public ListNode(DiceDbClient client) {
+      this.client = client;
+    }
+
+    public ListNode() {
+    }
   }
 }

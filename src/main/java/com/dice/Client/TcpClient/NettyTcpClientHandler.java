@@ -13,12 +13,11 @@ import java.util.concurrent.BlockingQueue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
+public class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
   private static final Logger logger = LoggerFactory.getLogger(NettyTcpClientHandler.class);
-  private Channel channel;
   private final BlockingQueue<TcpResponse> responseQueue;
-
+  private Channel channel;
   private TcpConnectionStatus tcpConnectionStatus = TcpConnectionStatus.CLOSED;
 
   NettyTcpClientHandler() {
