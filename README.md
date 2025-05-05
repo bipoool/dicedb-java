@@ -9,7 +9,7 @@ Designed for simplicity and performance, this SDK allows you to interact with Di
 
 Build the project
 ```shell
-  mvn clean install
+$ mvn clean install
 ```
 
 Add the following dependency to your `pom.xml` if you're using Maven:
