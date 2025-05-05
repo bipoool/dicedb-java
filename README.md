@@ -20,7 +20,7 @@ Add the following dependency to your `pom.xml` if you're using Maven:
 ```java
 public static void main(String[] args) throws DiceDbException, InterruptedException {
 
-    DiceDbConnectionManager dice = new DiceDbConnectionManager("localhost", 7379);
+    DiceDbManager  dice = new DiceDbManager ("localhost", 7379);
 
     Response response = dice.fire("FLUSHDB", List.of());
     System.out.println("Response: " + response);

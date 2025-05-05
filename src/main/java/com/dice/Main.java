@@ -8,8 +8,7 @@ import java.util.concurrent.BlockingQueue;
 public class Main {
 
   public static void main(String[] args) throws DiceDbException, InterruptedException {
-
-    DiceDbConnectionManager dice = new DiceDbConnectionManager("localhost", 7379);
+    DiceDbManager dice = new DiceDbManager("localhost", 7379);
 
     Response response = dice.fire("FLUSHDB", List.of());
     System.out.println("Response: " + response);
@@ -38,6 +37,5 @@ public class Main {
       count++;
     }
     dice.close();
-
   }
 }
