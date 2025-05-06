@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package com.dice.command;
+package me.vipulgupta.dice.command;
 
 option java_outer_classname = "CommandProto";
-option java_package = "com.dice.Command";
+option java_package = "me.vipulgupta.dice.Command";
 
 message Command {
   string cmd = 1;

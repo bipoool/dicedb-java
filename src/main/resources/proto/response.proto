@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package com.dice.Reponse;
+package me.vipulgupta.dice.Reponse;
 
-option java_package = "com.dice.Reponse";
+option java_package = "me.vipulgupta.dice.Reponse";
 option java_outer_classname = "ResponseProto";
 option java_multiple_files = true;
 
