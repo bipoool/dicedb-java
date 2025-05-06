@@ -16,7 +16,7 @@ Add the following dependency to your `pom.xml` if you're using Maven:
 
 ```xml
 <dependency>
-    <groupId>com.dice</groupId>
+    <groupId>me.vipulgupta.dice</groupId>
     <artifactId>dicedb-java</artifactId>
     <version>1.0</version>
 </dependency>
