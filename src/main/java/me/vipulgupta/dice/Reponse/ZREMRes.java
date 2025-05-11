@@ -10,12 +10,147 @@ public final class ZREMRes extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:me.vipulgupta.dice.Reponse.ZREMRes)
     ZREMResOrBuilder {
-private static final long serialVersionUID = 0L;
+
+  public static final int COUNT_FIELD_NUMBER = 1;
+  private static final long serialVersionUID = 0L;
+  // @@protoc_insertion_point(class_scope:me.vipulgupta.dice.Reponse.ZREMRes)
+  private static final me.vipulgupta.dice.Reponse.ZREMRes DEFAULT_INSTANCE;
+  private static final com.google.protobuf.Parser<ZREMRes>
+      PARSER = new com.google.protobuf.AbstractParser<ZREMRes>() {
+    @java.lang.Override
+    public ZREMRes parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
+
+  static {
+    DEFAULT_INSTANCE = new me.vipulgupta.dice.Reponse.ZREMRes();
+  }
+
+  private long count_ = 0L;
+  private byte memoizedIsInitialized = -1;
+
   // Use ZREMRes.newBuilder() to construct.
   private ZREMRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
   private ZREMRes() {
+  }
+
+  public static final com.google.protobuf.Descriptors.Descriptor
+  getDescriptor() {
+    return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZREMRes_descriptor;
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
+      com.google.protobuf.ByteString data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
+      com.google.protobuf.ByteString data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(byte[] data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseDelimitedFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseDelimitedFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static Builder newBuilder() {
+    return DEFAULT_INSTANCE.toBuilder();
+  }
+
+  public static Builder newBuilder(me.vipulgupta.dice.Reponse.ZREMRes prototype) {
+    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZREMRes getDefaultInstance() {
+    return DEFAULT_INSTANCE;
+  }
+
+  public static com.google.protobuf.Parser<ZREMRes> parser() {
+    return PARSER;
   }
 
   @java.lang.Override
@@ -30,23 +165,19 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZREMRes_descriptor;
-  }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+  internalGetFieldAccessorTable() {
     return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZREMRes_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            me.vipulgupta.dice.Reponse.ZREMRes.class, me.vipulgupta.dice.Reponse.ZREMRes.Builder.class);
+            me.vipulgupta.dice.Reponse.ZREMRes.class,
+            me.vipulgupta.dice.Reponse.ZREMRes.Builder.class);
   }
 
-  public static final int COUNT_FIELD_NUMBER = 1;
-  private long count_ = 0L;
   /**
    * <code>int64 count = 1;</code>
+   *
    * @return The count.
    */
   @java.lang.Override
@@ -54,12 +185,15 @@ private static final long serialVersionUID = 0L;
     return count_;
   }
 
-  private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) return true;
-    if (isInitialized == 0) return false;
+    if (isInitialized == 1) {
+      return true;
+    }
+    if (isInitialized == 0) {
+      return false;
+    }
 
     memoizedIsInitialized = 1;
     return true;
@@ -67,7 +201,7 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+      throws java.io.IOException {
     if (count_ != 0L) {
       output.writeInt64(1, count_);
     }
@@ -77,12 +211,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
-    if (size != -1) return size;
+    if (size != -1) {
+      return size;
+    }
 
     size = 0;
     if (count_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, count_);
+          .computeInt64Size(1, count_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -92,7 +228,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof me.vipulgupta.dice.Reponse.ZREMRes)) {
       return super.equals(obj);
@@ -100,8 +236,12 @@ private static final long serialVersionUID = 0L;
     me.vipulgupta.dice.Reponse.ZREMRes other = (me.vipulgupta.dice.Reponse.ZREMRes) obj;
 
     if (getCount()
-        != other.getCount()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        != other.getCount()) {
+      return false;
+    }
+    if (!getUnknownFields().equals(other.getUnknownFields())) {
+      return false;
+    }
     return true;
   }
 
@@ -120,84 +260,11 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
-      com.google.protobuf.ByteString data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
-      com.google.protobuf.ByteString data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(byte[] data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseDelimitedFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.ZREMRes parseFrom(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+  @java.lang.Override
+  public Builder newBuilderForType() {
+    return newBuilder();
   }
 
-  @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
-  public static Builder newBuilder() {
-    return DEFAULT_INSTANCE.toBuilder();
-  }
-  public static Builder newBuilder(me.vipulgupta.dice.Reponse.ZREMRes prototype) {
-    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
   @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
@@ -210,6 +277,17 @@ private static final long serialVersionUID = 0L;
     Builder builder = new Builder(parent);
     return builder;
   }
+
+  @java.lang.Override
+  public com.google.protobuf.Parser<ZREMRes> getParserForType() {
+    return PARSER;
+  }
+
+  @java.lang.Override
+  public me.vipulgupta.dice.Reponse.ZREMRes getDefaultInstanceForType() {
+    return DEFAULT_INSTANCE;
+  }
+
   /**
    * Protobuf type {@code me.vipulgupta.dice.Reponse.ZREMRes}
    */
@@ -217,18 +295,9 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:me.vipulgupta.dice.Reponse.ZREMRes)
       me.vipulgupta.dice.Reponse.ZREMResOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZREMRes_descriptor;
-    }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZREMRes_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              me.vipulgupta.dice.Reponse.ZREMRes.class, me.vipulgupta.dice.Reponse.ZREMRes.Builder.class);
-    }
+    private int bitField0_;
+    private long count_;
 
     // Construct using me.vipulgupta.dice.Reponse.ZREMRes.newBuilder()
     private Builder() {
@@ -240,6 +309,21 @@ private static final long serialVersionUID = 0L;
       super(parent);
 
     }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZREMRes_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZREMRes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              me.vipulgupta.dice.Reponse.ZREMRes.class,
+              me.vipulgupta.dice.Reponse.ZREMRes.Builder.class);
+    }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -250,7 +334,7 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    getDescriptorForType() {
       return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZREMRes_descriptor;
     }
 
@@ -271,7 +355,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public me.vipulgupta.dice.Reponse.ZREMRes buildPartial() {
       me.vipulgupta.dice.Reponse.ZREMRes result = new me.vipulgupta.dice.Reponse.ZREMRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField0_ != 0) {
+        buildPartial0(result);
+      }
       onBuilt();
       return result;
     }
@@ -287,38 +373,44 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof me.vipulgupta.dice.Reponse.ZREMRes) {
-        return mergeFrom((me.vipulgupta.dice.Reponse.ZREMRes)other);
+        return mergeFrom((me.vipulgupta.dice.Reponse.ZREMRes) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -326,7 +418,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public Builder mergeFrom(me.vipulgupta.dice.Reponse.ZREMRes other) {
-      if (other == me.vipulgupta.dice.Reponse.ZREMRes.getDefaultInstance()) return this;
+      if (other == me.vipulgupta.dice.Reponse.ZREMRes.getDefaultInstance()) {
+        return this;
+      }
       if (other.getCount() != 0L) {
         setCount(other.getCount());
       }
@@ -376,31 +470,34 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
-    private int bitField0_;
 
-    private long count_ ;
     /**
      * <code>int64 count = 1;</code>
+     *
      * @return The count.
      */
     @java.lang.Override
     public long getCount() {
       return count_;
     }
+
     /**
      * <code>int64 count = 1;</code>
+     *
      * @param value The count to set.
      * @return This builder for chaining.
      */
     public Builder setCount(long value) {
-      
+
       count_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
+
     /**
      * <code>int64 count = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearCount() {
@@ -409,6 +506,7 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -421,54 +519,7 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:me.vipulgupta.dice.Reponse.ZREMRes)
-  }
-
-  // @@protoc_insertion_point(class_scope:me.vipulgupta.dice.Reponse.ZREMRes)
-  private static final me.vipulgupta.dice.Reponse.ZREMRes DEFAULT_INSTANCE;
-  static {
-    DEFAULT_INSTANCE = new me.vipulgupta.dice.Reponse.ZREMRes();
-  }
-
-  public static me.vipulgupta.dice.Reponse.ZREMRes getDefaultInstance() {
-    return DEFAULT_INSTANCE;
-  }
-
-  private static final com.google.protobuf.Parser<ZREMRes>
-      PARSER = new com.google.protobuf.AbstractParser<ZREMRes>() {
-    @java.lang.Override
-    public ZREMRes parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
-    }
-  };
-
-  public static com.google.protobuf.Parser<ZREMRes> parser() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public com.google.protobuf.Parser<ZREMRes> getParserForType() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public me.vipulgupta.dice.Reponse.ZREMRes getDefaultInstanceForType() {
-    return DEFAULT_INSTANCE;
   }
 
 }

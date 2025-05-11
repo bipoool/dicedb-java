@@ -10,14 +10,199 @@ public final class Response extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:me.vipulgupta.dice.Reponse.Response)
     ResponseOrBuilder {
-private static final long serialVersionUID = 0L;
+
+  public static final int STATUS_FIELD_NUMBER = 1;
+  public static final int MESSAGE_FIELD_NUMBER = 2;
+  public static final int FINGERPRINT64_FIELD_NUMBER = 3;
+  public static final int TYPERES_FIELD_NUMBER = 11;
+  public static final int PINGRES_FIELD_NUMBER = 12;
+  public static final int ECHORES_FIELD_NUMBER = 13;
+  public static final int HANDSHAKERES_FIELD_NUMBER = 14;
+  public static final int EXISTSRES_FIELD_NUMBER = 15;
+  public static final int GETRES_FIELD_NUMBER = 16;
+  public static final int SETRES_FIELD_NUMBER = 17;
+
+  ;
+  public static final int DELRES_FIELD_NUMBER = 18;
+  public static final int KEYSRES_FIELD_NUMBER = 19;
+  public static final int GETDELRES_FIELD_NUMBER = 20;
+  public static final int GETEXRES_FIELD_NUMBER = 21;
+  public static final int GETSETRES_FIELD_NUMBER = 22;
+  public static final int INCRRES_FIELD_NUMBER = 23;
+  public static final int DECRRES_FIELD_NUMBER = 24;
+  public static final int INCRBYRES_FIELD_NUMBER = 25;
+  public static final int DECRBYRES_FIELD_NUMBER = 26;
+  public static final int FLUSHDBRES_FIELD_NUMBER = 27;
+  public static final int EXPIRERES_FIELD_NUMBER = 28;
+  public static final int EXPIREATRES_FIELD_NUMBER = 29;
+  public static final int EXPIRETIMERES_FIELD_NUMBER = 30;
+  public static final int TTLRES_FIELD_NUMBER = 31;
+  public static final int GETWATCHRES_FIELD_NUMBER = 32;
+  public static final int UNWATCHRES_FIELD_NUMBER = 33;
+  public static final int HGETRES_FIELD_NUMBER = 34;
+  public static final int HSETRES_FIELD_NUMBER = 35;
+  public static final int HGETALLRES_FIELD_NUMBER = 36;
+  public static final int HGETWATCHRES_FIELD_NUMBER = 37;
+  public static final int HGETALLWATCHRES_FIELD_NUMBER = 38;
+  public static final int ZADDRES_FIELD_NUMBER = 39;
+  public static final int ZCOUNTRES_FIELD_NUMBER = 40;
+  public static final int ZRANGERES_FIELD_NUMBER = 41;
+  public static final int ZPOPMAXRES_FIELD_NUMBER = 42;
+  public static final int ZREMRES_FIELD_NUMBER = 43;
+  public static final int ZPOPMINRES_FIELD_NUMBER = 44;
+  public static final int ZRANKRES_FIELD_NUMBER = 45;
+  public static final int ZCARDRES_FIELD_NUMBER = 46;
+  public static final int ZRANGEWATCHRES_FIELD_NUMBER = 47;
+  public static final int ZCOUNTWATCHRES_FIELD_NUMBER = 48;
+  public static final int ZCARDWATCHRES_FIELD_NUMBER = 49;
+  public static final int ZRANKWATCHRES_FIELD_NUMBER = 50;
+  private static final long serialVersionUID = 0L;
+  // @@protoc_insertion_point(class_scope:me.vipulgupta.dice.Reponse.Response)
+  private static final me.vipulgupta.dice.Reponse.Response DEFAULT_INSTANCE;
+  private static final com.google.protobuf.Parser<Response>
+      PARSER = new com.google.protobuf.AbstractParser<Response>() {
+    @java.lang.Override
+    public Response parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
+
+  static {
+    DEFAULT_INSTANCE = new me.vipulgupta.dice.Reponse.Response();
+  }
+
+  private int responseCase_ = 0;
+  private java.lang.Object response_;
+  private int status_ = 0;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object message_ = "";
+  private long fingerprint64_ = 0L;
+  private byte memoizedIsInitialized = -1;
+
   // Use Response.newBuilder() to construct.
   private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private Response() {
     status_ = 0;
     message_ = "";
+  }
+
+  public static final com.google.protobuf.Descriptors.Descriptor
+  getDescriptor() {
+    return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_Response_descriptor;
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseFrom(
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseFrom(
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseFrom(
+      com.google.protobuf.ByteString data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseFrom(
+      com.google.protobuf.ByteString data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseFrom(byte[] data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseFrom(
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseDelimitedFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseDelimitedFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseFrom(
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response parseFrom(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static Builder newBuilder() {
+    return DEFAULT_INSTANCE.toBuilder();
+  }
+
+  public static Builder newBuilder(me.vipulgupta.dice.Reponse.Response prototype) {
+    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+  }
+
+  public static me.vipulgupta.dice.Reponse.Response getDefaultInstance() {
+    return DEFAULT_INSTANCE;
+  }
+
+  public static com.google.protobuf.Parser<Response> parser() {
+    return PARSER;
   }
 
   @java.lang.Override
@@ -32,129 +217,15 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_Response_descriptor;
-  }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+  internalGetFieldAccessorTable() {
     return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_Response_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            me.vipulgupta.dice.Reponse.Response.class, me.vipulgupta.dice.Reponse.Response.Builder.class);
+            me.vipulgupta.dice.Reponse.Response.class,
+            me.vipulgupta.dice.Reponse.Response.Builder.class);
   }
-
-  private int responseCase_ = 0;
-  private java.lang.Object response_;
-  public enum ResponseCase
-      implements com.google.protobuf.Internal.EnumLite,
-          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    TYPERES(11),
-    PINGRES(12),
-    ECHORES(13),
-    HANDSHAKERES(14),
-    EXISTSRES(15),
-    GETRES(16),
-    SETRES(17),
-    DELRES(18),
-    KEYSRES(19),
-    GETDELRES(20),
-    GETEXRES(21),
-    GETSETRES(22),
-    INCRRES(23),
-    DECRRES(24),
-    INCRBYRES(25),
-    DECRBYRES(26),
-    FLUSHDBRES(27),
-    EXPIRERES(28),
-    EXPIREATRES(29),
-    EXPIRETIMERES(30),
-    TTLRES(31),
-    GETWATCHRES(32),
-    UNWATCHRES(33),
-    HGETRES(34),
-    HSETRES(35),
-    HGETALLRES(36),
-    HGETWATCHRES(37),
-    HGETALLWATCHRES(38),
-    ZADDRES(39),
-    ZCOUNTRES(40),
-    ZRANGERES(41),
-    ZPOPMAXRES(42),
-    ZREMRES(43),
-    ZPOPMINRES(44),
-    ZRANKRES(45),
-    ZCARDRES(46),
-    ZRANGEWATCHRES(47),
-    ZCOUNTWATCHRES(48),
-    ZCARDWATCHRES(49),
-    ZRANKWATCHRES(50),
-    RESPONSE_NOT_SET(0);
-    private final int value;
-    private ResponseCase(int value) {
-      this.value = value;
-    }
-    /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static ResponseCase valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static ResponseCase forNumber(int value) {
-      switch (value) {
-        case 11: return TYPERES;
-        case 12: return PINGRES;
-        case 13: return ECHORES;
-        case 14: return HANDSHAKERES;
-        case 15: return EXISTSRES;
-        case 16: return GETRES;
-        case 17: return SETRES;
-        case 18: return DELRES;
-        case 19: return KEYSRES;
-        case 20: return GETDELRES;
-        case 21: return GETEXRES;
-        case 22: return GETSETRES;
-        case 23: return INCRRES;
-        case 24: return DECRRES;
-        case 25: return INCRBYRES;
-        case 26: return DECRBYRES;
-        case 27: return FLUSHDBRES;
-        case 28: return EXPIRERES;
-        case 29: return EXPIREATRES;
-        case 30: return EXPIRETIMERES;
-        case 31: return TTLRES;
-        case 32: return GETWATCHRES;
-        case 33: return UNWATCHRES;
-        case 34: return HGETRES;
-        case 35: return HSETRES;
-        case 36: return HGETALLRES;
-        case 37: return HGETWATCHRES;
-        case 38: return HGETALLWATCHRES;
-        case 39: return ZADDRES;
-        case 40: return ZCOUNTRES;
-        case 41: return ZRANGERES;
-        case 42: return ZPOPMAXRES;
-        case 43: return ZREMRES;
-        case 44: return ZPOPMINRES;
-        case 45: return ZRANKRES;
-        case 46: return ZCARDRES;
-        case 47: return ZRANGEWATCHRES;
-        case 48: return ZCOUNTWATCHRES;
-        case 49: return ZCARDWATCHRES;
-        case 50: return ZRANKWATCHRES;
-        case 0: return RESPONSE_NOT_SET;
-        default: return null;
-      }
-    }
-    public int getNumber() {
-      return this.value;
-    }
-  };
 
   public ResponseCase
   getResponseCase() {
@@ -162,29 +233,30 @@ private static final long serialVersionUID = 0L;
         responseCase_);
   }
 
-  public static final int STATUS_FIELD_NUMBER = 1;
-  private int status_ = 0;
   /**
    * <code>.me.vipulgupta.dice.Reponse.Status status = 1;</code>
+   *
    * @return The enum numeric value on the wire for status.
    */
-  @java.lang.Override public int getStatusValue() {
+  @java.lang.Override
+  public int getStatusValue() {
     return status_;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.Status status = 1;</code>
+   *
    * @return The status.
    */
-  @java.lang.Override public me.vipulgupta.dice.Reponse.Status getStatus() {
+  @java.lang.Override
+  public me.vipulgupta.dice.Reponse.Status getStatus() {
     me.vipulgupta.dice.Reponse.Status result = me.vipulgupta.dice.Reponse.Status.forNumber(status_);
     return result == null ? me.vipulgupta.dice.Reponse.Status.UNRECOGNIZED : result;
   }
 
-  public static final int MESSAGE_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object message_ = "";
   /**
    * <code>string message = 2;</code>
+   *
    * @return The message.
    */
   @java.lang.Override
@@ -193,23 +265,25 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
+      com.google.protobuf.ByteString bs =
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       message_ = s;
       return s;
     }
   }
+
   /**
    * <code>string message = 2;</code>
+   *
    * @return The bytes for message.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getMessageBytes() {
+  getMessageBytes() {
     java.lang.Object ref = message_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
+      com.google.protobuf.ByteString b =
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       message_ = b;
@@ -219,10 +293,9 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int FINGERPRINT64_FIELD_NUMBER = 3;
-  private long fingerprint64_ = 0L;
   /**
    * <code>uint64 fingerprint64 = 3;</code>
+   *
    * @return The fingerprint64.
    */
   @java.lang.Override
@@ -230,1252 +303,1375 @@ private static final long serialVersionUID = 0L;
     return fingerprint64_;
   }
 
-  public static final int TYPERES_FIELD_NUMBER = 11;
   /**
    * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
+   *
    * @return Whether the tYPERes field is set.
    */
   @java.lang.Override
   public boolean hasTYPERes() {
     return responseCase_ == 11;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
+   *
    * @return The tYPERes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.TYPERes getTYPERes() {
     if (responseCase_ == 11) {
-       return (me.vipulgupta.dice.Reponse.TYPERes) response_;
+      return (me.vipulgupta.dice.Reponse.TYPERes) response_;
     }
     return me.vipulgupta.dice.Reponse.TYPERes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.TYPEResOrBuilder getTYPEResOrBuilder() {
     if (responseCase_ == 11) {
-       return (me.vipulgupta.dice.Reponse.TYPERes) response_;
+      return (me.vipulgupta.dice.Reponse.TYPERes) response_;
     }
     return me.vipulgupta.dice.Reponse.TYPERes.getDefaultInstance();
   }
 
-  public static final int PINGRES_FIELD_NUMBER = 12;
   /**
    * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
+   *
    * @return Whether the pINGRes field is set.
    */
   @java.lang.Override
   public boolean hasPINGRes() {
     return responseCase_ == 12;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
+   *
    * @return The pINGRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.PINGRes getPINGRes() {
     if (responseCase_ == 12) {
-       return (me.vipulgupta.dice.Reponse.PINGRes) response_;
+      return (me.vipulgupta.dice.Reponse.PINGRes) response_;
     }
     return me.vipulgupta.dice.Reponse.PINGRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.PINGResOrBuilder getPINGResOrBuilder() {
     if (responseCase_ == 12) {
-       return (me.vipulgupta.dice.Reponse.PINGRes) response_;
+      return (me.vipulgupta.dice.Reponse.PINGRes) response_;
     }
     return me.vipulgupta.dice.Reponse.PINGRes.getDefaultInstance();
   }
 
-  public static final int ECHORES_FIELD_NUMBER = 13;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
+   *
    * @return Whether the eCHORes field is set.
    */
   @java.lang.Override
   public boolean hasECHORes() {
     return responseCase_ == 13;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
+   *
    * @return The eCHORes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ECHORes getECHORes() {
     if (responseCase_ == 13) {
-       return (me.vipulgupta.dice.Reponse.ECHORes) response_;
+      return (me.vipulgupta.dice.Reponse.ECHORes) response_;
     }
     return me.vipulgupta.dice.Reponse.ECHORes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ECHOResOrBuilder getECHOResOrBuilder() {
     if (responseCase_ == 13) {
-       return (me.vipulgupta.dice.Reponse.ECHORes) response_;
+      return (me.vipulgupta.dice.Reponse.ECHORes) response_;
     }
     return me.vipulgupta.dice.Reponse.ECHORes.getDefaultInstance();
   }
 
-  public static final int HANDSHAKERES_FIELD_NUMBER = 14;
   /**
    * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
+   *
    * @return Whether the hANDSHAKERes field is set.
    */
   @java.lang.Override
   public boolean hasHANDSHAKERes() {
     return responseCase_ == 14;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
+   *
    * @return The hANDSHAKERes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HANDSHAKERes getHANDSHAKERes() {
     if (responseCase_ == 14) {
-       return (me.vipulgupta.dice.Reponse.HANDSHAKERes) response_;
+      return (me.vipulgupta.dice.Reponse.HANDSHAKERes) response_;
     }
     return me.vipulgupta.dice.Reponse.HANDSHAKERes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HANDSHAKEResOrBuilder getHANDSHAKEResOrBuilder() {
     if (responseCase_ == 14) {
-       return (me.vipulgupta.dice.Reponse.HANDSHAKERes) response_;
+      return (me.vipulgupta.dice.Reponse.HANDSHAKERes) response_;
     }
     return me.vipulgupta.dice.Reponse.HANDSHAKERes.getDefaultInstance();
   }
 
-  public static final int EXISTSRES_FIELD_NUMBER = 15;
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
+   *
    * @return Whether the eXISTSRes field is set.
    */
   @java.lang.Override
   public boolean hasEXISTSRes() {
     return responseCase_ == 15;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
+   *
    * @return The eXISTSRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.EXISTSRes getEXISTSRes() {
     if (responseCase_ == 15) {
-       return (me.vipulgupta.dice.Reponse.EXISTSRes) response_;
+      return (me.vipulgupta.dice.Reponse.EXISTSRes) response_;
     }
     return me.vipulgupta.dice.Reponse.EXISTSRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.EXISTSResOrBuilder getEXISTSResOrBuilder() {
     if (responseCase_ == 15) {
-       return (me.vipulgupta.dice.Reponse.EXISTSRes) response_;
+      return (me.vipulgupta.dice.Reponse.EXISTSRes) response_;
     }
     return me.vipulgupta.dice.Reponse.EXISTSRes.getDefaultInstance();
   }
 
-  public static final int GETRES_FIELD_NUMBER = 16;
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
+   *
    * @return Whether the gETRes field is set.
    */
   @java.lang.Override
   public boolean hasGETRes() {
     return responseCase_ == 16;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
+   *
    * @return The gETRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.GETRes getGETRes() {
     if (responseCase_ == 16) {
-       return (me.vipulgupta.dice.Reponse.GETRes) response_;
+      return (me.vipulgupta.dice.Reponse.GETRes) response_;
     }
     return me.vipulgupta.dice.Reponse.GETRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.GETResOrBuilder getGETResOrBuilder() {
     if (responseCase_ == 16) {
-       return (me.vipulgupta.dice.Reponse.GETRes) response_;
+      return (me.vipulgupta.dice.Reponse.GETRes) response_;
     }
     return me.vipulgupta.dice.Reponse.GETRes.getDefaultInstance();
   }
 
-  public static final int SETRES_FIELD_NUMBER = 17;
   /**
    * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
+   *
    * @return Whether the sETRes field is set.
    */
   @java.lang.Override
   public boolean hasSETRes() {
     return responseCase_ == 17;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
+   *
    * @return The sETRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.SETRes getSETRes() {
     if (responseCase_ == 17) {
-       return (me.vipulgupta.dice.Reponse.SETRes) response_;
+      return (me.vipulgupta.dice.Reponse.SETRes) response_;
     }
     return me.vipulgupta.dice.Reponse.SETRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.SETResOrBuilder getSETResOrBuilder() {
     if (responseCase_ == 17) {
-       return (me.vipulgupta.dice.Reponse.SETRes) response_;
+      return (me.vipulgupta.dice.Reponse.SETRes) response_;
     }
     return me.vipulgupta.dice.Reponse.SETRes.getDefaultInstance();
   }
 
-  public static final int DELRES_FIELD_NUMBER = 18;
   /**
    * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
+   *
    * @return Whether the dELRes field is set.
    */
   @java.lang.Override
   public boolean hasDELRes() {
     return responseCase_ == 18;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
+   *
    * @return The dELRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.DELRes getDELRes() {
     if (responseCase_ == 18) {
-       return (me.vipulgupta.dice.Reponse.DELRes) response_;
+      return (me.vipulgupta.dice.Reponse.DELRes) response_;
     }
     return me.vipulgupta.dice.Reponse.DELRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.DELResOrBuilder getDELResOrBuilder() {
     if (responseCase_ == 18) {
-       return (me.vipulgupta.dice.Reponse.DELRes) response_;
+      return (me.vipulgupta.dice.Reponse.DELRes) response_;
     }
     return me.vipulgupta.dice.Reponse.DELRes.getDefaultInstance();
   }
 
-  public static final int KEYSRES_FIELD_NUMBER = 19;
   /**
    * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
+   *
    * @return Whether the kEYSRes field is set.
    */
   @java.lang.Override
   public boolean hasKEYSRes() {
     return responseCase_ == 19;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
+   *
    * @return The kEYSRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.KEYSRes getKEYSRes() {
     if (responseCase_ == 19) {
-       return (me.vipulgupta.dice.Reponse.KEYSRes) response_;
+      return (me.vipulgupta.dice.Reponse.KEYSRes) response_;
     }
     return me.vipulgupta.dice.Reponse.KEYSRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.KEYSResOrBuilder getKEYSResOrBuilder() {
     if (responseCase_ == 19) {
-       return (me.vipulgupta.dice.Reponse.KEYSRes) response_;
+      return (me.vipulgupta.dice.Reponse.KEYSRes) response_;
     }
     return me.vipulgupta.dice.Reponse.KEYSRes.getDefaultInstance();
   }
 
-  public static final int GETDELRES_FIELD_NUMBER = 20;
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
+   *
    * @return Whether the gETDELRes field is set.
    */
   @java.lang.Override
   public boolean hasGETDELRes() {
     return responseCase_ == 20;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
+   *
    * @return The gETDELRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.GETDELRes getGETDELRes() {
     if (responseCase_ == 20) {
-       return (me.vipulgupta.dice.Reponse.GETDELRes) response_;
+      return (me.vipulgupta.dice.Reponse.GETDELRes) response_;
     }
     return me.vipulgupta.dice.Reponse.GETDELRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.GETDELResOrBuilder getGETDELResOrBuilder() {
     if (responseCase_ == 20) {
-       return (me.vipulgupta.dice.Reponse.GETDELRes) response_;
+      return (me.vipulgupta.dice.Reponse.GETDELRes) response_;
     }
     return me.vipulgupta.dice.Reponse.GETDELRes.getDefaultInstance();
   }
 
-  public static final int GETEXRES_FIELD_NUMBER = 21;
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
+   *
    * @return Whether the gETEXRes field is set.
    */
   @java.lang.Override
   public boolean hasGETEXRes() {
     return responseCase_ == 21;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
+   *
    * @return The gETEXRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.GETEXRes getGETEXRes() {
     if (responseCase_ == 21) {
-       return (me.vipulgupta.dice.Reponse.GETEXRes) response_;
+      return (me.vipulgupta.dice.Reponse.GETEXRes) response_;
     }
     return me.vipulgupta.dice.Reponse.GETEXRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.GETEXResOrBuilder getGETEXResOrBuilder() {
     if (responseCase_ == 21) {
-       return (me.vipulgupta.dice.Reponse.GETEXRes) response_;
+      return (me.vipulgupta.dice.Reponse.GETEXRes) response_;
     }
     return me.vipulgupta.dice.Reponse.GETEXRes.getDefaultInstance();
   }
 
-  public static final int GETSETRES_FIELD_NUMBER = 22;
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
+   *
    * @return Whether the gETSETRes field is set.
    */
   @java.lang.Override
   public boolean hasGETSETRes() {
     return responseCase_ == 22;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
+   *
    * @return The gETSETRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.GETSETRes getGETSETRes() {
     if (responseCase_ == 22) {
-       return (me.vipulgupta.dice.Reponse.GETSETRes) response_;
+      return (me.vipulgupta.dice.Reponse.GETSETRes) response_;
     }
     return me.vipulgupta.dice.Reponse.GETSETRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.GETSETResOrBuilder getGETSETResOrBuilder() {
     if (responseCase_ == 22) {
-       return (me.vipulgupta.dice.Reponse.GETSETRes) response_;
+      return (me.vipulgupta.dice.Reponse.GETSETRes) response_;
     }
     return me.vipulgupta.dice.Reponse.GETSETRes.getDefaultInstance();
   }
 
-  public static final int INCRRES_FIELD_NUMBER = 23;
   /**
    * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
+   *
    * @return Whether the iNCRRes field is set.
    */
   @java.lang.Override
   public boolean hasINCRRes() {
     return responseCase_ == 23;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
+   *
    * @return The iNCRRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.INCRRes getINCRRes() {
     if (responseCase_ == 23) {
-       return (me.vipulgupta.dice.Reponse.INCRRes) response_;
+      return (me.vipulgupta.dice.Reponse.INCRRes) response_;
     }
     return me.vipulgupta.dice.Reponse.INCRRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.INCRResOrBuilder getINCRResOrBuilder() {
     if (responseCase_ == 23) {
-       return (me.vipulgupta.dice.Reponse.INCRRes) response_;
+      return (me.vipulgupta.dice.Reponse.INCRRes) response_;
     }
     return me.vipulgupta.dice.Reponse.INCRRes.getDefaultInstance();
   }
 
-  public static final int DECRRES_FIELD_NUMBER = 24;
   /**
    * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
+   *
    * @return Whether the dECRRes field is set.
    */
   @java.lang.Override
   public boolean hasDECRRes() {
     return responseCase_ == 24;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
+   *
    * @return The dECRRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.DECRRes getDECRRes() {
     if (responseCase_ == 24) {
-       return (me.vipulgupta.dice.Reponse.DECRRes) response_;
+      return (me.vipulgupta.dice.Reponse.DECRRes) response_;
     }
     return me.vipulgupta.dice.Reponse.DECRRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.DECRResOrBuilder getDECRResOrBuilder() {
     if (responseCase_ == 24) {
-       return (me.vipulgupta.dice.Reponse.DECRRes) response_;
+      return (me.vipulgupta.dice.Reponse.DECRRes) response_;
     }
     return me.vipulgupta.dice.Reponse.DECRRes.getDefaultInstance();
   }
 
-  public static final int INCRBYRES_FIELD_NUMBER = 25;
   /**
    * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
+   *
    * @return Whether the iNCRBYRes field is set.
    */
   @java.lang.Override
   public boolean hasINCRBYRes() {
     return responseCase_ == 25;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
+   *
    * @return The iNCRBYRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.INCRBYRes getINCRBYRes() {
     if (responseCase_ == 25) {
-       return (me.vipulgupta.dice.Reponse.INCRBYRes) response_;
+      return (me.vipulgupta.dice.Reponse.INCRBYRes) response_;
     }
     return me.vipulgupta.dice.Reponse.INCRBYRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.INCRBYResOrBuilder getINCRBYResOrBuilder() {
     if (responseCase_ == 25) {
-       return (me.vipulgupta.dice.Reponse.INCRBYRes) response_;
+      return (me.vipulgupta.dice.Reponse.INCRBYRes) response_;
     }
     return me.vipulgupta.dice.Reponse.INCRBYRes.getDefaultInstance();
   }
 
-  public static final int DECRBYRES_FIELD_NUMBER = 26;
   /**
    * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
+   *
    * @return Whether the dECRBYRes field is set.
    */
   @java.lang.Override
   public boolean hasDECRBYRes() {
     return responseCase_ == 26;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
+   *
    * @return The dECRBYRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.DECRBYRes getDECRBYRes() {
     if (responseCase_ == 26) {
-       return (me.vipulgupta.dice.Reponse.DECRBYRes) response_;
+      return (me.vipulgupta.dice.Reponse.DECRBYRes) response_;
     }
     return me.vipulgupta.dice.Reponse.DECRBYRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.DECRBYResOrBuilder getDECRBYResOrBuilder() {
     if (responseCase_ == 26) {
-       return (me.vipulgupta.dice.Reponse.DECRBYRes) response_;
+      return (me.vipulgupta.dice.Reponse.DECRBYRes) response_;
     }
     return me.vipulgupta.dice.Reponse.DECRBYRes.getDefaultInstance();
   }
 
-  public static final int FLUSHDBRES_FIELD_NUMBER = 27;
   /**
    * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
+   *
    * @return Whether the fLUSHDBRes field is set.
    */
   @java.lang.Override
   public boolean hasFLUSHDBRes() {
     return responseCase_ == 27;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
+   *
    * @return The fLUSHDBRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.FLUSHDBRes getFLUSHDBRes() {
     if (responseCase_ == 27) {
-       return (me.vipulgupta.dice.Reponse.FLUSHDBRes) response_;
+      return (me.vipulgupta.dice.Reponse.FLUSHDBRes) response_;
     }
     return me.vipulgupta.dice.Reponse.FLUSHDBRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.FLUSHDBResOrBuilder getFLUSHDBResOrBuilder() {
     if (responseCase_ == 27) {
-       return (me.vipulgupta.dice.Reponse.FLUSHDBRes) response_;
+      return (me.vipulgupta.dice.Reponse.FLUSHDBRes) response_;
     }
     return me.vipulgupta.dice.Reponse.FLUSHDBRes.getDefaultInstance();
   }
 
-  public static final int EXPIRERES_FIELD_NUMBER = 28;
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
+   *
    * @return Whether the eXPIRERes field is set.
    */
   @java.lang.Override
   public boolean hasEXPIRERes() {
     return responseCase_ == 28;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
+   *
    * @return The eXPIRERes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.EXPIRERes getEXPIRERes() {
     if (responseCase_ == 28) {
-       return (me.vipulgupta.dice.Reponse.EXPIRERes) response_;
+      return (me.vipulgupta.dice.Reponse.EXPIRERes) response_;
     }
     return me.vipulgupta.dice.Reponse.EXPIRERes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.EXPIREResOrBuilder getEXPIREResOrBuilder() {
     if (responseCase_ == 28) {
-       return (me.vipulgupta.dice.Reponse.EXPIRERes) response_;
+      return (me.vipulgupta.dice.Reponse.EXPIRERes) response_;
     }
     return me.vipulgupta.dice.Reponse.EXPIRERes.getDefaultInstance();
   }
 
-  public static final int EXPIREATRES_FIELD_NUMBER = 29;
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
+   *
    * @return Whether the eXPIREATRes field is set.
    */
   @java.lang.Override
   public boolean hasEXPIREATRes() {
     return responseCase_ == 29;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
+   *
    * @return The eXPIREATRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.EXPIREATRes getEXPIREATRes() {
     if (responseCase_ == 29) {
-       return (me.vipulgupta.dice.Reponse.EXPIREATRes) response_;
+      return (me.vipulgupta.dice.Reponse.EXPIREATRes) response_;
     }
     return me.vipulgupta.dice.Reponse.EXPIREATRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.EXPIREATResOrBuilder getEXPIREATResOrBuilder() {
     if (responseCase_ == 29) {
-       return (me.vipulgupta.dice.Reponse.EXPIREATRes) response_;
+      return (me.vipulgupta.dice.Reponse.EXPIREATRes) response_;
     }
     return me.vipulgupta.dice.Reponse.EXPIREATRes.getDefaultInstance();
   }
 
-  public static final int EXPIRETIMERES_FIELD_NUMBER = 30;
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
+   *
    * @return Whether the eXPIRETIMERes field is set.
    */
   @java.lang.Override
   public boolean hasEXPIRETIMERes() {
     return responseCase_ == 30;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
+   *
    * @return The eXPIRETIMERes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.EXPIRETIMERes getEXPIRETIMERes() {
     if (responseCase_ == 30) {
-       return (me.vipulgupta.dice.Reponse.EXPIRETIMERes) response_;
+      return (me.vipulgupta.dice.Reponse.EXPIRETIMERes) response_;
     }
     return me.vipulgupta.dice.Reponse.EXPIRETIMERes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.EXPIRETIMEResOrBuilder getEXPIRETIMEResOrBuilder() {
     if (responseCase_ == 30) {
-       return (me.vipulgupta.dice.Reponse.EXPIRETIMERes) response_;
+      return (me.vipulgupta.dice.Reponse.EXPIRETIMERes) response_;
     }
     return me.vipulgupta.dice.Reponse.EXPIRETIMERes.getDefaultInstance();
   }
 
-  public static final int TTLRES_FIELD_NUMBER = 31;
   /**
    * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
+   *
    * @return Whether the tTLRes field is set.
    */
   @java.lang.Override
   public boolean hasTTLRes() {
     return responseCase_ == 31;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
+   *
    * @return The tTLRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.TTLRes getTTLRes() {
     if (responseCase_ == 31) {
-       return (me.vipulgupta.dice.Reponse.TTLRes) response_;
+      return (me.vipulgupta.dice.Reponse.TTLRes) response_;
     }
     return me.vipulgupta.dice.Reponse.TTLRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.TTLResOrBuilder getTTLResOrBuilder() {
     if (responseCase_ == 31) {
-       return (me.vipulgupta.dice.Reponse.TTLRes) response_;
+      return (me.vipulgupta.dice.Reponse.TTLRes) response_;
     }
     return me.vipulgupta.dice.Reponse.TTLRes.getDefaultInstance();
   }
 
-  public static final int GETWATCHRES_FIELD_NUMBER = 32;
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
+   *
    * @return Whether the gETWATCHRes field is set.
    */
   @java.lang.Override
   public boolean hasGETWATCHRes() {
     return responseCase_ == 32;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
+   *
    * @return The gETWATCHRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.GETWATCHRes getGETWATCHRes() {
     if (responseCase_ == 32) {
-       return (me.vipulgupta.dice.Reponse.GETWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.GETWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.GETWATCHRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.GETWATCHResOrBuilder getGETWATCHResOrBuilder() {
     if (responseCase_ == 32) {
-       return (me.vipulgupta.dice.Reponse.GETWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.GETWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.GETWATCHRes.getDefaultInstance();
   }
 
-  public static final int UNWATCHRES_FIELD_NUMBER = 33;
   /**
    * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
+   *
    * @return Whether the uNWATCHRes field is set.
    */
   @java.lang.Override
   public boolean hasUNWATCHRes() {
     return responseCase_ == 33;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
+   *
    * @return The uNWATCHRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.UNWATCHRes getUNWATCHRes() {
     if (responseCase_ == 33) {
-       return (me.vipulgupta.dice.Reponse.UNWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.UNWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.UNWATCHRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.UNWATCHResOrBuilder getUNWATCHResOrBuilder() {
     if (responseCase_ == 33) {
-       return (me.vipulgupta.dice.Reponse.UNWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.UNWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.UNWATCHRes.getDefaultInstance();
   }
 
-  public static final int HGETRES_FIELD_NUMBER = 34;
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
+   *
    * @return Whether the hGETRes field is set.
    */
   @java.lang.Override
   public boolean hasHGETRes() {
     return responseCase_ == 34;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
+   *
    * @return The hGETRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HGETRes getHGETRes() {
     if (responseCase_ == 34) {
-       return (me.vipulgupta.dice.Reponse.HGETRes) response_;
+      return (me.vipulgupta.dice.Reponse.HGETRes) response_;
     }
     return me.vipulgupta.dice.Reponse.HGETRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HGETResOrBuilder getHGETResOrBuilder() {
     if (responseCase_ == 34) {
-       return (me.vipulgupta.dice.Reponse.HGETRes) response_;
+      return (me.vipulgupta.dice.Reponse.HGETRes) response_;
     }
     return me.vipulgupta.dice.Reponse.HGETRes.getDefaultInstance();
   }
 
-  public static final int HSETRES_FIELD_NUMBER = 35;
   /**
    * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
+   *
    * @return Whether the hSETRes field is set.
    */
   @java.lang.Override
   public boolean hasHSETRes() {
     return responseCase_ == 35;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
+   *
    * @return The hSETRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HSETRes getHSETRes() {
     if (responseCase_ == 35) {
-       return (me.vipulgupta.dice.Reponse.HSETRes) response_;
+      return (me.vipulgupta.dice.Reponse.HSETRes) response_;
     }
     return me.vipulgupta.dice.Reponse.HSETRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HSETResOrBuilder getHSETResOrBuilder() {
     if (responseCase_ == 35) {
-       return (me.vipulgupta.dice.Reponse.HSETRes) response_;
+      return (me.vipulgupta.dice.Reponse.HSETRes) response_;
     }
     return me.vipulgupta.dice.Reponse.HSETRes.getDefaultInstance();
   }
 
-  public static final int HGETALLRES_FIELD_NUMBER = 36;
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
+   *
    * @return Whether the hGETALLRes field is set.
    */
   @java.lang.Override
   public boolean hasHGETALLRes() {
     return responseCase_ == 36;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
+   *
    * @return The hGETALLRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HGETALLRes getHGETALLRes() {
     if (responseCase_ == 36) {
-       return (me.vipulgupta.dice.Reponse.HGETALLRes) response_;
+      return (me.vipulgupta.dice.Reponse.HGETALLRes) response_;
     }
     return me.vipulgupta.dice.Reponse.HGETALLRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HGETALLResOrBuilder getHGETALLResOrBuilder() {
     if (responseCase_ == 36) {
-       return (me.vipulgupta.dice.Reponse.HGETALLRes) response_;
+      return (me.vipulgupta.dice.Reponse.HGETALLRes) response_;
     }
     return me.vipulgupta.dice.Reponse.HGETALLRes.getDefaultInstance();
   }
 
-  public static final int HGETWATCHRES_FIELD_NUMBER = 37;
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
+   *
    * @return Whether the hGETWATCHRes field is set.
    */
   @java.lang.Override
   public boolean hasHGETWATCHRes() {
     return responseCase_ == 37;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
+   *
    * @return The hGETWATCHRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HGETWATCHRes getHGETWATCHRes() {
     if (responseCase_ == 37) {
-       return (me.vipulgupta.dice.Reponse.HGETWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.HGETWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.HGETWATCHRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HGETWATCHResOrBuilder getHGETWATCHResOrBuilder() {
     if (responseCase_ == 37) {
-       return (me.vipulgupta.dice.Reponse.HGETWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.HGETWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.HGETWATCHRes.getDefaultInstance();
   }
 
-  public static final int HGETALLWATCHRES_FIELD_NUMBER = 38;
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
+   *
    * @return Whether the hGETALLWATCHRes field is set.
    */
   @java.lang.Override
   public boolean hasHGETALLWATCHRes() {
     return responseCase_ == 38;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
+   *
    * @return The hGETALLWATCHRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HGETALLWATCHRes getHGETALLWATCHRes() {
     if (responseCase_ == 38) {
-       return (me.vipulgupta.dice.Reponse.HGETALLWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.HGETALLWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.HGETALLWATCHRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.HGETALLWATCHResOrBuilder getHGETALLWATCHResOrBuilder() {
     if (responseCase_ == 38) {
-       return (me.vipulgupta.dice.Reponse.HGETALLWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.HGETALLWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.HGETALLWATCHRes.getDefaultInstance();
   }
 
-  public static final int ZADDRES_FIELD_NUMBER = 39;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
+   *
    * @return Whether the zADDRes field is set.
    */
   @java.lang.Override
   public boolean hasZADDRes() {
     return responseCase_ == 39;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
+   *
    * @return The zADDRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZADDRes getZADDRes() {
     if (responseCase_ == 39) {
-       return (me.vipulgupta.dice.Reponse.ZADDRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZADDRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZADDRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZADDResOrBuilder getZADDResOrBuilder() {
     if (responseCase_ == 39) {
-       return (me.vipulgupta.dice.Reponse.ZADDRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZADDRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZADDRes.getDefaultInstance();
   }
 
-  public static final int ZCOUNTRES_FIELD_NUMBER = 40;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
+   *
    * @return Whether the zCOUNTRes field is set.
    */
   @java.lang.Override
   public boolean hasZCOUNTRes() {
     return responseCase_ == 40;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
+   *
    * @return The zCOUNTRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZCOUNTRes getZCOUNTRes() {
     if (responseCase_ == 40) {
-       return (me.vipulgupta.dice.Reponse.ZCOUNTRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZCOUNTRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZCOUNTRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZCOUNTResOrBuilder getZCOUNTResOrBuilder() {
     if (responseCase_ == 40) {
-       return (me.vipulgupta.dice.Reponse.ZCOUNTRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZCOUNTRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZCOUNTRes.getDefaultInstance();
   }
 
-  public static final int ZRANGERES_FIELD_NUMBER = 41;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
+   *
    * @return Whether the zRANGERes field is set.
    */
   @java.lang.Override
   public boolean hasZRANGERes() {
     return responseCase_ == 41;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
+   *
    * @return The zRANGERes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZRANGERes getZRANGERes() {
     if (responseCase_ == 41) {
-       return (me.vipulgupta.dice.Reponse.ZRANGERes) response_;
+      return (me.vipulgupta.dice.Reponse.ZRANGERes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZRANGERes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZRANGEResOrBuilder getZRANGEResOrBuilder() {
     if (responseCase_ == 41) {
-       return (me.vipulgupta.dice.Reponse.ZRANGERes) response_;
+      return (me.vipulgupta.dice.Reponse.ZRANGERes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZRANGERes.getDefaultInstance();
   }
 
-  public static final int ZPOPMAXRES_FIELD_NUMBER = 42;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
+   *
    * @return Whether the zPOPMAXRes field is set.
    */
   @java.lang.Override
   public boolean hasZPOPMAXRes() {
     return responseCase_ == 42;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
+   *
    * @return The zPOPMAXRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZPOPMAXRes getZPOPMAXRes() {
     if (responseCase_ == 42) {
-       return (me.vipulgupta.dice.Reponse.ZPOPMAXRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZPOPMAXRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZPOPMAXRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZPOPMAXResOrBuilder getZPOPMAXResOrBuilder() {
     if (responseCase_ == 42) {
-       return (me.vipulgupta.dice.Reponse.ZPOPMAXRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZPOPMAXRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZPOPMAXRes.getDefaultInstance();
   }
 
-  public static final int ZREMRES_FIELD_NUMBER = 43;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
+   *
    * @return Whether the zREMRes field is set.
    */
   @java.lang.Override
   public boolean hasZREMRes() {
     return responseCase_ == 43;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
+   *
    * @return The zREMRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZREMRes getZREMRes() {
     if (responseCase_ == 43) {
-       return (me.vipulgupta.dice.Reponse.ZREMRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZREMRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZREMRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZREMResOrBuilder getZREMResOrBuilder() {
     if (responseCase_ == 43) {
-       return (me.vipulgupta.dice.Reponse.ZREMRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZREMRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZREMRes.getDefaultInstance();
   }
 
-  public static final int ZPOPMINRES_FIELD_NUMBER = 44;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
+   *
    * @return Whether the zPOPMINRes field is set.
    */
   @java.lang.Override
   public boolean hasZPOPMINRes() {
     return responseCase_ == 44;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
+   *
    * @return The zPOPMINRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZPOPMINRes getZPOPMINRes() {
     if (responseCase_ == 44) {
-       return (me.vipulgupta.dice.Reponse.ZPOPMINRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZPOPMINRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZPOPMINRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZPOPMINResOrBuilder getZPOPMINResOrBuilder() {
     if (responseCase_ == 44) {
-       return (me.vipulgupta.dice.Reponse.ZPOPMINRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZPOPMINRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZPOPMINRes.getDefaultInstance();
   }
 
-  public static final int ZRANKRES_FIELD_NUMBER = 45;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
+   *
    * @return Whether the zRANKRes field is set.
    */
   @java.lang.Override
   public boolean hasZRANKRes() {
     return responseCase_ == 45;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
+   *
    * @return The zRANKRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZRANKRes getZRANKRes() {
     if (responseCase_ == 45) {
-       return (me.vipulgupta.dice.Reponse.ZRANKRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZRANKRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZRANKRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZRANKResOrBuilder getZRANKResOrBuilder() {
     if (responseCase_ == 45) {
-       return (me.vipulgupta.dice.Reponse.ZRANKRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZRANKRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZRANKRes.getDefaultInstance();
   }
 
-  public static final int ZCARDRES_FIELD_NUMBER = 46;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
+   *
    * @return Whether the zCARDRes field is set.
    */
   @java.lang.Override
   public boolean hasZCARDRes() {
     return responseCase_ == 46;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
+   *
    * @return The zCARDRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZCARDRes getZCARDRes() {
     if (responseCase_ == 46) {
-       return (me.vipulgupta.dice.Reponse.ZCARDRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZCARDRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZCARDRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZCARDResOrBuilder getZCARDResOrBuilder() {
     if (responseCase_ == 46) {
-       return (me.vipulgupta.dice.Reponse.ZCARDRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZCARDRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZCARDRes.getDefaultInstance();
   }
 
-  public static final int ZRANGEWATCHRES_FIELD_NUMBER = 47;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
+   *
    * @return Whether the zRANGEWATCHRes field is set.
    */
   @java.lang.Override
   public boolean hasZRANGEWATCHRes() {
     return responseCase_ == 47;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
+   *
    * @return The zRANGEWATCHRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZRANGEWATCHRes getZRANGEWATCHRes() {
     if (responseCase_ == 47) {
-       return (me.vipulgupta.dice.Reponse.ZRANGEWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZRANGEWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZRANGEWATCHResOrBuilder getZRANGEWATCHResOrBuilder() {
     if (responseCase_ == 47) {
-       return (me.vipulgupta.dice.Reponse.ZRANGEWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZRANGEWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.getDefaultInstance();
   }
 
-  public static final int ZCOUNTWATCHRES_FIELD_NUMBER = 48;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
+   *
    * @return Whether the zCOUNTWATCHRes field is set.
    */
   @java.lang.Override
   public boolean hasZCOUNTWATCHRes() {
     return responseCase_ == 48;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
+   *
    * @return The zCOUNTWATCHRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes getZCOUNTWATCHRes() {
     if (responseCase_ == 48) {
-       return (me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZCOUNTWATCHResOrBuilder getZCOUNTWATCHResOrBuilder() {
     if (responseCase_ == 48) {
-       return (me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.getDefaultInstance();
   }
 
-  public static final int ZCARDWATCHRES_FIELD_NUMBER = 49;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
+   *
    * @return Whether the zCARDWATCHRes field is set.
    */
   @java.lang.Override
   public boolean hasZCARDWATCHRes() {
     return responseCase_ == 49;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
+   *
    * @return The zCARDWATCHRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZCARDWATCHRes getZCARDWATCHRes() {
     if (responseCase_ == 49) {
-       return (me.vipulgupta.dice.Reponse.ZCARDWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZCARDWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZCARDWATCHRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZCARDWATCHResOrBuilder getZCARDWATCHResOrBuilder() {
     if (responseCase_ == 49) {
-       return (me.vipulgupta.dice.Reponse.ZCARDWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZCARDWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZCARDWATCHRes.getDefaultInstance();
   }
 
-  public static final int ZRANKWATCHRES_FIELD_NUMBER = 50;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
+   *
    * @return Whether the zRANKWATCHRes field is set.
    */
   @java.lang.Override
   public boolean hasZRANKWATCHRes() {
     return responseCase_ == 50;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
+   *
    * @return The zRANKWATCHRes.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZRANKWATCHRes getZRANKWATCHRes() {
     if (responseCase_ == 50) {
-       return (me.vipulgupta.dice.Reponse.ZRANKWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZRANKWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZRANKWATCHRes.getDefaultInstance();
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZRANKWATCHResOrBuilder getZRANKWATCHResOrBuilder() {
     if (responseCase_ == 50) {
-       return (me.vipulgupta.dice.Reponse.ZRANKWATCHRes) response_;
+      return (me.vipulgupta.dice.Reponse.ZRANKWATCHRes) response_;
     }
     return me.vipulgupta.dice.Reponse.ZRANKWATCHRes.getDefaultInstance();
   }
 
-  private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) return true;
-    if (isInitialized == 0) return false;
+    if (isInitialized == 1) {
+      return true;
+    }
+    if (isInitialized == 0) {
+      return false;
+    }
 
     memoizedIsInitialized = 1;
     return true;
@@ -1483,7 +1679,7 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+      throws java.io.IOException {
     if (status_ != me.vipulgupta.dice.Reponse.Status.Status_OK.getNumber()) {
       output.writeEnum(1, status_);
     }
@@ -1619,179 +1815,181 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
-    if (size != -1) return size;
+    if (size != -1) {
+      return size;
+    }
 
     size = 0;
     if (status_ != me.vipulgupta.dice.Reponse.Status.Status_OK.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, status_);
+          .computeEnumSize(1, status_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
     }
     if (fingerprint64_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt64Size(3, fingerprint64_);
+          .computeUInt64Size(3, fingerprint64_);
     }
     if (responseCase_ == 11) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(11, (me.vipulgupta.dice.Reponse.TYPERes) response_);
+          .computeMessageSize(11, (me.vipulgupta.dice.Reponse.TYPERes) response_);
     }
     if (responseCase_ == 12) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(12, (me.vipulgupta.dice.Reponse.PINGRes) response_);
+          .computeMessageSize(12, (me.vipulgupta.dice.Reponse.PINGRes) response_);
     }
     if (responseCase_ == 13) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(13, (me.vipulgupta.dice.Reponse.ECHORes) response_);
+          .computeMessageSize(13, (me.vipulgupta.dice.Reponse.ECHORes) response_);
     }
     if (responseCase_ == 14) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(14, (me.vipulgupta.dice.Reponse.HANDSHAKERes) response_);
+          .computeMessageSize(14, (me.vipulgupta.dice.Reponse.HANDSHAKERes) response_);
     }
     if (responseCase_ == 15) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(15, (me.vipulgupta.dice.Reponse.EXISTSRes) response_);
+          .computeMessageSize(15, (me.vipulgupta.dice.Reponse.EXISTSRes) response_);
     }
     if (responseCase_ == 16) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(16, (me.vipulgupta.dice.Reponse.GETRes) response_);
+          .computeMessageSize(16, (me.vipulgupta.dice.Reponse.GETRes) response_);
     }
     if (responseCase_ == 17) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(17, (me.vipulgupta.dice.Reponse.SETRes) response_);
+          .computeMessageSize(17, (me.vipulgupta.dice.Reponse.SETRes) response_);
     }
     if (responseCase_ == 18) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(18, (me.vipulgupta.dice.Reponse.DELRes) response_);
+          .computeMessageSize(18, (me.vipulgupta.dice.Reponse.DELRes) response_);
     }
     if (responseCase_ == 19) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(19, (me.vipulgupta.dice.Reponse.KEYSRes) response_);
+          .computeMessageSize(19, (me.vipulgupta.dice.Reponse.KEYSRes) response_);
     }
     if (responseCase_ == 20) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(20, (me.vipulgupta.dice.Reponse.GETDELRes) response_);
+          .computeMessageSize(20, (me.vipulgupta.dice.Reponse.GETDELRes) response_);
     }
     if (responseCase_ == 21) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(21, (me.vipulgupta.dice.Reponse.GETEXRes) response_);
+          .computeMessageSize(21, (me.vipulgupta.dice.Reponse.GETEXRes) response_);
     }
     if (responseCase_ == 22) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(22, (me.vipulgupta.dice.Reponse.GETSETRes) response_);
+          .computeMessageSize(22, (me.vipulgupta.dice.Reponse.GETSETRes) response_);
     }
     if (responseCase_ == 23) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(23, (me.vipulgupta.dice.Reponse.INCRRes) response_);
+          .computeMessageSize(23, (me.vipulgupta.dice.Reponse.INCRRes) response_);
     }
     if (responseCase_ == 24) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(24, (me.vipulgupta.dice.Reponse.DECRRes) response_);
+          .computeMessageSize(24, (me.vipulgupta.dice.Reponse.DECRRes) response_);
     }
     if (responseCase_ == 25) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(25, (me.vipulgupta.dice.Reponse.INCRBYRes) response_);
+          .computeMessageSize(25, (me.vipulgupta.dice.Reponse.INCRBYRes) response_);
     }
     if (responseCase_ == 26) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(26, (me.vipulgupta.dice.Reponse.DECRBYRes) response_);
+          .computeMessageSize(26, (me.vipulgupta.dice.Reponse.DECRBYRes) response_);
     }
     if (responseCase_ == 27) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(27, (me.vipulgupta.dice.Reponse.FLUSHDBRes) response_);
+          .computeMessageSize(27, (me.vipulgupta.dice.Reponse.FLUSHDBRes) response_);
     }
     if (responseCase_ == 28) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(28, (me.vipulgupta.dice.Reponse.EXPIRERes) response_);
+          .computeMessageSize(28, (me.vipulgupta.dice.Reponse.EXPIRERes) response_);
     }
     if (responseCase_ == 29) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(29, (me.vipulgupta.dice.Reponse.EXPIREATRes) response_);
+          .computeMessageSize(29, (me.vipulgupta.dice.Reponse.EXPIREATRes) response_);
     }
     if (responseCase_ == 30) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(30, (me.vipulgupta.dice.Reponse.EXPIRETIMERes) response_);
+          .computeMessageSize(30, (me.vipulgupta.dice.Reponse.EXPIRETIMERes) response_);
     }
     if (responseCase_ == 31) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(31, (me.vipulgupta.dice.Reponse.TTLRes) response_);
+          .computeMessageSize(31, (me.vipulgupta.dice.Reponse.TTLRes) response_);
     }
     if (responseCase_ == 32) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(32, (me.vipulgupta.dice.Reponse.GETWATCHRes) response_);
+          .computeMessageSize(32, (me.vipulgupta.dice.Reponse.GETWATCHRes) response_);
     }
     if (responseCase_ == 33) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(33, (me.vipulgupta.dice.Reponse.UNWATCHRes) response_);
+          .computeMessageSize(33, (me.vipulgupta.dice.Reponse.UNWATCHRes) response_);
     }
     if (responseCase_ == 34) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(34, (me.vipulgupta.dice.Reponse.HGETRes) response_);
+          .computeMessageSize(34, (me.vipulgupta.dice.Reponse.HGETRes) response_);
     }
     if (responseCase_ == 35) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(35, (me.vipulgupta.dice.Reponse.HSETRes) response_);
+          .computeMessageSize(35, (me.vipulgupta.dice.Reponse.HSETRes) response_);
     }
     if (responseCase_ == 36) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(36, (me.vipulgupta.dice.Reponse.HGETALLRes) response_);
+          .computeMessageSize(36, (me.vipulgupta.dice.Reponse.HGETALLRes) response_);
     }
     if (responseCase_ == 37) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(37, (me.vipulgupta.dice.Reponse.HGETWATCHRes) response_);
+          .computeMessageSize(37, (me.vipulgupta.dice.Reponse.HGETWATCHRes) response_);
     }
     if (responseCase_ == 38) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(38, (me.vipulgupta.dice.Reponse.HGETALLWATCHRes) response_);
+          .computeMessageSize(38, (me.vipulgupta.dice.Reponse.HGETALLWATCHRes) response_);
     }
     if (responseCase_ == 39) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(39, (me.vipulgupta.dice.Reponse.ZADDRes) response_);
+          .computeMessageSize(39, (me.vipulgupta.dice.Reponse.ZADDRes) response_);
     }
     if (responseCase_ == 40) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(40, (me.vipulgupta.dice.Reponse.ZCOUNTRes) response_);
+          .computeMessageSize(40, (me.vipulgupta.dice.Reponse.ZCOUNTRes) response_);
     }
     if (responseCase_ == 41) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(41, (me.vipulgupta.dice.Reponse.ZRANGERes) response_);
+          .computeMessageSize(41, (me.vipulgupta.dice.Reponse.ZRANGERes) response_);
     }
     if (responseCase_ == 42) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(42, (me.vipulgupta.dice.Reponse.ZPOPMAXRes) response_);
+          .computeMessageSize(42, (me.vipulgupta.dice.Reponse.ZPOPMAXRes) response_);
     }
     if (responseCase_ == 43) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(43, (me.vipulgupta.dice.Reponse.ZREMRes) response_);
+          .computeMessageSize(43, (me.vipulgupta.dice.Reponse.ZREMRes) response_);
     }
     if (responseCase_ == 44) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(44, (me.vipulgupta.dice.Reponse.ZPOPMINRes) response_);
+          .computeMessageSize(44, (me.vipulgupta.dice.Reponse.ZPOPMINRes) response_);
     }
     if (responseCase_ == 45) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(45, (me.vipulgupta.dice.Reponse.ZRANKRes) response_);
+          .computeMessageSize(45, (me.vipulgupta.dice.Reponse.ZRANKRes) response_);
     }
     if (responseCase_ == 46) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(46, (me.vipulgupta.dice.Reponse.ZCARDRes) response_);
+          .computeMessageSize(46, (me.vipulgupta.dice.Reponse.ZCARDRes) response_);
     }
     if (responseCase_ == 47) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(47, (me.vipulgupta.dice.Reponse.ZRANGEWATCHRes) response_);
+          .computeMessageSize(47, (me.vipulgupta.dice.Reponse.ZRANGEWATCHRes) response_);
     }
     if (responseCase_ == 48) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(48, (me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) response_);
+          .computeMessageSize(48, (me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) response_);
     }
     if (responseCase_ == 49) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(49, (me.vipulgupta.dice.Reponse.ZCARDWATCHRes) response_);
+          .computeMessageSize(49, (me.vipulgupta.dice.Reponse.ZCARDWATCHRes) response_);
     }
     if (responseCase_ == 50) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(50, (me.vipulgupta.dice.Reponse.ZRANKWATCHRes) response_);
+          .computeMessageSize(50, (me.vipulgupta.dice.Reponse.ZRANKWATCHRes) response_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1801,184 +1999,274 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof me.vipulgupta.dice.Reponse.Response)) {
       return super.equals(obj);
     }
     me.vipulgupta.dice.Reponse.Response other = (me.vipulgupta.dice.Reponse.Response) obj;
 
-    if (status_ != other.status_) return false;
+    if (status_ != other.status_) {
+      return false;
+    }
     if (!getMessage()
-        .equals(other.getMessage())) return false;
+        .equals(other.getMessage())) {
+      return false;
+    }
     if (getFingerprint64()
-        != other.getFingerprint64()) return false;
-    if (!getResponseCase().equals(other.getResponseCase())) return false;
+        != other.getFingerprint64()) {
+      return false;
+    }
+    if (!getResponseCase().equals(other.getResponseCase())) {
+      return false;
+    }
     switch (responseCase_) {
       case 11:
         if (!getTYPERes()
-            .equals(other.getTYPERes())) return false;
+            .equals(other.getTYPERes())) {
+          return false;
+        }
         break;
       case 12:
         if (!getPINGRes()
-            .equals(other.getPINGRes())) return false;
+            .equals(other.getPINGRes())) {
+          return false;
+        }
         break;
       case 13:
         if (!getECHORes()
-            .equals(other.getECHORes())) return false;
+            .equals(other.getECHORes())) {
+          return false;
+        }
         break;
       case 14:
         if (!getHANDSHAKERes()
-            .equals(other.getHANDSHAKERes())) return false;
+            .equals(other.getHANDSHAKERes())) {
+          return false;
+        }
         break;
       case 15:
         if (!getEXISTSRes()
-            .equals(other.getEXISTSRes())) return false;
+            .equals(other.getEXISTSRes())) {
+          return false;
+        }
         break;
       case 16:
         if (!getGETRes()
-            .equals(other.getGETRes())) return false;
+            .equals(other.getGETRes())) {
+          return false;
+        }
         break;
       case 17:
         if (!getSETRes()
-            .equals(other.getSETRes())) return false;
+            .equals(other.getSETRes())) {
+          return false;
+        }
         break;
       case 18:
         if (!getDELRes()
-            .equals(other.getDELRes())) return false;
+            .equals(other.getDELRes())) {
+          return false;
+        }
         break;
       case 19:
         if (!getKEYSRes()
-            .equals(other.getKEYSRes())) return false;
+            .equals(other.getKEYSRes())) {
+          return false;
+        }
         break;
       case 20:
         if (!getGETDELRes()
-            .equals(other.getGETDELRes())) return false;
+            .equals(other.getGETDELRes())) {
+          return false;
+        }
         break;
       case 21:
         if (!getGETEXRes()
-            .equals(other.getGETEXRes())) return false;
+            .equals(other.getGETEXRes())) {
+          return false;
+        }
         break;
       case 22:
         if (!getGETSETRes()
-            .equals(other.getGETSETRes())) return false;
+            .equals(other.getGETSETRes())) {
+          return false;
+        }
         break;
       case 23:
         if (!getINCRRes()
-            .equals(other.getINCRRes())) return false;
+            .equals(other.getINCRRes())) {
+          return false;
+        }
         break;
       case 24:
         if (!getDECRRes()
-            .equals(other.getDECRRes())) return false;
+            .equals(other.getDECRRes())) {
+          return false;
+        }
         break;
       case 25:
         if (!getINCRBYRes()
-            .equals(other.getINCRBYRes())) return false;
+            .equals(other.getINCRBYRes())) {
+          return false;
+        }
         break;
       case 26:
         if (!getDECRBYRes()
-            .equals(other.getDECRBYRes())) return false;
+            .equals(other.getDECRBYRes())) {
+          return false;
+        }
         break;
       case 27:
         if (!getFLUSHDBRes()
-            .equals(other.getFLUSHDBRes())) return false;
+            .equals(other.getFLUSHDBRes())) {
+          return false;
+        }
         break;
       case 28:
         if (!getEXPIRERes()
-            .equals(other.getEXPIRERes())) return false;
+            .equals(other.getEXPIRERes())) {
+          return false;
+        }
         break;
       case 29:
         if (!getEXPIREATRes()
-            .equals(other.getEXPIREATRes())) return false;
+            .equals(other.getEXPIREATRes())) {
+          return false;
+        }
         break;
       case 30:
         if (!getEXPIRETIMERes()
-            .equals(other.getEXPIRETIMERes())) return false;
+            .equals(other.getEXPIRETIMERes())) {
+          return false;
+        }
         break;
       case 31:
         if (!getTTLRes()
-            .equals(other.getTTLRes())) return false;
+            .equals(other.getTTLRes())) {
+          return false;
+        }
         break;
       case 32:
         if (!getGETWATCHRes()
-            .equals(other.getGETWATCHRes())) return false;
+            .equals(other.getGETWATCHRes())) {
+          return false;
+        }
         break;
       case 33:
         if (!getUNWATCHRes()
-            .equals(other.getUNWATCHRes())) return false;
+            .equals(other.getUNWATCHRes())) {
+          return false;
+        }
         break;
       case 34:
         if (!getHGETRes()
-            .equals(other.getHGETRes())) return false;
+            .equals(other.getHGETRes())) {
+          return false;
+        }
         break;
       case 35:
         if (!getHSETRes()
-            .equals(other.getHSETRes())) return false;
+            .equals(other.getHSETRes())) {
+          return false;
+        }
         break;
       case 36:
         if (!getHGETALLRes()
-            .equals(other.getHGETALLRes())) return false;
+            .equals(other.getHGETALLRes())) {
+          return false;
+        }
         break;
       case 37:
         if (!getHGETWATCHRes()
-            .equals(other.getHGETWATCHRes())) return false;
+            .equals(other.getHGETWATCHRes())) {
+          return false;
+        }
         break;
       case 38:
         if (!getHGETALLWATCHRes()
-            .equals(other.getHGETALLWATCHRes())) return false;
+            .equals(other.getHGETALLWATCHRes())) {
+          return false;
+        }
         break;
       case 39:
         if (!getZADDRes()
-            .equals(other.getZADDRes())) return false;
+            .equals(other.getZADDRes())) {
+          return false;
+        }
         break;
       case 40:
         if (!getZCOUNTRes()
-            .equals(other.getZCOUNTRes())) return false;
+            .equals(other.getZCOUNTRes())) {
+          return false;
+        }
         break;
       case 41:
         if (!getZRANGERes()
-            .equals(other.getZRANGERes())) return false;
+            .equals(other.getZRANGERes())) {
+          return false;
+        }
         break;
       case 42:
         if (!getZPOPMAXRes()
-            .equals(other.getZPOPMAXRes())) return false;
+            .equals(other.getZPOPMAXRes())) {
+          return false;
+        }
         break;
       case 43:
         if (!getZREMRes()
-            .equals(other.getZREMRes())) return false;
+            .equals(other.getZREMRes())) {
+          return false;
+        }
         break;
       case 44:
         if (!getZPOPMINRes()
-            .equals(other.getZPOPMINRes())) return false;
+            .equals(other.getZPOPMINRes())) {
+          return false;
+        }
         break;
       case 45:
         if (!getZRANKRes()
-            .equals(other.getZRANKRes())) return false;
+            .equals(other.getZRANKRes())) {
+          return false;
+        }
         break;
       case 46:
         if (!getZCARDRes()
-            .equals(other.getZCARDRes())) return false;
+            .equals(other.getZCARDRes())) {
+          return false;
+        }
         break;
       case 47:
         if (!getZRANGEWATCHRes()
-            .equals(other.getZRANGEWATCHRes())) return false;
+            .equals(other.getZRANGEWATCHRes())) {
+          return false;
+        }
         break;
       case 48:
         if (!getZCOUNTWATCHRes()
-            .equals(other.getZCOUNTWATCHRes())) return false;
+            .equals(other.getZCOUNTWATCHRes())) {
+          return false;
+        }
         break;
       case 49:
         if (!getZCARDWATCHRes()
-            .equals(other.getZCARDWATCHRes())) return false;
+            .equals(other.getZCARDWATCHRes())) {
+          return false;
+        }
         break;
       case 50:
         if (!getZRANKWATCHRes()
-            .equals(other.getZRANKWATCHRes())) return false;
+            .equals(other.getZRANKWATCHRes())) {
+          return false;
+        }
         break;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) {
+      return false;
+    }
     return true;
   }
 
@@ -2165,84 +2453,11 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static me.vipulgupta.dice.Reponse.Response parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseFrom(
-      com.google.protobuf.ByteString data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseFrom(
-      com.google.protobuf.ByteString data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseFrom(byte[] data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseDelimitedFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.Response parseFrom(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+  @java.lang.Override
+  public Builder newBuilderForType() {
+    return newBuilder();
   }
 
-  @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
-  public static Builder newBuilder() {
-    return DEFAULT_INSTANCE.toBuilder();
-  }
-  public static Builder newBuilder(me.vipulgupta.dice.Reponse.Response prototype) {
-    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
   @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
@@ -2255,6 +2470,171 @@ private static final long serialVersionUID = 0L;
     Builder builder = new Builder(parent);
     return builder;
   }
+
+  @java.lang.Override
+  public com.google.protobuf.Parser<Response> getParserForType() {
+    return PARSER;
+  }
+
+  @java.lang.Override
+  public me.vipulgupta.dice.Reponse.Response getDefaultInstanceForType() {
+    return DEFAULT_INSTANCE;
+  }
+
+  public enum ResponseCase
+      implements com.google.protobuf.Internal.EnumLite,
+      com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    TYPERES(11),
+    PINGRES(12),
+    ECHORES(13),
+    HANDSHAKERES(14),
+    EXISTSRES(15),
+    GETRES(16),
+    SETRES(17),
+    DELRES(18),
+    KEYSRES(19),
+    GETDELRES(20),
+    GETEXRES(21),
+    GETSETRES(22),
+    INCRRES(23),
+    DECRRES(24),
+    INCRBYRES(25),
+    DECRBYRES(26),
+    FLUSHDBRES(27),
+    EXPIRERES(28),
+    EXPIREATRES(29),
+    EXPIRETIMERES(30),
+    TTLRES(31),
+    GETWATCHRES(32),
+    UNWATCHRES(33),
+    HGETRES(34),
+    HSETRES(35),
+    HGETALLRES(36),
+    HGETWATCHRES(37),
+    HGETALLWATCHRES(38),
+    ZADDRES(39),
+    ZCOUNTRES(40),
+    ZRANGERES(41),
+    ZPOPMAXRES(42),
+    ZREMRES(43),
+    ZPOPMINRES(44),
+    ZRANKRES(45),
+    ZCARDRES(46),
+    ZRANGEWATCHRES(47),
+    ZCOUNTWATCHRES(48),
+    ZCARDWATCHRES(49),
+    ZRANKWATCHRES(50),
+    RESPONSE_NOT_SET(0);
+    private final int value;
+
+    private ResponseCase(int value) {
+      this.value = value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ResponseCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ResponseCase forNumber(int value) {
+      switch (value) {
+        case 11:
+          return TYPERES;
+        case 12:
+          return PINGRES;
+        case 13:
+          return ECHORES;
+        case 14:
+          return HANDSHAKERES;
+        case 15:
+          return EXISTSRES;
+        case 16:
+          return GETRES;
+        case 17:
+          return SETRES;
+        case 18:
+          return DELRES;
+        case 19:
+          return KEYSRES;
+        case 20:
+          return GETDELRES;
+        case 21:
+          return GETEXRES;
+        case 22:
+          return GETSETRES;
+        case 23:
+          return INCRRES;
+        case 24:
+          return DECRRES;
+        case 25:
+          return INCRBYRES;
+        case 26:
+          return DECRBYRES;
+        case 27:
+          return FLUSHDBRES;
+        case 28:
+          return EXPIRERES;
+        case 29:
+          return EXPIREATRES;
+        case 30:
+          return EXPIRETIMERES;
+        case 31:
+          return TTLRES;
+        case 32:
+          return GETWATCHRES;
+        case 33:
+          return UNWATCHRES;
+        case 34:
+          return HGETRES;
+        case 35:
+          return HSETRES;
+        case 36:
+          return HGETALLRES;
+        case 37:
+          return HGETWATCHRES;
+        case 38:
+          return HGETALLWATCHRES;
+        case 39:
+          return ZADDRES;
+        case 40:
+          return ZCOUNTRES;
+        case 41:
+          return ZRANGERES;
+        case 42:
+          return ZPOPMAXRES;
+        case 43:
+          return ZREMRES;
+        case 44:
+          return ZPOPMINRES;
+        case 45:
+          return ZRANKRES;
+        case 46:
+          return ZCARDRES;
+        case 47:
+          return ZRANGEWATCHRES;
+        case 48:
+          return ZCOUNTWATCHRES;
+        case 49:
+          return ZCARDWATCHRES;
+        case 50:
+          return ZRANKWATCHRES;
+        case 0:
+          return RESPONSE_NOT_SET;
+        default:
+          return null;
+      }
+    }
+
+    public int getNumber() {
+      return this.value;
+    }
+  }
+
   /**
    * Protobuf type {@code me.vipulgupta.dice.Reponse.Response}
    */
@@ -2262,18 +2642,94 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:me.vipulgupta.dice.Reponse.Response)
       me.vipulgupta.dice.Reponse.ResponseOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_Response_descriptor;
-    }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_Response_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              me.vipulgupta.dice.Reponse.Response.class, me.vipulgupta.dice.Reponse.Response.Builder.class);
-    }
+    private int responseCase_ = 0;
+    private java.lang.Object response_;
+    private int bitField0_;
+    private int bitField1_;
+    private int status_ = 0;
+    private java.lang.Object message_ = "";
+    private long fingerprint64_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.TYPERes, me.vipulgupta.dice.Reponse.TYPERes.Builder, me.vipulgupta.dice.Reponse.TYPEResOrBuilder> tYPEResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.PINGRes, me.vipulgupta.dice.Reponse.PINGRes.Builder, me.vipulgupta.dice.Reponse.PINGResOrBuilder> pINGResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ECHORes, me.vipulgupta.dice.Reponse.ECHORes.Builder, me.vipulgupta.dice.Reponse.ECHOResOrBuilder> eCHOResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.HANDSHAKERes, me.vipulgupta.dice.Reponse.HANDSHAKERes.Builder, me.vipulgupta.dice.Reponse.HANDSHAKEResOrBuilder> hANDSHAKEResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.EXISTSRes, me.vipulgupta.dice.Reponse.EXISTSRes.Builder, me.vipulgupta.dice.Reponse.EXISTSResOrBuilder> eXISTSResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.GETRes, me.vipulgupta.dice.Reponse.GETRes.Builder, me.vipulgupta.dice.Reponse.GETResOrBuilder> gETResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.SETRes, me.vipulgupta.dice.Reponse.SETRes.Builder, me.vipulgupta.dice.Reponse.SETResOrBuilder> sETResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.DELRes, me.vipulgupta.dice.Reponse.DELRes.Builder, me.vipulgupta.dice.Reponse.DELResOrBuilder> dELResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.KEYSRes, me.vipulgupta.dice.Reponse.KEYSRes.Builder, me.vipulgupta.dice.Reponse.KEYSResOrBuilder> kEYSResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.GETDELRes, me.vipulgupta.dice.Reponse.GETDELRes.Builder, me.vipulgupta.dice.Reponse.GETDELResOrBuilder> gETDELResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.GETEXRes, me.vipulgupta.dice.Reponse.GETEXRes.Builder, me.vipulgupta.dice.Reponse.GETEXResOrBuilder> gETEXResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.GETSETRes, me.vipulgupta.dice.Reponse.GETSETRes.Builder, me.vipulgupta.dice.Reponse.GETSETResOrBuilder> gETSETResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.INCRRes, me.vipulgupta.dice.Reponse.INCRRes.Builder, me.vipulgupta.dice.Reponse.INCRResOrBuilder> iNCRResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.DECRRes, me.vipulgupta.dice.Reponse.DECRRes.Builder, me.vipulgupta.dice.Reponse.DECRResOrBuilder> dECRResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.INCRBYRes, me.vipulgupta.dice.Reponse.INCRBYRes.Builder, me.vipulgupta.dice.Reponse.INCRBYResOrBuilder> iNCRBYResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.DECRBYRes, me.vipulgupta.dice.Reponse.DECRBYRes.Builder, me.vipulgupta.dice.Reponse.DECRBYResOrBuilder> dECRBYResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.FLUSHDBRes, me.vipulgupta.dice.Reponse.FLUSHDBRes.Builder, me.vipulgupta.dice.Reponse.FLUSHDBResOrBuilder> fLUSHDBResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.EXPIRERes, me.vipulgupta.dice.Reponse.EXPIRERes.Builder, me.vipulgupta.dice.Reponse.EXPIREResOrBuilder> eXPIREResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.EXPIREATRes, me.vipulgupta.dice.Reponse.EXPIREATRes.Builder, me.vipulgupta.dice.Reponse.EXPIREATResOrBuilder> eXPIREATResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.EXPIRETIMERes, me.vipulgupta.dice.Reponse.EXPIRETIMERes.Builder, me.vipulgupta.dice.Reponse.EXPIRETIMEResOrBuilder> eXPIRETIMEResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.TTLRes, me.vipulgupta.dice.Reponse.TTLRes.Builder, me.vipulgupta.dice.Reponse.TTLResOrBuilder> tTLResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.GETWATCHRes, me.vipulgupta.dice.Reponse.GETWATCHRes.Builder, me.vipulgupta.dice.Reponse.GETWATCHResOrBuilder> gETWATCHResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.UNWATCHRes, me.vipulgupta.dice.Reponse.UNWATCHRes.Builder, me.vipulgupta.dice.Reponse.UNWATCHResOrBuilder> uNWATCHResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.HGETRes, me.vipulgupta.dice.Reponse.HGETRes.Builder, me.vipulgupta.dice.Reponse.HGETResOrBuilder> hGETResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.HSETRes, me.vipulgupta.dice.Reponse.HSETRes.Builder, me.vipulgupta.dice.Reponse.HSETResOrBuilder> hSETResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.HGETALLRes, me.vipulgupta.dice.Reponse.HGETALLRes.Builder, me.vipulgupta.dice.Reponse.HGETALLResOrBuilder> hGETALLResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.HGETWATCHRes, me.vipulgupta.dice.Reponse.HGETWATCHRes.Builder, me.vipulgupta.dice.Reponse.HGETWATCHResOrBuilder> hGETWATCHResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.HGETALLWATCHRes, me.vipulgupta.dice.Reponse.HGETALLWATCHRes.Builder, me.vipulgupta.dice.Reponse.HGETALLWATCHResOrBuilder> hGETALLWATCHResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZADDRes, me.vipulgupta.dice.Reponse.ZADDRes.Builder, me.vipulgupta.dice.Reponse.ZADDResOrBuilder> zADDResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZCOUNTRes, me.vipulgupta.dice.Reponse.ZCOUNTRes.Builder, me.vipulgupta.dice.Reponse.ZCOUNTResOrBuilder> zCOUNTResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZRANGERes, me.vipulgupta.dice.Reponse.ZRANGERes.Builder, me.vipulgupta.dice.Reponse.ZRANGEResOrBuilder> zRANGEResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZPOPMAXRes, me.vipulgupta.dice.Reponse.ZPOPMAXRes.Builder, me.vipulgupta.dice.Reponse.ZPOPMAXResOrBuilder> zPOPMAXResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZREMRes, me.vipulgupta.dice.Reponse.ZREMRes.Builder, me.vipulgupta.dice.Reponse.ZREMResOrBuilder> zREMResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZPOPMINRes, me.vipulgupta.dice.Reponse.ZPOPMINRes.Builder, me.vipulgupta.dice.Reponse.ZPOPMINResOrBuilder> zPOPMINResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZRANKRes, me.vipulgupta.dice.Reponse.ZRANKRes.Builder, me.vipulgupta.dice.Reponse.ZRANKResOrBuilder> zRANKResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZCARDRes, me.vipulgupta.dice.Reponse.ZCARDRes.Builder, me.vipulgupta.dice.Reponse.ZCARDResOrBuilder> zCARDResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZRANGEWATCHRes, me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZRANGEWATCHResOrBuilder> zRANGEWATCHResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes, me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZCOUNTWATCHResOrBuilder> zCOUNTWATCHResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZCARDWATCHRes, me.vipulgupta.dice.Reponse.ZCARDWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZCARDWATCHResOrBuilder> zCARDWATCHResBuilder_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZRANKWATCHRes, me.vipulgupta.dice.Reponse.ZRANKWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZRANKWATCHResOrBuilder> zRANKWATCHResBuilder_;
 
     // Construct using me.vipulgupta.dice.Reponse.Response.newBuilder()
     private Builder() {
@@ -2285,6 +2741,21 @@ private static final long serialVersionUID = 0L;
       super(parent);
 
     }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              me.vipulgupta.dice.Reponse.Response.class,
+              me.vipulgupta.dice.Reponse.Response.Builder.class);
+    }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -2420,7 +2891,7 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    getDescriptorForType() {
       return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_Response_descriptor;
     }
 
@@ -2441,8 +2912,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public me.vipulgupta.dice.Reponse.Response buildPartial() {
       me.vipulgupta.dice.Reponse.Response result = new me.vipulgupta.dice.Reponse.Response(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      if (bitField1_ != 0) { buildPartial1(result); }
+      if (bitField0_ != 0) {
+        buildPartial0(result);
+      }
+      if (bitField1_ != 0) {
+        buildPartial1(result);
+      }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -2634,38 +3109,44 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof me.vipulgupta.dice.Reponse.Response) {
-        return mergeFrom((me.vipulgupta.dice.Reponse.Response)other);
+        return mergeFrom((me.vipulgupta.dice.Reponse.Response) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -2673,7 +3154,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public Builder mergeFrom(me.vipulgupta.dice.Reponse.Response other) {
-      if (other == me.vipulgupta.dice.Reponse.Response.getDefaultInstance()) return this;
+      if (other == me.vipulgupta.dice.Reponse.Response.getDefaultInstance()) {
+        return this;
+      }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
@@ -3186,10 +3669,9 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
-    private int responseCase_ = 0;
-    private java.lang.Object response_;
+
     public ResponseCase
-        getResponseCase() {
+    getResponseCase() {
       return ResponseCase.forNumber(
           responseCase_);
     }
@@ -3201,19 +3683,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
-    private int bitField1_;
-
-    private int status_ = 0;
     /**
      * <code>.me.vipulgupta.dice.Reponse.Status status = 1;</code>
+     *
      * @return The enum numeric value on the wire for status.
      */
-    @java.lang.Override public int getStatusValue() {
+    @java.lang.Override
+    public int getStatusValue() {
       return status_;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.Status status = 1;</code>
+     *
      * @param value The enum numeric value on the wire for status to set.
      * @return This builder for chaining.
      */
@@ -3223,17 +3705,22 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.Status status = 1;</code>
+     *
      * @return The status.
      */
     @java.lang.Override
     public me.vipulgupta.dice.Reponse.Status getStatus() {
-      me.vipulgupta.dice.Reponse.Status result = me.vipulgupta.dice.Reponse.Status.forNumber(status_);
+      me.vipulgupta.dice.Reponse.Status result = me.vipulgupta.dice.Reponse.Status.forNumber(
+          status_);
       return result == null ? me.vipulgupta.dice.Reponse.Status.UNRECOGNIZED : result;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.Status status = 1;</code>
+     *
      * @param value The status to set.
      * @return This builder for chaining.
      */
@@ -3246,8 +3733,10 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.Status status = 1;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
@@ -3257,9 +3746,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object message_ = "";
     /**
      * <code>string message = 2;</code>
+     *
      * @return The message.
      */
     public java.lang.String getMessage() {
@@ -3274,15 +3763,34 @@ private static final long serialVersionUID = 0L;
         return (java.lang.String) ref;
       }
     }
+
     /**
      * <code>string message = 2;</code>
+     *
+     * @param value The message to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMessage(
+        java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      message_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>string message = 2;</code>
+     *
      * @return The bytes for message.
      */
     public com.google.protobuf.ByteString
-        getMessageBytes() {
+    getMessageBytes() {
       java.lang.Object ref = message_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         message_ = b;
@@ -3291,21 +3799,28 @@ private static final long serialVersionUID = 0L;
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <code>string message = 2;</code>
-     * @param value The message to set.
+     *
+     * @param value The bytes for message to set.
      * @return This builder for chaining.
      */
-    public Builder setMessage(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+    public Builder setMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
       message_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
+
     /**
      * <code>string message = 2;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearMessage() {
@@ -3314,44 +3829,34 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
-    /**
-     * <code>string message = 2;</code>
-     * @param value The bytes for message to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMessageBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      message_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
 
-    private long fingerprint64_ ;
     /**
      * <code>uint64 fingerprint64 = 3;</code>
+     *
      * @return The fingerprint64.
      */
     @java.lang.Override
     public long getFingerprint64() {
       return fingerprint64_;
     }
+
     /**
      * <code>uint64 fingerprint64 = 3;</code>
+     *
      * @param value The fingerprint64 to set.
      * @return This builder for chaining.
      */
     public Builder setFingerprint64(long value) {
-      
+
       fingerprint64_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
+
     /**
      * <code>uint64 fingerprint64 = 3;</code>
+     *
      * @return This builder for chaining.
      */
     public Builder clearFingerprint64() {
@@ -3361,18 +3866,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.TYPERes, me.vipulgupta.dice.Reponse.TYPERes.Builder, me.vipulgupta.dice.Reponse.TYPEResOrBuilder> tYPEResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
+     *
      * @return Whether the tYPERes field is set.
      */
     @java.lang.Override
     public boolean hasTYPERes() {
       return responseCase_ == 11;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
+     *
      * @return The tYPERes.
      */
     @java.lang.Override
@@ -3389,6 +3895,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.TYPERes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
      */
@@ -3405,6 +3912,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 11;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
      */
@@ -3419,6 +3927,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 11;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
      */
@@ -3426,7 +3935,8 @@ private static final long serialVersionUID = 0L;
       if (tYPEResBuilder_ == null) {
         if (responseCase_ == 11 &&
             response_ != me.vipulgupta.dice.Reponse.TYPERes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.TYPERes.newBuilder((me.vipulgupta.dice.Reponse.TYPERes) response_)
+          response_ = me.vipulgupta.dice.Reponse.TYPERes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.TYPERes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -3442,6 +3952,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 11;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
      */
@@ -3461,12 +3972,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
      */
     public me.vipulgupta.dice.Reponse.TYPERes.Builder getTYPEResBuilder() {
       return getTYPEResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
      */
@@ -3481,21 +3994,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.TYPERes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TYPERes TYPERes = 11;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.TYPERes, me.vipulgupta.dice.Reponse.TYPERes.Builder, me.vipulgupta.dice.Reponse.TYPEResOrBuilder> 
-        getTYPEResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.TYPERes, me.vipulgupta.dice.Reponse.TYPERes.Builder, me.vipulgupta.dice.Reponse.TYPEResOrBuilder>
+    getTYPEResFieldBuilder() {
       if (tYPEResBuilder_ == null) {
         if (!(responseCase_ == 11)) {
           response_ = me.vipulgupta.dice.Reponse.TYPERes.getDefaultInstance();
         }
         tYPEResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.TYPERes, me.vipulgupta.dice.Reponse.TYPERes.Builder, me.vipulgupta.dice.Reponse.TYPEResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.TYPERes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.TYPERes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 11;
@@ -3503,18 +4017,19 @@ private static final long serialVersionUID = 0L;
       return tYPEResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.PINGRes, me.vipulgupta.dice.Reponse.PINGRes.Builder, me.vipulgupta.dice.Reponse.PINGResOrBuilder> pINGResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
+     *
      * @return Whether the pINGRes field is set.
      */
     @java.lang.Override
     public boolean hasPINGRes() {
       return responseCase_ == 12;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
+     *
      * @return The pINGRes.
      */
     @java.lang.Override
@@ -3531,6 +4046,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.PINGRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
      */
@@ -3547,6 +4063,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 12;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
      */
@@ -3561,6 +4078,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 12;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
      */
@@ -3568,7 +4086,8 @@ private static final long serialVersionUID = 0L;
       if (pINGResBuilder_ == null) {
         if (responseCase_ == 12 &&
             response_ != me.vipulgupta.dice.Reponse.PINGRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.PINGRes.newBuilder((me.vipulgupta.dice.Reponse.PINGRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.PINGRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.PINGRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -3584,6 +4103,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 12;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
      */
@@ -3603,12 +4123,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
      */
     public me.vipulgupta.dice.Reponse.PINGRes.Builder getPINGResBuilder() {
       return getPINGResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
      */
@@ -3623,21 +4145,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.PINGRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.PINGRes PINGRes = 12;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.PINGRes, me.vipulgupta.dice.Reponse.PINGRes.Builder, me.vipulgupta.dice.Reponse.PINGResOrBuilder> 
-        getPINGResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.PINGRes, me.vipulgupta.dice.Reponse.PINGRes.Builder, me.vipulgupta.dice.Reponse.PINGResOrBuilder>
+    getPINGResFieldBuilder() {
       if (pINGResBuilder_ == null) {
         if (!(responseCase_ == 12)) {
           response_ = me.vipulgupta.dice.Reponse.PINGRes.getDefaultInstance();
         }
         pINGResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.PINGRes, me.vipulgupta.dice.Reponse.PINGRes.Builder, me.vipulgupta.dice.Reponse.PINGResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.PINGRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.PINGRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 12;
@@ -3645,18 +4168,19 @@ private static final long serialVersionUID = 0L;
       return pINGResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ECHORes, me.vipulgupta.dice.Reponse.ECHORes.Builder, me.vipulgupta.dice.Reponse.ECHOResOrBuilder> eCHOResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
+     *
      * @return Whether the eCHORes field is set.
      */
     @java.lang.Override
     public boolean hasECHORes() {
       return responseCase_ == 13;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
+     *
      * @return The eCHORes.
      */
     @java.lang.Override
@@ -3673,6 +4197,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ECHORes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
      */
@@ -3689,6 +4214,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 13;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
      */
@@ -3703,6 +4229,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 13;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
      */
@@ -3710,7 +4237,8 @@ private static final long serialVersionUID = 0L;
       if (eCHOResBuilder_ == null) {
         if (responseCase_ == 13 &&
             response_ != me.vipulgupta.dice.Reponse.ECHORes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ECHORes.newBuilder((me.vipulgupta.dice.Reponse.ECHORes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ECHORes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ECHORes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -3726,6 +4254,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 13;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
      */
@@ -3745,12 +4274,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
      */
     public me.vipulgupta.dice.Reponse.ECHORes.Builder getECHOResBuilder() {
       return getECHOResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
      */
@@ -3765,21 +4296,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ECHORes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ECHORes ECHORes = 13;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ECHORes, me.vipulgupta.dice.Reponse.ECHORes.Builder, me.vipulgupta.dice.Reponse.ECHOResOrBuilder> 
-        getECHOResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ECHORes, me.vipulgupta.dice.Reponse.ECHORes.Builder, me.vipulgupta.dice.Reponse.ECHOResOrBuilder>
+    getECHOResFieldBuilder() {
       if (eCHOResBuilder_ == null) {
         if (!(responseCase_ == 13)) {
           response_ = me.vipulgupta.dice.Reponse.ECHORes.getDefaultInstance();
         }
         eCHOResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ECHORes, me.vipulgupta.dice.Reponse.ECHORes.Builder, me.vipulgupta.dice.Reponse.ECHOResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ECHORes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ECHORes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 13;
@@ -3787,18 +4319,19 @@ private static final long serialVersionUID = 0L;
       return eCHOResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HANDSHAKERes, me.vipulgupta.dice.Reponse.HANDSHAKERes.Builder, me.vipulgupta.dice.Reponse.HANDSHAKEResOrBuilder> hANDSHAKEResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
+     *
      * @return Whether the hANDSHAKERes field is set.
      */
     @java.lang.Override
     public boolean hasHANDSHAKERes() {
       return responseCase_ == 14;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
+     *
      * @return The hANDSHAKERes.
      */
     @java.lang.Override
@@ -3815,6 +4348,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HANDSHAKERes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
      */
@@ -3831,6 +4365,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 14;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
      */
@@ -3845,6 +4380,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 14;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
      */
@@ -3852,7 +4388,8 @@ private static final long serialVersionUID = 0L;
       if (hANDSHAKEResBuilder_ == null) {
         if (responseCase_ == 14 &&
             response_ != me.vipulgupta.dice.Reponse.HANDSHAKERes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.HANDSHAKERes.newBuilder((me.vipulgupta.dice.Reponse.HANDSHAKERes) response_)
+          response_ = me.vipulgupta.dice.Reponse.HANDSHAKERes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.HANDSHAKERes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -3868,6 +4405,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 14;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
      */
@@ -3887,12 +4425,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
      */
     public me.vipulgupta.dice.Reponse.HANDSHAKERes.Builder getHANDSHAKEResBuilder() {
       return getHANDSHAKEResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
      */
@@ -3907,21 +4447,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HANDSHAKERes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HANDSHAKERes HANDSHAKERes = 14;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HANDSHAKERes, me.vipulgupta.dice.Reponse.HANDSHAKERes.Builder, me.vipulgupta.dice.Reponse.HANDSHAKEResOrBuilder> 
-        getHANDSHAKEResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.HANDSHAKERes, me.vipulgupta.dice.Reponse.HANDSHAKERes.Builder, me.vipulgupta.dice.Reponse.HANDSHAKEResOrBuilder>
+    getHANDSHAKEResFieldBuilder() {
       if (hANDSHAKEResBuilder_ == null) {
         if (!(responseCase_ == 14)) {
           response_ = me.vipulgupta.dice.Reponse.HANDSHAKERes.getDefaultInstance();
         }
         hANDSHAKEResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.HANDSHAKERes, me.vipulgupta.dice.Reponse.HANDSHAKERes.Builder, me.vipulgupta.dice.Reponse.HANDSHAKEResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.HANDSHAKERes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.HANDSHAKERes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 14;
@@ -3929,18 +4470,19 @@ private static final long serialVersionUID = 0L;
       return hANDSHAKEResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.EXISTSRes, me.vipulgupta.dice.Reponse.EXISTSRes.Builder, me.vipulgupta.dice.Reponse.EXISTSResOrBuilder> eXISTSResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
+     *
      * @return Whether the eXISTSRes field is set.
      */
     @java.lang.Override
     public boolean hasEXISTSRes() {
       return responseCase_ == 15;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
+     *
      * @return The eXISTSRes.
      */
     @java.lang.Override
@@ -3957,6 +4499,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.EXISTSRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
      */
@@ -3973,6 +4516,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 15;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
      */
@@ -3987,6 +4531,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 15;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
      */
@@ -3994,7 +4539,8 @@ private static final long serialVersionUID = 0L;
       if (eXISTSResBuilder_ == null) {
         if (responseCase_ == 15 &&
             response_ != me.vipulgupta.dice.Reponse.EXISTSRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.EXISTSRes.newBuilder((me.vipulgupta.dice.Reponse.EXISTSRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.EXISTSRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.EXISTSRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -4010,6 +4556,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 15;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
      */
@@ -4029,12 +4576,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
      */
     public me.vipulgupta.dice.Reponse.EXISTSRes.Builder getEXISTSResBuilder() {
       return getEXISTSResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
      */
@@ -4049,21 +4598,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.EXISTSRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXISTSRes EXISTSRes = 15;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.EXISTSRes, me.vipulgupta.dice.Reponse.EXISTSRes.Builder, me.vipulgupta.dice.Reponse.EXISTSResOrBuilder> 
-        getEXISTSResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.EXISTSRes, me.vipulgupta.dice.Reponse.EXISTSRes.Builder, me.vipulgupta.dice.Reponse.EXISTSResOrBuilder>
+    getEXISTSResFieldBuilder() {
       if (eXISTSResBuilder_ == null) {
         if (!(responseCase_ == 15)) {
           response_ = me.vipulgupta.dice.Reponse.EXISTSRes.getDefaultInstance();
         }
         eXISTSResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.EXISTSRes, me.vipulgupta.dice.Reponse.EXISTSRes.Builder, me.vipulgupta.dice.Reponse.EXISTSResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.EXISTSRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.EXISTSRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 15;
@@ -4071,18 +4621,19 @@ private static final long serialVersionUID = 0L;
       return eXISTSResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.GETRes, me.vipulgupta.dice.Reponse.GETRes.Builder, me.vipulgupta.dice.Reponse.GETResOrBuilder> gETResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
+     *
      * @return Whether the gETRes field is set.
      */
     @java.lang.Override
     public boolean hasGETRes() {
       return responseCase_ == 16;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
+     *
      * @return The gETRes.
      */
     @java.lang.Override
@@ -4099,6 +4650,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.GETRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
      */
@@ -4115,6 +4667,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 16;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
      */
@@ -4129,6 +4682,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 16;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
      */
@@ -4136,7 +4690,8 @@ private static final long serialVersionUID = 0L;
       if (gETResBuilder_ == null) {
         if (responseCase_ == 16 &&
             response_ != me.vipulgupta.dice.Reponse.GETRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.GETRes.newBuilder((me.vipulgupta.dice.Reponse.GETRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.GETRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.GETRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -4152,6 +4707,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 16;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
      */
@@ -4171,12 +4727,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
      */
     public me.vipulgupta.dice.Reponse.GETRes.Builder getGETResBuilder() {
       return getGETResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
      */
@@ -4191,21 +4749,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.GETRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETRes GETRes = 16;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.GETRes, me.vipulgupta.dice.Reponse.GETRes.Builder, me.vipulgupta.dice.Reponse.GETResOrBuilder> 
-        getGETResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.GETRes, me.vipulgupta.dice.Reponse.GETRes.Builder, me.vipulgupta.dice.Reponse.GETResOrBuilder>
+    getGETResFieldBuilder() {
       if (gETResBuilder_ == null) {
         if (!(responseCase_ == 16)) {
           response_ = me.vipulgupta.dice.Reponse.GETRes.getDefaultInstance();
         }
         gETResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.GETRes, me.vipulgupta.dice.Reponse.GETRes.Builder, me.vipulgupta.dice.Reponse.GETResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.GETRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.GETRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 16;
@@ -4213,18 +4772,19 @@ private static final long serialVersionUID = 0L;
       return gETResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.SETRes, me.vipulgupta.dice.Reponse.SETRes.Builder, me.vipulgupta.dice.Reponse.SETResOrBuilder> sETResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
+     *
      * @return Whether the sETRes field is set.
      */
     @java.lang.Override
     public boolean hasSETRes() {
       return responseCase_ == 17;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
+     *
      * @return The sETRes.
      */
     @java.lang.Override
@@ -4241,6 +4801,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.SETRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
      */
@@ -4257,6 +4818,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 17;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
      */
@@ -4271,6 +4833,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 17;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
      */
@@ -4278,7 +4841,8 @@ private static final long serialVersionUID = 0L;
       if (sETResBuilder_ == null) {
         if (responseCase_ == 17 &&
             response_ != me.vipulgupta.dice.Reponse.SETRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.SETRes.newBuilder((me.vipulgupta.dice.Reponse.SETRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.SETRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.SETRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -4294,6 +4858,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 17;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
      */
@@ -4313,12 +4878,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
      */
     public me.vipulgupta.dice.Reponse.SETRes.Builder getSETResBuilder() {
       return getSETResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
      */
@@ -4333,21 +4900,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.SETRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.SETRes SETRes = 17;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.SETRes, me.vipulgupta.dice.Reponse.SETRes.Builder, me.vipulgupta.dice.Reponse.SETResOrBuilder> 
-        getSETResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.SETRes, me.vipulgupta.dice.Reponse.SETRes.Builder, me.vipulgupta.dice.Reponse.SETResOrBuilder>
+    getSETResFieldBuilder() {
       if (sETResBuilder_ == null) {
         if (!(responseCase_ == 17)) {
           response_ = me.vipulgupta.dice.Reponse.SETRes.getDefaultInstance();
         }
         sETResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.SETRes, me.vipulgupta.dice.Reponse.SETRes.Builder, me.vipulgupta.dice.Reponse.SETResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.SETRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.SETRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 17;
@@ -4355,18 +4923,19 @@ private static final long serialVersionUID = 0L;
       return sETResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.DELRes, me.vipulgupta.dice.Reponse.DELRes.Builder, me.vipulgupta.dice.Reponse.DELResOrBuilder> dELResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
+     *
      * @return Whether the dELRes field is set.
      */
     @java.lang.Override
     public boolean hasDELRes() {
       return responseCase_ == 18;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
+     *
      * @return The dELRes.
      */
     @java.lang.Override
@@ -4383,6 +4952,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.DELRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
      */
@@ -4399,6 +4969,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 18;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
      */
@@ -4413,6 +4984,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 18;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
      */
@@ -4420,7 +4992,8 @@ private static final long serialVersionUID = 0L;
       if (dELResBuilder_ == null) {
         if (responseCase_ == 18 &&
             response_ != me.vipulgupta.dice.Reponse.DELRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.DELRes.newBuilder((me.vipulgupta.dice.Reponse.DELRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.DELRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.DELRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -4436,6 +5009,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 18;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
      */
@@ -4455,12 +5029,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
      */
     public me.vipulgupta.dice.Reponse.DELRes.Builder getDELResBuilder() {
       return getDELResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
      */
@@ -4475,21 +5051,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.DELRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DELRes DELRes = 18;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.DELRes, me.vipulgupta.dice.Reponse.DELRes.Builder, me.vipulgupta.dice.Reponse.DELResOrBuilder> 
-        getDELResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.DELRes, me.vipulgupta.dice.Reponse.DELRes.Builder, me.vipulgupta.dice.Reponse.DELResOrBuilder>
+    getDELResFieldBuilder() {
       if (dELResBuilder_ == null) {
         if (!(responseCase_ == 18)) {
           response_ = me.vipulgupta.dice.Reponse.DELRes.getDefaultInstance();
         }
         dELResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.DELRes, me.vipulgupta.dice.Reponse.DELRes.Builder, me.vipulgupta.dice.Reponse.DELResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.DELRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.DELRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 18;
@@ -4497,18 +5074,19 @@ private static final long serialVersionUID = 0L;
       return dELResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.KEYSRes, me.vipulgupta.dice.Reponse.KEYSRes.Builder, me.vipulgupta.dice.Reponse.KEYSResOrBuilder> kEYSResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
+     *
      * @return Whether the kEYSRes field is set.
      */
     @java.lang.Override
     public boolean hasKEYSRes() {
       return responseCase_ == 19;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
+     *
      * @return The kEYSRes.
      */
     @java.lang.Override
@@ -4525,6 +5103,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.KEYSRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
      */
@@ -4541,6 +5120,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 19;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
      */
@@ -4555,6 +5135,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 19;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
      */
@@ -4562,7 +5143,8 @@ private static final long serialVersionUID = 0L;
       if (kEYSResBuilder_ == null) {
         if (responseCase_ == 19 &&
             response_ != me.vipulgupta.dice.Reponse.KEYSRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.KEYSRes.newBuilder((me.vipulgupta.dice.Reponse.KEYSRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.KEYSRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.KEYSRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -4578,6 +5160,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 19;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
      */
@@ -4597,12 +5180,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
      */
     public me.vipulgupta.dice.Reponse.KEYSRes.Builder getKEYSResBuilder() {
       return getKEYSResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
      */
@@ -4617,21 +5202,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.KEYSRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.KEYSRes KEYSRes = 19;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.KEYSRes, me.vipulgupta.dice.Reponse.KEYSRes.Builder, me.vipulgupta.dice.Reponse.KEYSResOrBuilder> 
-        getKEYSResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.KEYSRes, me.vipulgupta.dice.Reponse.KEYSRes.Builder, me.vipulgupta.dice.Reponse.KEYSResOrBuilder>
+    getKEYSResFieldBuilder() {
       if (kEYSResBuilder_ == null) {
         if (!(responseCase_ == 19)) {
           response_ = me.vipulgupta.dice.Reponse.KEYSRes.getDefaultInstance();
         }
         kEYSResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.KEYSRes, me.vipulgupta.dice.Reponse.KEYSRes.Builder, me.vipulgupta.dice.Reponse.KEYSResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.KEYSRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.KEYSRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 19;
@@ -4639,18 +5225,19 @@ private static final long serialVersionUID = 0L;
       return kEYSResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.GETDELRes, me.vipulgupta.dice.Reponse.GETDELRes.Builder, me.vipulgupta.dice.Reponse.GETDELResOrBuilder> gETDELResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
+     *
      * @return Whether the gETDELRes field is set.
      */
     @java.lang.Override
     public boolean hasGETDELRes() {
       return responseCase_ == 20;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
+     *
      * @return The gETDELRes.
      */
     @java.lang.Override
@@ -4667,6 +5254,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.GETDELRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
      */
@@ -4683,6 +5271,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 20;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
      */
@@ -4697,6 +5286,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 20;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
      */
@@ -4704,7 +5294,8 @@ private static final long serialVersionUID = 0L;
       if (gETDELResBuilder_ == null) {
         if (responseCase_ == 20 &&
             response_ != me.vipulgupta.dice.Reponse.GETDELRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.GETDELRes.newBuilder((me.vipulgupta.dice.Reponse.GETDELRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.GETDELRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.GETDELRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -4720,6 +5311,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 20;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
      */
@@ -4739,12 +5331,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
      */
     public me.vipulgupta.dice.Reponse.GETDELRes.Builder getGETDELResBuilder() {
       return getGETDELResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
      */
@@ -4759,21 +5353,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.GETDELRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETDELRes GETDELRes = 20;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.GETDELRes, me.vipulgupta.dice.Reponse.GETDELRes.Builder, me.vipulgupta.dice.Reponse.GETDELResOrBuilder> 
-        getGETDELResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.GETDELRes, me.vipulgupta.dice.Reponse.GETDELRes.Builder, me.vipulgupta.dice.Reponse.GETDELResOrBuilder>
+    getGETDELResFieldBuilder() {
       if (gETDELResBuilder_ == null) {
         if (!(responseCase_ == 20)) {
           response_ = me.vipulgupta.dice.Reponse.GETDELRes.getDefaultInstance();
         }
         gETDELResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.GETDELRes, me.vipulgupta.dice.Reponse.GETDELRes.Builder, me.vipulgupta.dice.Reponse.GETDELResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.GETDELRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.GETDELRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 20;
@@ -4781,18 +5376,19 @@ private static final long serialVersionUID = 0L;
       return gETDELResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.GETEXRes, me.vipulgupta.dice.Reponse.GETEXRes.Builder, me.vipulgupta.dice.Reponse.GETEXResOrBuilder> gETEXResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
+     *
      * @return Whether the gETEXRes field is set.
      */
     @java.lang.Override
     public boolean hasGETEXRes() {
       return responseCase_ == 21;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
+     *
      * @return The gETEXRes.
      */
     @java.lang.Override
@@ -4809,6 +5405,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.GETEXRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
      */
@@ -4825,6 +5422,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 21;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
      */
@@ -4839,6 +5437,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 21;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
      */
@@ -4846,7 +5445,8 @@ private static final long serialVersionUID = 0L;
       if (gETEXResBuilder_ == null) {
         if (responseCase_ == 21 &&
             response_ != me.vipulgupta.dice.Reponse.GETEXRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.GETEXRes.newBuilder((me.vipulgupta.dice.Reponse.GETEXRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.GETEXRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.GETEXRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -4862,6 +5462,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 21;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
      */
@@ -4881,12 +5482,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
      */
     public me.vipulgupta.dice.Reponse.GETEXRes.Builder getGETEXResBuilder() {
       return getGETEXResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
      */
@@ -4901,21 +5504,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.GETEXRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETEXRes GETEXRes = 21;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.GETEXRes, me.vipulgupta.dice.Reponse.GETEXRes.Builder, me.vipulgupta.dice.Reponse.GETEXResOrBuilder> 
-        getGETEXResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.GETEXRes, me.vipulgupta.dice.Reponse.GETEXRes.Builder, me.vipulgupta.dice.Reponse.GETEXResOrBuilder>
+    getGETEXResFieldBuilder() {
       if (gETEXResBuilder_ == null) {
         if (!(responseCase_ == 21)) {
           response_ = me.vipulgupta.dice.Reponse.GETEXRes.getDefaultInstance();
         }
         gETEXResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.GETEXRes, me.vipulgupta.dice.Reponse.GETEXRes.Builder, me.vipulgupta.dice.Reponse.GETEXResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.GETEXRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.GETEXRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 21;
@@ -4923,18 +5527,19 @@ private static final long serialVersionUID = 0L;
       return gETEXResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.GETSETRes, me.vipulgupta.dice.Reponse.GETSETRes.Builder, me.vipulgupta.dice.Reponse.GETSETResOrBuilder> gETSETResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
+     *
      * @return Whether the gETSETRes field is set.
      */
     @java.lang.Override
     public boolean hasGETSETRes() {
       return responseCase_ == 22;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
+     *
      * @return The gETSETRes.
      */
     @java.lang.Override
@@ -4951,6 +5556,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.GETSETRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
      */
@@ -4967,6 +5573,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 22;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
      */
@@ -4981,6 +5588,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 22;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
      */
@@ -4988,7 +5596,8 @@ private static final long serialVersionUID = 0L;
       if (gETSETResBuilder_ == null) {
         if (responseCase_ == 22 &&
             response_ != me.vipulgupta.dice.Reponse.GETSETRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.GETSETRes.newBuilder((me.vipulgupta.dice.Reponse.GETSETRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.GETSETRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.GETSETRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -5004,6 +5613,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 22;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
      */
@@ -5023,12 +5633,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
      */
     public me.vipulgupta.dice.Reponse.GETSETRes.Builder getGETSETResBuilder() {
       return getGETSETResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
      */
@@ -5043,21 +5655,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.GETSETRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETSETRes GETSETRes = 22;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.GETSETRes, me.vipulgupta.dice.Reponse.GETSETRes.Builder, me.vipulgupta.dice.Reponse.GETSETResOrBuilder> 
-        getGETSETResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.GETSETRes, me.vipulgupta.dice.Reponse.GETSETRes.Builder, me.vipulgupta.dice.Reponse.GETSETResOrBuilder>
+    getGETSETResFieldBuilder() {
       if (gETSETResBuilder_ == null) {
         if (!(responseCase_ == 22)) {
           response_ = me.vipulgupta.dice.Reponse.GETSETRes.getDefaultInstance();
         }
         gETSETResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.GETSETRes, me.vipulgupta.dice.Reponse.GETSETRes.Builder, me.vipulgupta.dice.Reponse.GETSETResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.GETSETRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.GETSETRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 22;
@@ -5065,18 +5678,19 @@ private static final long serialVersionUID = 0L;
       return gETSETResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.INCRRes, me.vipulgupta.dice.Reponse.INCRRes.Builder, me.vipulgupta.dice.Reponse.INCRResOrBuilder> iNCRResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
+     *
      * @return Whether the iNCRRes field is set.
      */
     @java.lang.Override
     public boolean hasINCRRes() {
       return responseCase_ == 23;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
+     *
      * @return The iNCRRes.
      */
     @java.lang.Override
@@ -5093,6 +5707,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.INCRRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
      */
@@ -5109,6 +5724,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 23;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
      */
@@ -5123,6 +5739,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 23;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
      */
@@ -5130,7 +5747,8 @@ private static final long serialVersionUID = 0L;
       if (iNCRResBuilder_ == null) {
         if (responseCase_ == 23 &&
             response_ != me.vipulgupta.dice.Reponse.INCRRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.INCRRes.newBuilder((me.vipulgupta.dice.Reponse.INCRRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.INCRRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.INCRRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -5146,6 +5764,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 23;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
      */
@@ -5165,12 +5784,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
      */
     public me.vipulgupta.dice.Reponse.INCRRes.Builder getINCRResBuilder() {
       return getINCRResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
      */
@@ -5185,21 +5806,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.INCRRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRRes INCRRes = 23;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.INCRRes, me.vipulgupta.dice.Reponse.INCRRes.Builder, me.vipulgupta.dice.Reponse.INCRResOrBuilder> 
-        getINCRResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.INCRRes, me.vipulgupta.dice.Reponse.INCRRes.Builder, me.vipulgupta.dice.Reponse.INCRResOrBuilder>
+    getINCRResFieldBuilder() {
       if (iNCRResBuilder_ == null) {
         if (!(responseCase_ == 23)) {
           response_ = me.vipulgupta.dice.Reponse.INCRRes.getDefaultInstance();
         }
         iNCRResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.INCRRes, me.vipulgupta.dice.Reponse.INCRRes.Builder, me.vipulgupta.dice.Reponse.INCRResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.INCRRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.INCRRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 23;
@@ -5207,18 +5829,19 @@ private static final long serialVersionUID = 0L;
       return iNCRResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.DECRRes, me.vipulgupta.dice.Reponse.DECRRes.Builder, me.vipulgupta.dice.Reponse.DECRResOrBuilder> dECRResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
+     *
      * @return Whether the dECRRes field is set.
      */
     @java.lang.Override
     public boolean hasDECRRes() {
       return responseCase_ == 24;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
+     *
      * @return The dECRRes.
      */
     @java.lang.Override
@@ -5235,6 +5858,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.DECRRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
      */
@@ -5251,6 +5875,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 24;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
      */
@@ -5265,6 +5890,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 24;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
      */
@@ -5272,7 +5898,8 @@ private static final long serialVersionUID = 0L;
       if (dECRResBuilder_ == null) {
         if (responseCase_ == 24 &&
             response_ != me.vipulgupta.dice.Reponse.DECRRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.DECRRes.newBuilder((me.vipulgupta.dice.Reponse.DECRRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.DECRRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.DECRRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -5288,6 +5915,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 24;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
      */
@@ -5307,12 +5935,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
      */
     public me.vipulgupta.dice.Reponse.DECRRes.Builder getDECRResBuilder() {
       return getDECRResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
      */
@@ -5327,21 +5957,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.DECRRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRRes DECRRes = 24;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.DECRRes, me.vipulgupta.dice.Reponse.DECRRes.Builder, me.vipulgupta.dice.Reponse.DECRResOrBuilder> 
-        getDECRResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.DECRRes, me.vipulgupta.dice.Reponse.DECRRes.Builder, me.vipulgupta.dice.Reponse.DECRResOrBuilder>
+    getDECRResFieldBuilder() {
       if (dECRResBuilder_ == null) {
         if (!(responseCase_ == 24)) {
           response_ = me.vipulgupta.dice.Reponse.DECRRes.getDefaultInstance();
         }
         dECRResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.DECRRes, me.vipulgupta.dice.Reponse.DECRRes.Builder, me.vipulgupta.dice.Reponse.DECRResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.DECRRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.DECRRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 24;
@@ -5349,18 +5980,19 @@ private static final long serialVersionUID = 0L;
       return dECRResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.INCRBYRes, me.vipulgupta.dice.Reponse.INCRBYRes.Builder, me.vipulgupta.dice.Reponse.INCRBYResOrBuilder> iNCRBYResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
+     *
      * @return Whether the iNCRBYRes field is set.
      */
     @java.lang.Override
     public boolean hasINCRBYRes() {
       return responseCase_ == 25;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
+     *
      * @return The iNCRBYRes.
      */
     @java.lang.Override
@@ -5377,6 +6009,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.INCRBYRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
      */
@@ -5393,6 +6026,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 25;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
      */
@@ -5407,6 +6041,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 25;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
      */
@@ -5414,7 +6049,8 @@ private static final long serialVersionUID = 0L;
       if (iNCRBYResBuilder_ == null) {
         if (responseCase_ == 25 &&
             response_ != me.vipulgupta.dice.Reponse.INCRBYRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.INCRBYRes.newBuilder((me.vipulgupta.dice.Reponse.INCRBYRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.INCRBYRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.INCRBYRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -5430,6 +6066,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 25;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
      */
@@ -5449,12 +6086,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
      */
     public me.vipulgupta.dice.Reponse.INCRBYRes.Builder getINCRBYResBuilder() {
       return getINCRBYResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
      */
@@ -5469,21 +6108,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.INCRBYRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.INCRBYRes INCRBYRes = 25;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.INCRBYRes, me.vipulgupta.dice.Reponse.INCRBYRes.Builder, me.vipulgupta.dice.Reponse.INCRBYResOrBuilder> 
-        getINCRBYResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.INCRBYRes, me.vipulgupta.dice.Reponse.INCRBYRes.Builder, me.vipulgupta.dice.Reponse.INCRBYResOrBuilder>
+    getINCRBYResFieldBuilder() {
       if (iNCRBYResBuilder_ == null) {
         if (!(responseCase_ == 25)) {
           response_ = me.vipulgupta.dice.Reponse.INCRBYRes.getDefaultInstance();
         }
         iNCRBYResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.INCRBYRes, me.vipulgupta.dice.Reponse.INCRBYRes.Builder, me.vipulgupta.dice.Reponse.INCRBYResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.INCRBYRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.INCRBYRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 25;
@@ -5491,18 +6131,19 @@ private static final long serialVersionUID = 0L;
       return iNCRBYResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.DECRBYRes, me.vipulgupta.dice.Reponse.DECRBYRes.Builder, me.vipulgupta.dice.Reponse.DECRBYResOrBuilder> dECRBYResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
+     *
      * @return Whether the dECRBYRes field is set.
      */
     @java.lang.Override
     public boolean hasDECRBYRes() {
       return responseCase_ == 26;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
+     *
      * @return The dECRBYRes.
      */
     @java.lang.Override
@@ -5519,6 +6160,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.DECRBYRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
      */
@@ -5535,6 +6177,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 26;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
      */
@@ -5549,6 +6192,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 26;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
      */
@@ -5556,7 +6200,8 @@ private static final long serialVersionUID = 0L;
       if (dECRBYResBuilder_ == null) {
         if (responseCase_ == 26 &&
             response_ != me.vipulgupta.dice.Reponse.DECRBYRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.DECRBYRes.newBuilder((me.vipulgupta.dice.Reponse.DECRBYRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.DECRBYRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.DECRBYRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -5572,6 +6217,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 26;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
      */
@@ -5591,12 +6237,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
      */
     public me.vipulgupta.dice.Reponse.DECRBYRes.Builder getDECRBYResBuilder() {
       return getDECRBYResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
      */
@@ -5611,21 +6259,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.DECRBYRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.DECRBYRes DECRBYRes = 26;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.DECRBYRes, me.vipulgupta.dice.Reponse.DECRBYRes.Builder, me.vipulgupta.dice.Reponse.DECRBYResOrBuilder> 
-        getDECRBYResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.DECRBYRes, me.vipulgupta.dice.Reponse.DECRBYRes.Builder, me.vipulgupta.dice.Reponse.DECRBYResOrBuilder>
+    getDECRBYResFieldBuilder() {
       if (dECRBYResBuilder_ == null) {
         if (!(responseCase_ == 26)) {
           response_ = me.vipulgupta.dice.Reponse.DECRBYRes.getDefaultInstance();
         }
         dECRBYResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.DECRBYRes, me.vipulgupta.dice.Reponse.DECRBYRes.Builder, me.vipulgupta.dice.Reponse.DECRBYResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.DECRBYRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.DECRBYRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 26;
@@ -5633,18 +6282,19 @@ private static final long serialVersionUID = 0L;
       return dECRBYResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.FLUSHDBRes, me.vipulgupta.dice.Reponse.FLUSHDBRes.Builder, me.vipulgupta.dice.Reponse.FLUSHDBResOrBuilder> fLUSHDBResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
+     *
      * @return Whether the fLUSHDBRes field is set.
      */
     @java.lang.Override
     public boolean hasFLUSHDBRes() {
       return responseCase_ == 27;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
+     *
      * @return The fLUSHDBRes.
      */
     @java.lang.Override
@@ -5661,6 +6311,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.FLUSHDBRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
      */
@@ -5677,6 +6328,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 27;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
      */
@@ -5691,6 +6343,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 27;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
      */
@@ -5698,7 +6351,8 @@ private static final long serialVersionUID = 0L;
       if (fLUSHDBResBuilder_ == null) {
         if (responseCase_ == 27 &&
             response_ != me.vipulgupta.dice.Reponse.FLUSHDBRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.FLUSHDBRes.newBuilder((me.vipulgupta.dice.Reponse.FLUSHDBRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.FLUSHDBRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.FLUSHDBRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -5714,6 +6368,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 27;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
      */
@@ -5733,12 +6388,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
      */
     public me.vipulgupta.dice.Reponse.FLUSHDBRes.Builder getFLUSHDBResBuilder() {
       return getFLUSHDBResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
      */
@@ -5753,21 +6410,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.FLUSHDBRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.FLUSHDBRes FLUSHDBRes = 27;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.FLUSHDBRes, me.vipulgupta.dice.Reponse.FLUSHDBRes.Builder, me.vipulgupta.dice.Reponse.FLUSHDBResOrBuilder> 
-        getFLUSHDBResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.FLUSHDBRes, me.vipulgupta.dice.Reponse.FLUSHDBRes.Builder, me.vipulgupta.dice.Reponse.FLUSHDBResOrBuilder>
+    getFLUSHDBResFieldBuilder() {
       if (fLUSHDBResBuilder_ == null) {
         if (!(responseCase_ == 27)) {
           response_ = me.vipulgupta.dice.Reponse.FLUSHDBRes.getDefaultInstance();
         }
         fLUSHDBResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.FLUSHDBRes, me.vipulgupta.dice.Reponse.FLUSHDBRes.Builder, me.vipulgupta.dice.Reponse.FLUSHDBResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.FLUSHDBRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.FLUSHDBRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 27;
@@ -5775,18 +6433,19 @@ private static final long serialVersionUID = 0L;
       return fLUSHDBResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.EXPIRERes, me.vipulgupta.dice.Reponse.EXPIRERes.Builder, me.vipulgupta.dice.Reponse.EXPIREResOrBuilder> eXPIREResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
+     *
      * @return Whether the eXPIRERes field is set.
      */
     @java.lang.Override
     public boolean hasEXPIRERes() {
       return responseCase_ == 28;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
+     *
      * @return The eXPIRERes.
      */
     @java.lang.Override
@@ -5803,6 +6462,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.EXPIRERes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
      */
@@ -5819,6 +6479,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 28;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
      */
@@ -5833,6 +6494,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 28;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
      */
@@ -5840,7 +6502,8 @@ private static final long serialVersionUID = 0L;
       if (eXPIREResBuilder_ == null) {
         if (responseCase_ == 28 &&
             response_ != me.vipulgupta.dice.Reponse.EXPIRERes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.EXPIRERes.newBuilder((me.vipulgupta.dice.Reponse.EXPIRERes) response_)
+          response_ = me.vipulgupta.dice.Reponse.EXPIRERes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.EXPIRERes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -5856,6 +6519,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 28;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
      */
@@ -5875,12 +6539,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
      */
     public me.vipulgupta.dice.Reponse.EXPIRERes.Builder getEXPIREResBuilder() {
       return getEXPIREResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
      */
@@ -5895,21 +6561,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.EXPIRERes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRERes EXPIRERes = 28;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.EXPIRERes, me.vipulgupta.dice.Reponse.EXPIRERes.Builder, me.vipulgupta.dice.Reponse.EXPIREResOrBuilder> 
-        getEXPIREResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.EXPIRERes, me.vipulgupta.dice.Reponse.EXPIRERes.Builder, me.vipulgupta.dice.Reponse.EXPIREResOrBuilder>
+    getEXPIREResFieldBuilder() {
       if (eXPIREResBuilder_ == null) {
         if (!(responseCase_ == 28)) {
           response_ = me.vipulgupta.dice.Reponse.EXPIRERes.getDefaultInstance();
         }
         eXPIREResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.EXPIRERes, me.vipulgupta.dice.Reponse.EXPIRERes.Builder, me.vipulgupta.dice.Reponse.EXPIREResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.EXPIRERes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.EXPIRERes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 28;
@@ -5917,18 +6584,19 @@ private static final long serialVersionUID = 0L;
       return eXPIREResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.EXPIREATRes, me.vipulgupta.dice.Reponse.EXPIREATRes.Builder, me.vipulgupta.dice.Reponse.EXPIREATResOrBuilder> eXPIREATResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
+     *
      * @return Whether the eXPIREATRes field is set.
      */
     @java.lang.Override
     public boolean hasEXPIREATRes() {
       return responseCase_ == 29;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
+     *
      * @return The eXPIREATRes.
      */
     @java.lang.Override
@@ -5945,6 +6613,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.EXPIREATRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
      */
@@ -5961,6 +6630,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 29;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
      */
@@ -5975,6 +6645,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 29;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
      */
@@ -5982,7 +6653,8 @@ private static final long serialVersionUID = 0L;
       if (eXPIREATResBuilder_ == null) {
         if (responseCase_ == 29 &&
             response_ != me.vipulgupta.dice.Reponse.EXPIREATRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.EXPIREATRes.newBuilder((me.vipulgupta.dice.Reponse.EXPIREATRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.EXPIREATRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.EXPIREATRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -5998,6 +6670,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 29;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
      */
@@ -6017,12 +6690,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
      */
     public me.vipulgupta.dice.Reponse.EXPIREATRes.Builder getEXPIREATResBuilder() {
       return getEXPIREATResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
      */
@@ -6037,21 +6712,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.EXPIREATRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIREATRes EXPIREATRes = 29;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.EXPIREATRes, me.vipulgupta.dice.Reponse.EXPIREATRes.Builder, me.vipulgupta.dice.Reponse.EXPIREATResOrBuilder> 
-        getEXPIREATResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.EXPIREATRes, me.vipulgupta.dice.Reponse.EXPIREATRes.Builder, me.vipulgupta.dice.Reponse.EXPIREATResOrBuilder>
+    getEXPIREATResFieldBuilder() {
       if (eXPIREATResBuilder_ == null) {
         if (!(responseCase_ == 29)) {
           response_ = me.vipulgupta.dice.Reponse.EXPIREATRes.getDefaultInstance();
         }
         eXPIREATResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.EXPIREATRes, me.vipulgupta.dice.Reponse.EXPIREATRes.Builder, me.vipulgupta.dice.Reponse.EXPIREATResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.EXPIREATRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.EXPIREATRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 29;
@@ -6059,18 +6735,19 @@ private static final long serialVersionUID = 0L;
       return eXPIREATResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.EXPIRETIMERes, me.vipulgupta.dice.Reponse.EXPIRETIMERes.Builder, me.vipulgupta.dice.Reponse.EXPIRETIMEResOrBuilder> eXPIRETIMEResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
+     *
      * @return Whether the eXPIRETIMERes field is set.
      */
     @java.lang.Override
     public boolean hasEXPIRETIMERes() {
       return responseCase_ == 30;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
+     *
      * @return The eXPIRETIMERes.
      */
     @java.lang.Override
@@ -6087,6 +6764,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.EXPIRETIMERes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
      */
@@ -6103,6 +6781,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 30;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
      */
@@ -6117,6 +6796,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 30;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
      */
@@ -6124,7 +6804,8 @@ private static final long serialVersionUID = 0L;
       if (eXPIRETIMEResBuilder_ == null) {
         if (responseCase_ == 30 &&
             response_ != me.vipulgupta.dice.Reponse.EXPIRETIMERes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.EXPIRETIMERes.newBuilder((me.vipulgupta.dice.Reponse.EXPIRETIMERes) response_)
+          response_ = me.vipulgupta.dice.Reponse.EXPIRETIMERes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.EXPIRETIMERes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -6140,6 +6821,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 30;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
      */
@@ -6159,12 +6841,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
      */
     public me.vipulgupta.dice.Reponse.EXPIRETIMERes.Builder getEXPIRETIMEResBuilder() {
       return getEXPIRETIMEResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
      */
@@ -6179,21 +6863,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.EXPIRETIMERes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.EXPIRETIMERes EXPIRETIMERes = 30;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.EXPIRETIMERes, me.vipulgupta.dice.Reponse.EXPIRETIMERes.Builder, me.vipulgupta.dice.Reponse.EXPIRETIMEResOrBuilder> 
-        getEXPIRETIMEResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.EXPIRETIMERes, me.vipulgupta.dice.Reponse.EXPIRETIMERes.Builder, me.vipulgupta.dice.Reponse.EXPIRETIMEResOrBuilder>
+    getEXPIRETIMEResFieldBuilder() {
       if (eXPIRETIMEResBuilder_ == null) {
         if (!(responseCase_ == 30)) {
           response_ = me.vipulgupta.dice.Reponse.EXPIRETIMERes.getDefaultInstance();
         }
         eXPIRETIMEResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.EXPIRETIMERes, me.vipulgupta.dice.Reponse.EXPIRETIMERes.Builder, me.vipulgupta.dice.Reponse.EXPIRETIMEResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.EXPIRETIMERes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.EXPIRETIMERes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 30;
@@ -6201,18 +6886,19 @@ private static final long serialVersionUID = 0L;
       return eXPIRETIMEResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.TTLRes, me.vipulgupta.dice.Reponse.TTLRes.Builder, me.vipulgupta.dice.Reponse.TTLResOrBuilder> tTLResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
+     *
      * @return Whether the tTLRes field is set.
      */
     @java.lang.Override
     public boolean hasTTLRes() {
       return responseCase_ == 31;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
+     *
      * @return The tTLRes.
      */
     @java.lang.Override
@@ -6229,6 +6915,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.TTLRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
      */
@@ -6245,6 +6932,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 31;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
      */
@@ -6259,6 +6947,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 31;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
      */
@@ -6266,7 +6955,8 @@ private static final long serialVersionUID = 0L;
       if (tTLResBuilder_ == null) {
         if (responseCase_ == 31 &&
             response_ != me.vipulgupta.dice.Reponse.TTLRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.TTLRes.newBuilder((me.vipulgupta.dice.Reponse.TTLRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.TTLRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.TTLRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -6282,6 +6972,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 31;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
      */
@@ -6301,12 +6992,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
      */
     public me.vipulgupta.dice.Reponse.TTLRes.Builder getTTLResBuilder() {
       return getTTLResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
      */
@@ -6321,21 +7014,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.TTLRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.TTLRes TTLRes = 31;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.TTLRes, me.vipulgupta.dice.Reponse.TTLRes.Builder, me.vipulgupta.dice.Reponse.TTLResOrBuilder> 
-        getTTLResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.TTLRes, me.vipulgupta.dice.Reponse.TTLRes.Builder, me.vipulgupta.dice.Reponse.TTLResOrBuilder>
+    getTTLResFieldBuilder() {
       if (tTLResBuilder_ == null) {
         if (!(responseCase_ == 31)) {
           response_ = me.vipulgupta.dice.Reponse.TTLRes.getDefaultInstance();
         }
         tTLResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.TTLRes, me.vipulgupta.dice.Reponse.TTLRes.Builder, me.vipulgupta.dice.Reponse.TTLResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.TTLRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.TTLRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 31;
@@ -6343,18 +7037,19 @@ private static final long serialVersionUID = 0L;
       return tTLResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.GETWATCHRes, me.vipulgupta.dice.Reponse.GETWATCHRes.Builder, me.vipulgupta.dice.Reponse.GETWATCHResOrBuilder> gETWATCHResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
+     *
      * @return Whether the gETWATCHRes field is set.
      */
     @java.lang.Override
     public boolean hasGETWATCHRes() {
       return responseCase_ == 32;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
+     *
      * @return The gETWATCHRes.
      */
     @java.lang.Override
@@ -6371,6 +7066,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.GETWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
      */
@@ -6387,6 +7083,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 32;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
      */
@@ -6401,6 +7098,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 32;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
      */
@@ -6408,7 +7106,8 @@ private static final long serialVersionUID = 0L;
       if (gETWATCHResBuilder_ == null) {
         if (responseCase_ == 32 &&
             response_ != me.vipulgupta.dice.Reponse.GETWATCHRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.GETWATCHRes.newBuilder((me.vipulgupta.dice.Reponse.GETWATCHRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.GETWATCHRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.GETWATCHRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -6424,6 +7123,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 32;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
      */
@@ -6443,12 +7143,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
      */
     public me.vipulgupta.dice.Reponse.GETWATCHRes.Builder getGETWATCHResBuilder() {
       return getGETWATCHResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
      */
@@ -6463,21 +7165,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.GETWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.GETWATCHRes GETWATCHRes = 32;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.GETWATCHRes, me.vipulgupta.dice.Reponse.GETWATCHRes.Builder, me.vipulgupta.dice.Reponse.GETWATCHResOrBuilder> 
-        getGETWATCHResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.GETWATCHRes, me.vipulgupta.dice.Reponse.GETWATCHRes.Builder, me.vipulgupta.dice.Reponse.GETWATCHResOrBuilder>
+    getGETWATCHResFieldBuilder() {
       if (gETWATCHResBuilder_ == null) {
         if (!(responseCase_ == 32)) {
           response_ = me.vipulgupta.dice.Reponse.GETWATCHRes.getDefaultInstance();
         }
         gETWATCHResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.GETWATCHRes, me.vipulgupta.dice.Reponse.GETWATCHRes.Builder, me.vipulgupta.dice.Reponse.GETWATCHResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.GETWATCHRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.GETWATCHRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 32;
@@ -6485,18 +7188,19 @@ private static final long serialVersionUID = 0L;
       return gETWATCHResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.UNWATCHRes, me.vipulgupta.dice.Reponse.UNWATCHRes.Builder, me.vipulgupta.dice.Reponse.UNWATCHResOrBuilder> uNWATCHResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
+     *
      * @return Whether the uNWATCHRes field is set.
      */
     @java.lang.Override
     public boolean hasUNWATCHRes() {
       return responseCase_ == 33;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
+     *
      * @return The uNWATCHRes.
      */
     @java.lang.Override
@@ -6513,6 +7217,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.UNWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
      */
@@ -6529,6 +7234,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 33;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
      */
@@ -6543,6 +7249,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 33;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
      */
@@ -6550,7 +7257,8 @@ private static final long serialVersionUID = 0L;
       if (uNWATCHResBuilder_ == null) {
         if (responseCase_ == 33 &&
             response_ != me.vipulgupta.dice.Reponse.UNWATCHRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.UNWATCHRes.newBuilder((me.vipulgupta.dice.Reponse.UNWATCHRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.UNWATCHRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.UNWATCHRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -6566,6 +7274,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 33;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
      */
@@ -6585,12 +7294,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
      */
     public me.vipulgupta.dice.Reponse.UNWATCHRes.Builder getUNWATCHResBuilder() {
       return getUNWATCHResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
      */
@@ -6605,21 +7316,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.UNWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.UNWATCHRes UNWATCHRes = 33;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.UNWATCHRes, me.vipulgupta.dice.Reponse.UNWATCHRes.Builder, me.vipulgupta.dice.Reponse.UNWATCHResOrBuilder> 
-        getUNWATCHResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.UNWATCHRes, me.vipulgupta.dice.Reponse.UNWATCHRes.Builder, me.vipulgupta.dice.Reponse.UNWATCHResOrBuilder>
+    getUNWATCHResFieldBuilder() {
       if (uNWATCHResBuilder_ == null) {
         if (!(responseCase_ == 33)) {
           response_ = me.vipulgupta.dice.Reponse.UNWATCHRes.getDefaultInstance();
         }
         uNWATCHResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.UNWATCHRes, me.vipulgupta.dice.Reponse.UNWATCHRes.Builder, me.vipulgupta.dice.Reponse.UNWATCHResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.UNWATCHRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.UNWATCHRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 33;
@@ -6627,18 +7339,19 @@ private static final long serialVersionUID = 0L;
       return uNWATCHResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HGETRes, me.vipulgupta.dice.Reponse.HGETRes.Builder, me.vipulgupta.dice.Reponse.HGETResOrBuilder> hGETResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
+     *
      * @return Whether the hGETRes field is set.
      */
     @java.lang.Override
     public boolean hasHGETRes() {
       return responseCase_ == 34;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
+     *
      * @return The hGETRes.
      */
     @java.lang.Override
@@ -6655,6 +7368,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HGETRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
      */
@@ -6671,6 +7385,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 34;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
      */
@@ -6685,6 +7400,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 34;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
      */
@@ -6692,7 +7408,8 @@ private static final long serialVersionUID = 0L;
       if (hGETResBuilder_ == null) {
         if (responseCase_ == 34 &&
             response_ != me.vipulgupta.dice.Reponse.HGETRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.HGETRes.newBuilder((me.vipulgupta.dice.Reponse.HGETRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.HGETRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.HGETRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -6708,6 +7425,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 34;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
      */
@@ -6727,12 +7445,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
      */
     public me.vipulgupta.dice.Reponse.HGETRes.Builder getHGETResBuilder() {
       return getHGETResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
      */
@@ -6747,21 +7467,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HGETRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETRes HGETRes = 34;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HGETRes, me.vipulgupta.dice.Reponse.HGETRes.Builder, me.vipulgupta.dice.Reponse.HGETResOrBuilder> 
-        getHGETResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.HGETRes, me.vipulgupta.dice.Reponse.HGETRes.Builder, me.vipulgupta.dice.Reponse.HGETResOrBuilder>
+    getHGETResFieldBuilder() {
       if (hGETResBuilder_ == null) {
         if (!(responseCase_ == 34)) {
           response_ = me.vipulgupta.dice.Reponse.HGETRes.getDefaultInstance();
         }
         hGETResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.HGETRes, me.vipulgupta.dice.Reponse.HGETRes.Builder, me.vipulgupta.dice.Reponse.HGETResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.HGETRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.HGETRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 34;
@@ -6769,18 +7490,19 @@ private static final long serialVersionUID = 0L;
       return hGETResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HSETRes, me.vipulgupta.dice.Reponse.HSETRes.Builder, me.vipulgupta.dice.Reponse.HSETResOrBuilder> hSETResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
+     *
      * @return Whether the hSETRes field is set.
      */
     @java.lang.Override
     public boolean hasHSETRes() {
       return responseCase_ == 35;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
+     *
      * @return The hSETRes.
      */
     @java.lang.Override
@@ -6797,6 +7519,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HSETRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
      */
@@ -6813,6 +7536,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 35;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
      */
@@ -6827,6 +7551,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 35;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
      */
@@ -6834,7 +7559,8 @@ private static final long serialVersionUID = 0L;
       if (hSETResBuilder_ == null) {
         if (responseCase_ == 35 &&
             response_ != me.vipulgupta.dice.Reponse.HSETRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.HSETRes.newBuilder((me.vipulgupta.dice.Reponse.HSETRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.HSETRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.HSETRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -6850,6 +7576,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 35;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
      */
@@ -6869,12 +7596,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
      */
     public me.vipulgupta.dice.Reponse.HSETRes.Builder getHSETResBuilder() {
       return getHSETResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
      */
@@ -6889,21 +7618,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HSETRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HSETRes HSETRes = 35;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HSETRes, me.vipulgupta.dice.Reponse.HSETRes.Builder, me.vipulgupta.dice.Reponse.HSETResOrBuilder> 
-        getHSETResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.HSETRes, me.vipulgupta.dice.Reponse.HSETRes.Builder, me.vipulgupta.dice.Reponse.HSETResOrBuilder>
+    getHSETResFieldBuilder() {
       if (hSETResBuilder_ == null) {
         if (!(responseCase_ == 35)) {
           response_ = me.vipulgupta.dice.Reponse.HSETRes.getDefaultInstance();
         }
         hSETResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.HSETRes, me.vipulgupta.dice.Reponse.HSETRes.Builder, me.vipulgupta.dice.Reponse.HSETResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.HSETRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.HSETRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 35;
@@ -6911,18 +7641,19 @@ private static final long serialVersionUID = 0L;
       return hSETResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HGETALLRes, me.vipulgupta.dice.Reponse.HGETALLRes.Builder, me.vipulgupta.dice.Reponse.HGETALLResOrBuilder> hGETALLResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
+     *
      * @return Whether the hGETALLRes field is set.
      */
     @java.lang.Override
     public boolean hasHGETALLRes() {
       return responseCase_ == 36;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
+     *
      * @return The hGETALLRes.
      */
     @java.lang.Override
@@ -6939,6 +7670,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HGETALLRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
      */
@@ -6955,6 +7687,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 36;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
      */
@@ -6969,6 +7702,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 36;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
      */
@@ -6976,7 +7710,8 @@ private static final long serialVersionUID = 0L;
       if (hGETALLResBuilder_ == null) {
         if (responseCase_ == 36 &&
             response_ != me.vipulgupta.dice.Reponse.HGETALLRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.HGETALLRes.newBuilder((me.vipulgupta.dice.Reponse.HGETALLRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.HGETALLRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.HGETALLRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -6992,6 +7727,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 36;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
      */
@@ -7011,12 +7747,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
      */
     public me.vipulgupta.dice.Reponse.HGETALLRes.Builder getHGETALLResBuilder() {
       return getHGETALLResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
      */
@@ -7031,21 +7769,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HGETALLRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLRes HGETALLRes = 36;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HGETALLRes, me.vipulgupta.dice.Reponse.HGETALLRes.Builder, me.vipulgupta.dice.Reponse.HGETALLResOrBuilder> 
-        getHGETALLResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.HGETALLRes, me.vipulgupta.dice.Reponse.HGETALLRes.Builder, me.vipulgupta.dice.Reponse.HGETALLResOrBuilder>
+    getHGETALLResFieldBuilder() {
       if (hGETALLResBuilder_ == null) {
         if (!(responseCase_ == 36)) {
           response_ = me.vipulgupta.dice.Reponse.HGETALLRes.getDefaultInstance();
         }
         hGETALLResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.HGETALLRes, me.vipulgupta.dice.Reponse.HGETALLRes.Builder, me.vipulgupta.dice.Reponse.HGETALLResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.HGETALLRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.HGETALLRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 36;
@@ -7053,18 +7792,19 @@ private static final long serialVersionUID = 0L;
       return hGETALLResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HGETWATCHRes, me.vipulgupta.dice.Reponse.HGETWATCHRes.Builder, me.vipulgupta.dice.Reponse.HGETWATCHResOrBuilder> hGETWATCHResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
+     *
      * @return Whether the hGETWATCHRes field is set.
      */
     @java.lang.Override
     public boolean hasHGETWATCHRes() {
       return responseCase_ == 37;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
+     *
      * @return The hGETWATCHRes.
      */
     @java.lang.Override
@@ -7081,6 +7821,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HGETWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
      */
@@ -7097,6 +7838,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 37;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
      */
@@ -7111,6 +7853,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 37;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
      */
@@ -7118,7 +7861,8 @@ private static final long serialVersionUID = 0L;
       if (hGETWATCHResBuilder_ == null) {
         if (responseCase_ == 37 &&
             response_ != me.vipulgupta.dice.Reponse.HGETWATCHRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.HGETWATCHRes.newBuilder((me.vipulgupta.dice.Reponse.HGETWATCHRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.HGETWATCHRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.HGETWATCHRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -7134,6 +7878,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 37;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
      */
@@ -7153,12 +7898,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
      */
     public me.vipulgupta.dice.Reponse.HGETWATCHRes.Builder getHGETWATCHResBuilder() {
       return getHGETWATCHResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
      */
@@ -7173,21 +7920,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HGETWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETWATCHRes HGETWATCHRes = 37;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HGETWATCHRes, me.vipulgupta.dice.Reponse.HGETWATCHRes.Builder, me.vipulgupta.dice.Reponse.HGETWATCHResOrBuilder> 
-        getHGETWATCHResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.HGETWATCHRes, me.vipulgupta.dice.Reponse.HGETWATCHRes.Builder, me.vipulgupta.dice.Reponse.HGETWATCHResOrBuilder>
+    getHGETWATCHResFieldBuilder() {
       if (hGETWATCHResBuilder_ == null) {
         if (!(responseCase_ == 37)) {
           response_ = me.vipulgupta.dice.Reponse.HGETWATCHRes.getDefaultInstance();
         }
         hGETWATCHResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.HGETWATCHRes, me.vipulgupta.dice.Reponse.HGETWATCHRes.Builder, me.vipulgupta.dice.Reponse.HGETWATCHResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.HGETWATCHRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.HGETWATCHRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 37;
@@ -7195,18 +7943,19 @@ private static final long serialVersionUID = 0L;
       return hGETWATCHResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HGETALLWATCHRes, me.vipulgupta.dice.Reponse.HGETALLWATCHRes.Builder, me.vipulgupta.dice.Reponse.HGETALLWATCHResOrBuilder> hGETALLWATCHResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
+     *
      * @return Whether the hGETALLWATCHRes field is set.
      */
     @java.lang.Override
     public boolean hasHGETALLWATCHRes() {
       return responseCase_ == 38;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
+     *
      * @return The hGETALLWATCHRes.
      */
     @java.lang.Override
@@ -7223,6 +7972,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HGETALLWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
      */
@@ -7239,6 +7989,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 38;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
      */
@@ -7253,6 +8004,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 38;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
      */
@@ -7260,7 +8012,8 @@ private static final long serialVersionUID = 0L;
       if (hGETALLWATCHResBuilder_ == null) {
         if (responseCase_ == 38 &&
             response_ != me.vipulgupta.dice.Reponse.HGETALLWATCHRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.HGETALLWATCHRes.newBuilder((me.vipulgupta.dice.Reponse.HGETALLWATCHRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.HGETALLWATCHRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.HGETALLWATCHRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -7276,6 +8029,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 38;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
      */
@@ -7295,12 +8049,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
      */
     public me.vipulgupta.dice.Reponse.HGETALLWATCHRes.Builder getHGETALLWATCHResBuilder() {
       return getHGETALLWATCHResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
      */
@@ -7315,21 +8071,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.HGETALLWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.HGETALLWATCHRes HGETALLWATCHRes = 38;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.HGETALLWATCHRes, me.vipulgupta.dice.Reponse.HGETALLWATCHRes.Builder, me.vipulgupta.dice.Reponse.HGETALLWATCHResOrBuilder> 
-        getHGETALLWATCHResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.HGETALLWATCHRes, me.vipulgupta.dice.Reponse.HGETALLWATCHRes.Builder, me.vipulgupta.dice.Reponse.HGETALLWATCHResOrBuilder>
+    getHGETALLWATCHResFieldBuilder() {
       if (hGETALLWATCHResBuilder_ == null) {
         if (!(responseCase_ == 38)) {
           response_ = me.vipulgupta.dice.Reponse.HGETALLWATCHRes.getDefaultInstance();
         }
         hGETALLWATCHResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.HGETALLWATCHRes, me.vipulgupta.dice.Reponse.HGETALLWATCHRes.Builder, me.vipulgupta.dice.Reponse.HGETALLWATCHResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.HGETALLWATCHRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.HGETALLWATCHRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 38;
@@ -7337,18 +8094,19 @@ private static final long serialVersionUID = 0L;
       return hGETALLWATCHResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZADDRes, me.vipulgupta.dice.Reponse.ZADDRes.Builder, me.vipulgupta.dice.Reponse.ZADDResOrBuilder> zADDResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
+     *
      * @return Whether the zADDRes field is set.
      */
     @java.lang.Override
     public boolean hasZADDRes() {
       return responseCase_ == 39;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
+     *
      * @return The zADDRes.
      */
     @java.lang.Override
@@ -7365,6 +8123,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZADDRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
      */
@@ -7381,6 +8140,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 39;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
      */
@@ -7395,6 +8155,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 39;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
      */
@@ -7402,7 +8163,8 @@ private static final long serialVersionUID = 0L;
       if (zADDResBuilder_ == null) {
         if (responseCase_ == 39 &&
             response_ != me.vipulgupta.dice.Reponse.ZADDRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZADDRes.newBuilder((me.vipulgupta.dice.Reponse.ZADDRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZADDRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZADDRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -7418,6 +8180,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 39;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
      */
@@ -7437,12 +8200,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
      */
     public me.vipulgupta.dice.Reponse.ZADDRes.Builder getZADDResBuilder() {
       return getZADDResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
      */
@@ -7457,21 +8222,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZADDRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZADDRes ZADDRes = 39;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZADDRes, me.vipulgupta.dice.Reponse.ZADDRes.Builder, me.vipulgupta.dice.Reponse.ZADDResOrBuilder> 
-        getZADDResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZADDRes, me.vipulgupta.dice.Reponse.ZADDRes.Builder, me.vipulgupta.dice.Reponse.ZADDResOrBuilder>
+    getZADDResFieldBuilder() {
       if (zADDResBuilder_ == null) {
         if (!(responseCase_ == 39)) {
           response_ = me.vipulgupta.dice.Reponse.ZADDRes.getDefaultInstance();
         }
         zADDResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZADDRes, me.vipulgupta.dice.Reponse.ZADDRes.Builder, me.vipulgupta.dice.Reponse.ZADDResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZADDRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZADDRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 39;
@@ -7479,18 +8245,19 @@ private static final long serialVersionUID = 0L;
       return zADDResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZCOUNTRes, me.vipulgupta.dice.Reponse.ZCOUNTRes.Builder, me.vipulgupta.dice.Reponse.ZCOUNTResOrBuilder> zCOUNTResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
+     *
      * @return Whether the zCOUNTRes field is set.
      */
     @java.lang.Override
     public boolean hasZCOUNTRes() {
       return responseCase_ == 40;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
+     *
      * @return The zCOUNTRes.
      */
     @java.lang.Override
@@ -7507,6 +8274,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZCOUNTRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
      */
@@ -7523,6 +8291,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 40;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
      */
@@ -7537,6 +8306,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 40;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
      */
@@ -7544,7 +8314,8 @@ private static final long serialVersionUID = 0L;
       if (zCOUNTResBuilder_ == null) {
         if (responseCase_ == 40 &&
             response_ != me.vipulgupta.dice.Reponse.ZCOUNTRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZCOUNTRes.newBuilder((me.vipulgupta.dice.Reponse.ZCOUNTRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZCOUNTRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZCOUNTRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -7560,6 +8331,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 40;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
      */
@@ -7579,12 +8351,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
      */
     public me.vipulgupta.dice.Reponse.ZCOUNTRes.Builder getZCOUNTResBuilder() {
       return getZCOUNTResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
      */
@@ -7599,21 +8373,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZCOUNTRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTRes ZCOUNTRes = 40;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZCOUNTRes, me.vipulgupta.dice.Reponse.ZCOUNTRes.Builder, me.vipulgupta.dice.Reponse.ZCOUNTResOrBuilder> 
-        getZCOUNTResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZCOUNTRes, me.vipulgupta.dice.Reponse.ZCOUNTRes.Builder, me.vipulgupta.dice.Reponse.ZCOUNTResOrBuilder>
+    getZCOUNTResFieldBuilder() {
       if (zCOUNTResBuilder_ == null) {
         if (!(responseCase_ == 40)) {
           response_ = me.vipulgupta.dice.Reponse.ZCOUNTRes.getDefaultInstance();
         }
         zCOUNTResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZCOUNTRes, me.vipulgupta.dice.Reponse.ZCOUNTRes.Builder, me.vipulgupta.dice.Reponse.ZCOUNTResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZCOUNTRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZCOUNTRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 40;
@@ -7621,18 +8396,19 @@ private static final long serialVersionUID = 0L;
       return zCOUNTResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZRANGERes, me.vipulgupta.dice.Reponse.ZRANGERes.Builder, me.vipulgupta.dice.Reponse.ZRANGEResOrBuilder> zRANGEResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
+     *
      * @return Whether the zRANGERes field is set.
      */
     @java.lang.Override
     public boolean hasZRANGERes() {
       return responseCase_ == 41;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
+     *
      * @return The zRANGERes.
      */
     @java.lang.Override
@@ -7649,6 +8425,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZRANGERes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
      */
@@ -7665,6 +8442,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 41;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
      */
@@ -7679,6 +8457,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 41;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
      */
@@ -7686,7 +8465,8 @@ private static final long serialVersionUID = 0L;
       if (zRANGEResBuilder_ == null) {
         if (responseCase_ == 41 &&
             response_ != me.vipulgupta.dice.Reponse.ZRANGERes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZRANGERes.newBuilder((me.vipulgupta.dice.Reponse.ZRANGERes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZRANGERes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZRANGERes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -7702,6 +8482,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 41;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
      */
@@ -7721,12 +8502,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
      */
     public me.vipulgupta.dice.Reponse.ZRANGERes.Builder getZRANGEResBuilder() {
       return getZRANGEResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
      */
@@ -7741,21 +8524,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZRANGERes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGERes ZRANGERes = 41;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZRANGERes, me.vipulgupta.dice.Reponse.ZRANGERes.Builder, me.vipulgupta.dice.Reponse.ZRANGEResOrBuilder> 
-        getZRANGEResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZRANGERes, me.vipulgupta.dice.Reponse.ZRANGERes.Builder, me.vipulgupta.dice.Reponse.ZRANGEResOrBuilder>
+    getZRANGEResFieldBuilder() {
       if (zRANGEResBuilder_ == null) {
         if (!(responseCase_ == 41)) {
           response_ = me.vipulgupta.dice.Reponse.ZRANGERes.getDefaultInstance();
         }
         zRANGEResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZRANGERes, me.vipulgupta.dice.Reponse.ZRANGERes.Builder, me.vipulgupta.dice.Reponse.ZRANGEResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZRANGERes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZRANGERes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 41;
@@ -7763,18 +8547,19 @@ private static final long serialVersionUID = 0L;
       return zRANGEResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZPOPMAXRes, me.vipulgupta.dice.Reponse.ZPOPMAXRes.Builder, me.vipulgupta.dice.Reponse.ZPOPMAXResOrBuilder> zPOPMAXResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
+     *
      * @return Whether the zPOPMAXRes field is set.
      */
     @java.lang.Override
     public boolean hasZPOPMAXRes() {
       return responseCase_ == 42;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
+     *
      * @return The zPOPMAXRes.
      */
     @java.lang.Override
@@ -7791,6 +8576,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZPOPMAXRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
      */
@@ -7807,6 +8593,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 42;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
      */
@@ -7821,6 +8608,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 42;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
      */
@@ -7828,7 +8616,8 @@ private static final long serialVersionUID = 0L;
       if (zPOPMAXResBuilder_ == null) {
         if (responseCase_ == 42 &&
             response_ != me.vipulgupta.dice.Reponse.ZPOPMAXRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZPOPMAXRes.newBuilder((me.vipulgupta.dice.Reponse.ZPOPMAXRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZPOPMAXRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZPOPMAXRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -7844,6 +8633,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 42;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
      */
@@ -7863,12 +8653,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
      */
     public me.vipulgupta.dice.Reponse.ZPOPMAXRes.Builder getZPOPMAXResBuilder() {
       return getZPOPMAXResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
      */
@@ -7883,21 +8675,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZPOPMAXRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMAXRes ZPOPMAXRes = 42;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZPOPMAXRes, me.vipulgupta.dice.Reponse.ZPOPMAXRes.Builder, me.vipulgupta.dice.Reponse.ZPOPMAXResOrBuilder> 
-        getZPOPMAXResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZPOPMAXRes, me.vipulgupta.dice.Reponse.ZPOPMAXRes.Builder, me.vipulgupta.dice.Reponse.ZPOPMAXResOrBuilder>
+    getZPOPMAXResFieldBuilder() {
       if (zPOPMAXResBuilder_ == null) {
         if (!(responseCase_ == 42)) {
           response_ = me.vipulgupta.dice.Reponse.ZPOPMAXRes.getDefaultInstance();
         }
         zPOPMAXResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZPOPMAXRes, me.vipulgupta.dice.Reponse.ZPOPMAXRes.Builder, me.vipulgupta.dice.Reponse.ZPOPMAXResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZPOPMAXRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZPOPMAXRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 42;
@@ -7905,18 +8698,19 @@ private static final long serialVersionUID = 0L;
       return zPOPMAXResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZREMRes, me.vipulgupta.dice.Reponse.ZREMRes.Builder, me.vipulgupta.dice.Reponse.ZREMResOrBuilder> zREMResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
+     *
      * @return Whether the zREMRes field is set.
      */
     @java.lang.Override
     public boolean hasZREMRes() {
       return responseCase_ == 43;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
+     *
      * @return The zREMRes.
      */
     @java.lang.Override
@@ -7933,6 +8727,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZREMRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
      */
@@ -7949,6 +8744,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 43;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
      */
@@ -7963,6 +8759,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 43;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
      */
@@ -7970,7 +8767,8 @@ private static final long serialVersionUID = 0L;
       if (zREMResBuilder_ == null) {
         if (responseCase_ == 43 &&
             response_ != me.vipulgupta.dice.Reponse.ZREMRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZREMRes.newBuilder((me.vipulgupta.dice.Reponse.ZREMRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZREMRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZREMRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -7986,6 +8784,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 43;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
      */
@@ -8005,12 +8804,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
      */
     public me.vipulgupta.dice.Reponse.ZREMRes.Builder getZREMResBuilder() {
       return getZREMResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
      */
@@ -8025,21 +8826,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZREMRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZREMRes ZREMRes = 43;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZREMRes, me.vipulgupta.dice.Reponse.ZREMRes.Builder, me.vipulgupta.dice.Reponse.ZREMResOrBuilder> 
-        getZREMResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZREMRes, me.vipulgupta.dice.Reponse.ZREMRes.Builder, me.vipulgupta.dice.Reponse.ZREMResOrBuilder>
+    getZREMResFieldBuilder() {
       if (zREMResBuilder_ == null) {
         if (!(responseCase_ == 43)) {
           response_ = me.vipulgupta.dice.Reponse.ZREMRes.getDefaultInstance();
         }
         zREMResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZREMRes, me.vipulgupta.dice.Reponse.ZREMRes.Builder, me.vipulgupta.dice.Reponse.ZREMResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZREMRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZREMRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 43;
@@ -8047,18 +8849,19 @@ private static final long serialVersionUID = 0L;
       return zREMResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZPOPMINRes, me.vipulgupta.dice.Reponse.ZPOPMINRes.Builder, me.vipulgupta.dice.Reponse.ZPOPMINResOrBuilder> zPOPMINResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
+     *
      * @return Whether the zPOPMINRes field is set.
      */
     @java.lang.Override
     public boolean hasZPOPMINRes() {
       return responseCase_ == 44;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
+     *
      * @return The zPOPMINRes.
      */
     @java.lang.Override
@@ -8075,6 +8878,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZPOPMINRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
      */
@@ -8091,6 +8895,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 44;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
      */
@@ -8105,6 +8910,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 44;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
      */
@@ -8112,7 +8918,8 @@ private static final long serialVersionUID = 0L;
       if (zPOPMINResBuilder_ == null) {
         if (responseCase_ == 44 &&
             response_ != me.vipulgupta.dice.Reponse.ZPOPMINRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZPOPMINRes.newBuilder((me.vipulgupta.dice.Reponse.ZPOPMINRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZPOPMINRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZPOPMINRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -8128,6 +8935,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 44;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
      */
@@ -8147,12 +8955,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
      */
     public me.vipulgupta.dice.Reponse.ZPOPMINRes.Builder getZPOPMINResBuilder() {
       return getZPOPMINResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
      */
@@ -8167,21 +8977,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZPOPMINRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZPOPMINRes ZPOPMINRes = 44;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZPOPMINRes, me.vipulgupta.dice.Reponse.ZPOPMINRes.Builder, me.vipulgupta.dice.Reponse.ZPOPMINResOrBuilder> 
-        getZPOPMINResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZPOPMINRes, me.vipulgupta.dice.Reponse.ZPOPMINRes.Builder, me.vipulgupta.dice.Reponse.ZPOPMINResOrBuilder>
+    getZPOPMINResFieldBuilder() {
       if (zPOPMINResBuilder_ == null) {
         if (!(responseCase_ == 44)) {
           response_ = me.vipulgupta.dice.Reponse.ZPOPMINRes.getDefaultInstance();
         }
         zPOPMINResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZPOPMINRes, me.vipulgupta.dice.Reponse.ZPOPMINRes.Builder, me.vipulgupta.dice.Reponse.ZPOPMINResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZPOPMINRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZPOPMINRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 44;
@@ -8189,18 +9000,19 @@ private static final long serialVersionUID = 0L;
       return zPOPMINResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZRANKRes, me.vipulgupta.dice.Reponse.ZRANKRes.Builder, me.vipulgupta.dice.Reponse.ZRANKResOrBuilder> zRANKResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
+     *
      * @return Whether the zRANKRes field is set.
      */
     @java.lang.Override
     public boolean hasZRANKRes() {
       return responseCase_ == 45;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
+     *
      * @return The zRANKRes.
      */
     @java.lang.Override
@@ -8217,6 +9029,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZRANKRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
      */
@@ -8233,6 +9046,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 45;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
      */
@@ -8247,6 +9061,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 45;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
      */
@@ -8254,7 +9069,8 @@ private static final long serialVersionUID = 0L;
       if (zRANKResBuilder_ == null) {
         if (responseCase_ == 45 &&
             response_ != me.vipulgupta.dice.Reponse.ZRANKRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZRANKRes.newBuilder((me.vipulgupta.dice.Reponse.ZRANKRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZRANKRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZRANKRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -8270,6 +9086,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 45;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
      */
@@ -8289,12 +9106,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
      */
     public me.vipulgupta.dice.Reponse.ZRANKRes.Builder getZRANKResBuilder() {
       return getZRANKResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
      */
@@ -8309,21 +9128,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZRANKRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKRes ZRANKRes = 45;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZRANKRes, me.vipulgupta.dice.Reponse.ZRANKRes.Builder, me.vipulgupta.dice.Reponse.ZRANKResOrBuilder> 
-        getZRANKResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZRANKRes, me.vipulgupta.dice.Reponse.ZRANKRes.Builder, me.vipulgupta.dice.Reponse.ZRANKResOrBuilder>
+    getZRANKResFieldBuilder() {
       if (zRANKResBuilder_ == null) {
         if (!(responseCase_ == 45)) {
           response_ = me.vipulgupta.dice.Reponse.ZRANKRes.getDefaultInstance();
         }
         zRANKResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZRANKRes, me.vipulgupta.dice.Reponse.ZRANKRes.Builder, me.vipulgupta.dice.Reponse.ZRANKResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZRANKRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZRANKRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 45;
@@ -8331,18 +9151,19 @@ private static final long serialVersionUID = 0L;
       return zRANKResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZCARDRes, me.vipulgupta.dice.Reponse.ZCARDRes.Builder, me.vipulgupta.dice.Reponse.ZCARDResOrBuilder> zCARDResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
+     *
      * @return Whether the zCARDRes field is set.
      */
     @java.lang.Override
     public boolean hasZCARDRes() {
       return responseCase_ == 46;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
+     *
      * @return The zCARDRes.
      */
     @java.lang.Override
@@ -8359,6 +9180,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZCARDRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
      */
@@ -8375,6 +9197,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 46;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
      */
@@ -8389,6 +9212,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 46;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
      */
@@ -8396,7 +9220,8 @@ private static final long serialVersionUID = 0L;
       if (zCARDResBuilder_ == null) {
         if (responseCase_ == 46 &&
             response_ != me.vipulgupta.dice.Reponse.ZCARDRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZCARDRes.newBuilder((me.vipulgupta.dice.Reponse.ZCARDRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZCARDRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZCARDRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -8412,6 +9237,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 46;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
      */
@@ -8431,12 +9257,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
      */
     public me.vipulgupta.dice.Reponse.ZCARDRes.Builder getZCARDResBuilder() {
       return getZCARDResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
      */
@@ -8451,21 +9279,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZCARDRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDRes ZCARDRes = 46;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZCARDRes, me.vipulgupta.dice.Reponse.ZCARDRes.Builder, me.vipulgupta.dice.Reponse.ZCARDResOrBuilder> 
-        getZCARDResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZCARDRes, me.vipulgupta.dice.Reponse.ZCARDRes.Builder, me.vipulgupta.dice.Reponse.ZCARDResOrBuilder>
+    getZCARDResFieldBuilder() {
       if (zCARDResBuilder_ == null) {
         if (!(responseCase_ == 46)) {
           response_ = me.vipulgupta.dice.Reponse.ZCARDRes.getDefaultInstance();
         }
         zCARDResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZCARDRes, me.vipulgupta.dice.Reponse.ZCARDRes.Builder, me.vipulgupta.dice.Reponse.ZCARDResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZCARDRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZCARDRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 46;
@@ -8473,18 +9302,19 @@ private static final long serialVersionUID = 0L;
       return zCARDResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZRANGEWATCHRes, me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZRANGEWATCHResOrBuilder> zRANGEWATCHResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
+     *
      * @return Whether the zRANGEWATCHRes field is set.
      */
     @java.lang.Override
     public boolean hasZRANGEWATCHRes() {
       return responseCase_ == 47;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
+     *
      * @return The zRANGEWATCHRes.
      */
     @java.lang.Override
@@ -8501,6 +9331,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
      */
@@ -8517,6 +9348,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 47;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
      */
@@ -8531,6 +9363,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 47;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
      */
@@ -8538,7 +9371,8 @@ private static final long serialVersionUID = 0L;
       if (zRANGEWATCHResBuilder_ == null) {
         if (responseCase_ == 47 &&
             response_ != me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.newBuilder((me.vipulgupta.dice.Reponse.ZRANGEWATCHRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZRANGEWATCHRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -8554,6 +9388,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 47;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
      */
@@ -8573,12 +9408,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
      */
     public me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.Builder getZRANGEWATCHResBuilder() {
       return getZRANGEWATCHResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
      */
@@ -8593,21 +9430,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANGEWATCHRes ZRANGEWATCHRes = 47;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZRANGEWATCHRes, me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZRANGEWATCHResOrBuilder> 
-        getZRANGEWATCHResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZRANGEWATCHRes, me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZRANGEWATCHResOrBuilder>
+    getZRANGEWATCHResFieldBuilder() {
       if (zRANGEWATCHResBuilder_ == null) {
         if (!(responseCase_ == 47)) {
           response_ = me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.getDefaultInstance();
         }
         zRANGEWATCHResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZRANGEWATCHRes, me.vipulgupta.dice.Reponse.ZRANGEWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZRANGEWATCHResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZRANGEWATCHRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZRANGEWATCHRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 47;
@@ -8615,18 +9453,19 @@ private static final long serialVersionUID = 0L;
       return zRANGEWATCHResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes, me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZCOUNTWATCHResOrBuilder> zCOUNTWATCHResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
+     *
      * @return Whether the zCOUNTWATCHRes field is set.
      */
     @java.lang.Override
     public boolean hasZCOUNTWATCHRes() {
       return responseCase_ == 48;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
+     *
      * @return The zCOUNTWATCHRes.
      */
     @java.lang.Override
@@ -8643,6 +9482,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
      */
@@ -8659,6 +9499,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 48;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
      */
@@ -8673,6 +9514,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 48;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
      */
@@ -8680,7 +9522,8 @@ private static final long serialVersionUID = 0L;
       if (zCOUNTWATCHResBuilder_ == null) {
         if (responseCase_ == 48 &&
             response_ != me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.newBuilder((me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -8696,6 +9539,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 48;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
      */
@@ -8715,12 +9559,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
      */
     public me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.Builder getZCOUNTWATCHResBuilder() {
       return getZCOUNTWATCHResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
      */
@@ -8735,21 +9581,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes ZCOUNTWATCHRes = 48;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes, me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZCOUNTWATCHResOrBuilder> 
-        getZCOUNTWATCHResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes, me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZCOUNTWATCHResOrBuilder>
+    getZCOUNTWATCHResFieldBuilder() {
       if (zCOUNTWATCHResBuilder_ == null) {
         if (!(responseCase_ == 48)) {
           response_ = me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.getDefaultInstance();
         }
         zCOUNTWATCHResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes, me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZCOUNTWATCHResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 48;
@@ -8757,18 +9604,19 @@ private static final long serialVersionUID = 0L;
       return zCOUNTWATCHResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZCARDWATCHRes, me.vipulgupta.dice.Reponse.ZCARDWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZCARDWATCHResOrBuilder> zCARDWATCHResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
+     *
      * @return Whether the zCARDWATCHRes field is set.
      */
     @java.lang.Override
     public boolean hasZCARDWATCHRes() {
       return responseCase_ == 49;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
+     *
      * @return The zCARDWATCHRes.
      */
     @java.lang.Override
@@ -8785,6 +9633,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZCARDWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
      */
@@ -8801,6 +9650,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 49;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
      */
@@ -8815,6 +9665,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 49;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
      */
@@ -8822,7 +9673,8 @@ private static final long serialVersionUID = 0L;
       if (zCARDWATCHResBuilder_ == null) {
         if (responseCase_ == 49 &&
             response_ != me.vipulgupta.dice.Reponse.ZCARDWATCHRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZCARDWATCHRes.newBuilder((me.vipulgupta.dice.Reponse.ZCARDWATCHRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZCARDWATCHRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZCARDWATCHRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -8838,6 +9690,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 49;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
      */
@@ -8857,12 +9710,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
      */
     public me.vipulgupta.dice.Reponse.ZCARDWATCHRes.Builder getZCARDWATCHResBuilder() {
       return getZCARDWATCHResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
      */
@@ -8877,21 +9732,22 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZCARDWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZCARDWATCHRes ZCARDWATCHRes = 49;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZCARDWATCHRes, me.vipulgupta.dice.Reponse.ZCARDWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZCARDWATCHResOrBuilder> 
-        getZCARDWATCHResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZCARDWATCHRes, me.vipulgupta.dice.Reponse.ZCARDWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZCARDWATCHResOrBuilder>
+    getZCARDWATCHResFieldBuilder() {
       if (zCARDWATCHResBuilder_ == null) {
         if (!(responseCase_ == 49)) {
           response_ = me.vipulgupta.dice.Reponse.ZCARDWATCHRes.getDefaultInstance();
         }
         zCARDWATCHResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZCARDWATCHRes, me.vipulgupta.dice.Reponse.ZCARDWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZCARDWATCHResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZCARDWATCHRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZCARDWATCHRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 49;
@@ -8899,18 +9755,19 @@ private static final long serialVersionUID = 0L;
       return zCARDWATCHResBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZRANKWATCHRes, me.vipulgupta.dice.Reponse.ZRANKWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZRANKWATCHResOrBuilder> zRANKWATCHResBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
+     *
      * @return Whether the zRANKWATCHRes field is set.
      */
     @java.lang.Override
     public boolean hasZRANKWATCHRes() {
       return responseCase_ == 50;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
+     *
      * @return The zRANKWATCHRes.
      */
     @java.lang.Override
@@ -8927,6 +9784,7 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZRANKWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
      */
@@ -8943,6 +9801,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 50;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
      */
@@ -8957,6 +9816,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 50;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
      */
@@ -8964,7 +9824,8 @@ private static final long serialVersionUID = 0L;
       if (zRANKWATCHResBuilder_ == null) {
         if (responseCase_ == 50 &&
             response_ != me.vipulgupta.dice.Reponse.ZRANKWATCHRes.getDefaultInstance()) {
-          response_ = me.vipulgupta.dice.Reponse.ZRANKWATCHRes.newBuilder((me.vipulgupta.dice.Reponse.ZRANKWATCHRes) response_)
+          response_ = me.vipulgupta.dice.Reponse.ZRANKWATCHRes.newBuilder(
+                  (me.vipulgupta.dice.Reponse.ZRANKWATCHRes) response_)
               .mergeFrom(value).buildPartial();
         } else {
           response_ = value;
@@ -8980,6 +9841,7 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 50;
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
      */
@@ -8999,12 +9861,14 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
      */
     public me.vipulgupta.dice.Reponse.ZRANKWATCHRes.Builder getZRANKWATCHResBuilder() {
       return getZRANKWATCHResFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
      */
@@ -9019,27 +9883,29 @@ private static final long serialVersionUID = 0L;
         return me.vipulgupta.dice.Reponse.ZRANKWATCHRes.getDefaultInstance();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZRANKWATCHRes ZRANKWATCHRes = 50;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZRANKWATCHRes, me.vipulgupta.dice.Reponse.ZRANKWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZRANKWATCHResOrBuilder> 
-        getZRANKWATCHResFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZRANKWATCHRes, me.vipulgupta.dice.Reponse.ZRANKWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZRANKWATCHResOrBuilder>
+    getZRANKWATCHResFieldBuilder() {
       if (zRANKWATCHResBuilder_ == null) {
         if (!(responseCase_ == 50)) {
           response_ = me.vipulgupta.dice.Reponse.ZRANKWATCHRes.getDefaultInstance();
         }
         zRANKWATCHResBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZRANKWATCHRes, me.vipulgupta.dice.Reponse.ZRANKWATCHRes.Builder, me.vipulgupta.dice.Reponse.ZRANKWATCHResOrBuilder>(
-                (me.vipulgupta.dice.Reponse.ZRANKWATCHRes) response_,
-                getParentForChildren(),
-                isClean());
+            (me.vipulgupta.dice.Reponse.ZRANKWATCHRes) response_,
+            getParentForChildren(),
+            isClean());
         response_ = null;
       }
       responseCase_ = 50;
       onChanged();
       return zRANKWATCHResBuilder_;
     }
+
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9052,54 +9918,7 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:me.vipulgupta.dice.Reponse.Response)
-  }
-
-  // @@protoc_insertion_point(class_scope:me.vipulgupta.dice.Reponse.Response)
-  private static final me.vipulgupta.dice.Reponse.Response DEFAULT_INSTANCE;
-  static {
-    DEFAULT_INSTANCE = new me.vipulgupta.dice.Reponse.Response();
-  }
-
-  public static me.vipulgupta.dice.Reponse.Response getDefaultInstance() {
-    return DEFAULT_INSTANCE;
-  }
-
-  private static final com.google.protobuf.Parser<Response>
-      PARSER = new com.google.protobuf.AbstractParser<Response>() {
-    @java.lang.Override
-    public Response parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
-    }
-  };
-
-  public static com.google.protobuf.Parser<Response> parser() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public com.google.protobuf.Parser<Response> getParserForType() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public me.vipulgupta.dice.Reponse.Response getDefaultInstanceForType() {
-    return DEFAULT_INSTANCE;
   }
 
 }

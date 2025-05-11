@@ -8,8 +8,8 @@
         </encoder>
     </appender>
 
-    <!-- Log everything from com.dice.* -->
-    <logger name="com.dice" level="DEBUG" additivity="false">
+    <!-- Log everything from me.vipulgupta.dice* -->
+    <logger name="me.vipulgupta.dice" level="INFO" additivity="false">
         <appender-ref ref="STDOUT" />
     </logger>
 

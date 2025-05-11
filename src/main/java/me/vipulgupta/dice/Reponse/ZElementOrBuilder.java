@@ -9,24 +9,29 @@ public interface ZElementOrBuilder extends
 
   /**
    * <code>int64 score = 1;</code>
+   *
    * @return The score.
    */
   long getScore();
 
   /**
    * <code>string member = 2;</code>
+   *
    * @return The member.
    */
   java.lang.String getMember();
+
   /**
    * <code>string member = 2;</code>
+   *
    * @return The bytes for member.
    */
   com.google.protobuf.ByteString
-      getMemberBytes();
+  getMemberBytes();
 
   /**
    * <code>int64 rank = 3;</code>
+   *
    * @return The rank.
    */
   long getRank();

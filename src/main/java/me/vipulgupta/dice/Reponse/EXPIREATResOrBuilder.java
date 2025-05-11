@@ -9,6 +9,7 @@ public interface EXPIREATResOrBuilder extends
 
   /**
    * <code>bool isChanged = 1;</code>
+   *
    * @return The isChanged.
    */
   boolean getIsChanged();

@@ -6,4 +6,5 @@ package me.vipulgupta.dice.Reponse;
 public interface FLUSHDBResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:me.vipulgupta.dice.Reponse.FLUSHDBRes)
     com.google.protobuf.MessageOrBuilder {
+
 }

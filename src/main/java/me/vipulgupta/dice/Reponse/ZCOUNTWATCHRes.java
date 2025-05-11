@@ -10,12 +10,147 @@ public final class ZCOUNTWATCHRes extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes)
     ZCOUNTWATCHResOrBuilder {
-private static final long serialVersionUID = 0L;
+
+  private static final long serialVersionUID = 0L;
+  // @@protoc_insertion_point(class_scope:me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes)
+  private static final me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes DEFAULT_INSTANCE;
+  private static final com.google.protobuf.Parser<ZCOUNTWATCHRes>
+      PARSER = new com.google.protobuf.AbstractParser<ZCOUNTWATCHRes>() {
+    @java.lang.Override
+    public ZCOUNTWATCHRes parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
+
+  static {
+    DEFAULT_INSTANCE = new me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes();
+  }
+
+  private byte memoizedIsInitialized = -1;
+
   // Use ZCOUNTWATCHRes.newBuilder() to construct.
   private ZCOUNTWATCHRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private ZCOUNTWATCHRes() {
+  }
+
+  public static final com.google.protobuf.Descriptors.Descriptor
+  getDescriptor() {
+    return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZCOUNTWATCHRes_descriptor;
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
+      com.google.protobuf.ByteString data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
+      com.google.protobuf.ByteString data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(byte[] data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseDelimitedFrom(
+      java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseDelimitedFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static Builder newBuilder() {
+    return DEFAULT_INSTANCE.toBuilder();
+  }
+
+  public static Builder newBuilder(me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes prototype) {
+    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes getDefaultInstance() {
+    return DEFAULT_INSTANCE;
+  }
+
+  public static com.google.protobuf.Parser<ZCOUNTWATCHRes> parser() {
+    return PARSER;
   }
 
   @java.lang.Override
@@ -30,25 +165,25 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZCOUNTWATCHRes_descriptor;
-  }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+  internalGetFieldAccessorTable() {
     return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZCOUNTWATCHRes_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.class, me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.Builder.class);
+            me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.class,
+            me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.Builder.class);
   }
 
-  private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) return true;
-    if (isInitialized == 0) return false;
+    if (isInitialized == 1) {
+      return true;
+    }
+    if (isInitialized == 0) {
+      return false;
+    }
 
     memoizedIsInitialized = 1;
     return true;
@@ -56,14 +191,16 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+      throws java.io.IOException {
     getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
-    if (size != -1) return size;
+    if (size != -1) {
+      return size;
+    }
 
     size = 0;
     size += getUnknownFields().getSerializedSize();
@@ -74,14 +211,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes)) {
       return super.equals(obj);
     }
     me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes other = (me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) obj;
 
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) {
+      return false;
+    }
     return true;
   }
 
@@ -97,84 +236,11 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
-      com.google.protobuf.ByteString data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
-      com.google.protobuf.ByteString data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(byte[] data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseDelimitedFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes parseFrom(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+  @java.lang.Override
+  public Builder newBuilderForType() {
+    return newBuilder();
   }
 
-  @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
-  public static Builder newBuilder() {
-    return DEFAULT_INSTANCE.toBuilder();
-  }
-  public static Builder newBuilder(me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes prototype) {
-    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
   @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
@@ -187,6 +253,17 @@ private static final long serialVersionUID = 0L;
     Builder builder = new Builder(parent);
     return builder;
   }
+
+  @java.lang.Override
+  public com.google.protobuf.Parser<ZCOUNTWATCHRes> getParserForType() {
+    return PARSER;
+  }
+
+  @java.lang.Override
+  public me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes getDefaultInstanceForType() {
+    return DEFAULT_INSTANCE;
+  }
+
   /**
    * Protobuf type {@code me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes}
    */
@@ -194,18 +271,6 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes)
       me.vipulgupta.dice.Reponse.ZCOUNTWATCHResOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZCOUNTWATCHRes_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZCOUNTWATCHRes_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.class, me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.Builder.class);
-    }
 
     // Construct using me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.newBuilder()
     private Builder() {
@@ -217,6 +282,21 @@ private static final long serialVersionUID = 0L;
       super(parent);
 
     }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZCOUNTWATCHRes_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZCOUNTWATCHRes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.class,
+              me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.Builder.class);
+    }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -225,7 +305,7 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    getDescriptorForType() {
       return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZCOUNTWATCHRes_descriptor;
     }
 
@@ -245,7 +325,8 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes buildPartial() {
-      me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes result = new me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes(this);
+      me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes result = new me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes(
+          this);
       onBuilt();
       return result;
     }
@@ -254,38 +335,44 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) {
-        return mergeFrom((me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes)other);
+        return mergeFrom((me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -293,7 +380,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public Builder mergeFrom(me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes other) {
-      if (other == me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.getDefaultInstance()) return this;
+      if (other == me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes.getDefaultInstance()) {
+        return this;
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -335,6 +424,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -347,54 +437,7 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes)
-  }
-
-  // @@protoc_insertion_point(class_scope:me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes)
-  private static final me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes DEFAULT_INSTANCE;
-  static {
-    DEFAULT_INSTANCE = new me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes();
-  }
-
-  public static me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes getDefaultInstance() {
-    return DEFAULT_INSTANCE;
-  }
-
-  private static final com.google.protobuf.Parser<ZCOUNTWATCHRes>
-      PARSER = new com.google.protobuf.AbstractParser<ZCOUNTWATCHRes>() {
-    @java.lang.Override
-    public ZCOUNTWATCHRes parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
-    }
-  };
-
-  public static com.google.protobuf.Parser<ZCOUNTWATCHRes> parser() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public com.google.protobuf.Parser<ZCOUNTWATCHRes> getParserForType() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes getDefaultInstanceForType() {
-    return DEFAULT_INSTANCE;
   }
 
 }

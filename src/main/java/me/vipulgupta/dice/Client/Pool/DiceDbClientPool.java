@@ -1,17 +1,16 @@
 package me.vipulgupta.dice.Client.Pool;
 
-import me.vipulgupta.dice.Client.DiceDbClient.DiceDbClient;
-import me.vipulgupta.dice.Client.DiceDbClient.DiceDbClientFactory;
-import me.vipulgupta.dice.Command.CommandProto;
-import me.vipulgupta.dice.Command.CommandProto.Command;
-import me.vipulgupta.dice.Exceptions.DiceDbException;
-import me.vipulgupta.dice.Reponse.Response;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
+import me.vipulgupta.dice.Client.DiceDbClient.DiceDbClient;
+import me.vipulgupta.dice.Client.DiceDbClient.DiceDbClientFactory;
+import me.vipulgupta.dice.Command.CommandProto.Command;
+import me.vipulgupta.dice.Exceptions.DiceDbException;
+import me.vipulgupta.dice.Reponse.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,11 +18,10 @@ import org.slf4j.LoggerFactory;
 public class DiceDbClientPool implements ClientPool {
 
   private static final Logger logger = LoggerFactory.getLogger(DiceDbClientPool.class.getName());
-  private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
   private final int JOB_INTERVAL_IN_SECONDS = 5;
 
   private final ReentrantLock lock = new ReentrantLock();
-
+  private final ScheduledExecutorService scheduler;
   int maxPoolSize;
   int minPoolSize;
   int totalConnections;
@@ -39,9 +37,16 @@ public class DiceDbClientPool implements ClientPool {
     this.connectionPool = new LinkedListPool(maxPoolSize);
     this.watchClients = new LinkedListPool(maxPoolSize);
     this.clientFactory = new DiceDbClientFactory(host, port);
+    this.scheduler = Executors.newSingleThreadScheduledExecutor();
 
     for (int i = 0; i < minPoolSize; i++) {
-      connectionPool.put(this.clientFactory.createClient());
+      try {
+        this.connectionPool.put(this.clientFactory.createClient());
+      } catch (DiceDbException exp) {
+        logger.error("Error creating client: {}", exp.getMessage());
+        this.close();
+        throw exp;
+      }
       this.totalConnections++;
     }
     this.scheduleEvictionJob();
@@ -57,22 +62,17 @@ public class DiceDbClientPool implements ClientPool {
 
   @Override
   public Response fire(String cmd, List<String> args) throws DiceDbException {
-    CommandProto.Command commandProto = CommandProto.Command
-        .newBuilder()
-        .setCmd(cmd)
-        .addAllArgs(args)
-        .build();
-    return this.fire(commandProto);
+    DiceDbClient client = this.getConnection();
+    Response resp = client.fire(cmd, args);
+    this.returnConnection(client);
+    return resp;
   }
 
   @Override
   public BlockingQueue<Response> watch(String cmd, List<String> args) throws DiceDbException {
-    CommandProto.Command commandProto = CommandProto.Command
-        .newBuilder()
-        .setCmd(cmd)
-        .addAllArgs(args)
-        .build();
-    return this.watch(commandProto);
+    DiceDbClient client = this.getConnection();
+    watchClients.put(client);
+    return client.watch(cmd, args, () -> this.returnConnection(client));
   }
 
   @Override

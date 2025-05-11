@@ -6,4 +6,5 @@ package me.vipulgupta.dice.Reponse;
 public interface ZCARDWATCHResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:me.vipulgupta.dice.Reponse.ZCARDWATCHRes)
     com.google.protobuf.MessageOrBuilder {
+
 }

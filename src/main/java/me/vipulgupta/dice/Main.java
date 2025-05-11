@@ -1,9 +1,9 @@
 package me.vipulgupta.dice;
 
-import me.vipulgupta.dice.Exceptions.DiceDbException;
-import me.vipulgupta.dice.Reponse.Response;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
+import me.vipulgupta.dice.Exceptions.DiceDbException;
+import me.vipulgupta.dice.Reponse.Response;
 
 public class Main {
 

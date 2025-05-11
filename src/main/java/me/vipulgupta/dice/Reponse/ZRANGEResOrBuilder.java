@@ -10,21 +10,25 @@ public interface ZRANGEResOrBuilder extends
   /**
    * <code>repeated .me.vipulgupta.dice.Reponse.ZElement elements = 1;</code>
    */
-  java.util.List<me.vipulgupta.dice.Reponse.ZElement> 
-      getElementsList();
+  java.util.List<me.vipulgupta.dice.Reponse.ZElement>
+  getElementsList();
+
   /**
    * <code>repeated .me.vipulgupta.dice.Reponse.ZElement elements = 1;</code>
    */
   me.vipulgupta.dice.Reponse.ZElement getElements(int index);
+
   /**
    * <code>repeated .me.vipulgupta.dice.Reponse.ZElement elements = 1;</code>
    */
   int getElementsCount();
+
   /**
    * <code>repeated .me.vipulgupta.dice.Reponse.ZElement elements = 1;</code>
    */
-  java.util.List<? extends me.vipulgupta.dice.Reponse.ZElementOrBuilder> 
-      getElementsOrBuilderList();
+  java.util.List<? extends me.vipulgupta.dice.Reponse.ZElementOrBuilder>
+  getElementsOrBuilderList();
+
   /**
    * <code>repeated .me.vipulgupta.dice.Reponse.ZElement elements = 1;</code>
    */

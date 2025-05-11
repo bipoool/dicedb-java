@@ -9,14 +9,18 @@ public interface ZRANKResOrBuilder extends
 
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
+   *
    * @return Whether the element field is set.
    */
   boolean hasElement();
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
+   *
    * @return The element.
    */
   me.vipulgupta.dice.Reponse.ZElement getElement();
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
    */

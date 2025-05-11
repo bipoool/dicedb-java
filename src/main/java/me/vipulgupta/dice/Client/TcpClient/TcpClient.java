@@ -1,11 +1,11 @@
 package me.vipulgupta.dice.Client.TcpClient;
 
-import me.vipulgupta.dice.Exceptions.DiceDbException;
 import java.util.concurrent.BlockingQueue;
+import me.vipulgupta.dice.Exceptions.DiceDbException;
 
 public interface TcpClient {
 
-  TcpResponse sendSync(byte[] data) throws InterruptedException, DiceDbException;
+  TcpResponse sendSync(byte[] data) throws DiceDbException;
 
   BlockingQueue<TcpResponse> sendAsync(byte[] data) throws DiceDbException;
 

@@ -1,12 +1,12 @@
 package me.vipulgupta.dice;
 
+import java.util.List;
+import java.util.concurrent.BlockingQueue;
 import me.vipulgupta.dice.Client.Pool.ClientPool;
 import me.vipulgupta.dice.Client.Pool.DiceDbClientPool;
 import me.vipulgupta.dice.Command.CommandProto;
 import me.vipulgupta.dice.Exceptions.DiceDbException;
 import me.vipulgupta.dice.Reponse.Response;
-import java.util.List;
-import java.util.concurrent.BlockingQueue;
 
 public class DiceDbManager {
 

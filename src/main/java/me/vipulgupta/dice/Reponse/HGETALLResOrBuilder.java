@@ -10,21 +10,25 @@ public interface HGETALLResOrBuilder extends
   /**
    * <code>repeated .me.vipulgupta.dice.Reponse.HElement elements = 1;</code>
    */
-  java.util.List<me.vipulgupta.dice.Reponse.HElement> 
-      getElementsList();
+  java.util.List<me.vipulgupta.dice.Reponse.HElement>
+  getElementsList();
+
   /**
    * <code>repeated .me.vipulgupta.dice.Reponse.HElement elements = 1;</code>
    */
   me.vipulgupta.dice.Reponse.HElement getElements(int index);
+
   /**
    * <code>repeated .me.vipulgupta.dice.Reponse.HElement elements = 1;</code>
    */
   int getElementsCount();
+
   /**
    * <code>repeated .me.vipulgupta.dice.Reponse.HElement elements = 1;</code>
    */
-  java.util.List<? extends me.vipulgupta.dice.Reponse.HElementOrBuilder> 
-      getElementsOrBuilderList();
+  java.util.List<? extends me.vipulgupta.dice.Reponse.HElementOrBuilder>
+  getElementsOrBuilderList();
+
   /**
    * <code>repeated .me.vipulgupta.dice.Reponse.HElement elements = 1;</code>
    */

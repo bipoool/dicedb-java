@@ -6,4 +6,5 @@ package me.vipulgupta.dice.Reponse;
 public interface ZRANKWATCHResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:me.vipulgupta.dice.Reponse.ZRANKWATCHRes)
     com.google.protobuf.MessageOrBuilder {
+
 }

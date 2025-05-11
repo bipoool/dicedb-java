@@ -2,12 +2,6 @@ package me.vipulgupta.dice.Client.DiceDbClient;
 
 import static me.vipulgupta.dice.Reponse.Status.Status_ERR;
 
-import me.vipulgupta.dice.Client.TcpClient.NettyTcpClient;
-import me.vipulgupta.dice.Client.TcpClient.TcpClient;
-import me.vipulgupta.dice.Client.TcpClient.TcpResponse;
-import me.vipulgupta.dice.Command.CommandProto;
-import me.vipulgupta.dice.Exceptions.DiceDbException;
-import me.vipulgupta.dice.Reponse.Response;
 import com.google.protobuf.InvalidProtocolBufferException;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +10,12 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ScheduledExecutorService;
+import me.vipulgupta.dice.Client.TcpClient.NettyTcpClient;
+import me.vipulgupta.dice.Client.TcpClient.TcpClient;
+import me.vipulgupta.dice.Client.TcpClient.TcpResponse;
+import me.vipulgupta.dice.Command.CommandProto;
+import me.vipulgupta.dice.Exceptions.DiceDbException;
+import me.vipulgupta.dice.Reponse.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,8 +45,9 @@ public class SimpleDiceDbClient implements DiceDbClient {
         throw new DiceDbException(resp.getMessage());
       }
       logger.info("Connected to server: {}:{}", host, port);
-    } catch (InterruptedException e) {
-      throw new DiceDbException("Thread interrupted while connecting to server", e);
+    } catch (DiceDbException exp) {
+      this.close();
+      throw exp;
     }
   }
 
@@ -54,6 +55,9 @@ public class SimpleDiceDbClient implements DiceDbClient {
   public Response fire(CommandProto.Command command) throws DiceDbException {
     if (tcpClient == null) {
       throw new DiceDbException("Not connected to server! Please call connect() first.");
+    }
+    if (command == null) {
+      throw new DiceDbException("Command cannot be null");
     }
     try {
       byte[] data = command.toByteArray();
@@ -64,8 +68,6 @@ public class SimpleDiceDbClient implements DiceDbClient {
       }
       byte[] response = tcpResponse.data;
       return Response.parseFrom(response);
-    } catch (InterruptedException e) {
-      throw new DiceDbException("Thread interrupted while sending command", e);
     } catch (InvalidProtocolBufferException e) {
       throw new DiceDbException("Failed to parse response from server", e);
     } catch (Exception e) {

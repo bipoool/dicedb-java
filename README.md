@@ -18,7 +18,7 @@ Add the following dependency to your `pom.xml` if you're using Maven:
 <dependency>
     <groupId>me.vipulgupta.dice</groupId>
     <artifactId>dicedb-java</artifactId>
-    <version>1.0</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 
@@ -104,6 +104,5 @@ public static void main(String[] args) throws DiceDbException, InterruptedExcept
 | ZREM          | ✅         |
 
 ## 📌 Notes
-1. Connection pooling is under testing and not yet validated. 
-2. It uses blocking queues to manage client-server communication. 
-3. Contributions and feedback are welcome.
+1. It uses blocking queues to manage client-server communication. 
+2. Contributions and feedback are welcome.

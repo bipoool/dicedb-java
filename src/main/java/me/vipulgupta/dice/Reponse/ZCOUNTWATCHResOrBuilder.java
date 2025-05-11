@@ -6,4 +6,5 @@ package me.vipulgupta.dice.Reponse;
 public interface ZCOUNTWATCHResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:me.vipulgupta.dice.Reponse.ZCOUNTWATCHRes)
     com.google.protobuf.MessageOrBuilder {
+
 }

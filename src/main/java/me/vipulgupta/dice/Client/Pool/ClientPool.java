@@ -1,11 +1,11 @@
 package me.vipulgupta.dice.Client.Pool;
 
+import java.util.List;
+import java.util.concurrent.BlockingQueue;
 import me.vipulgupta.dice.Client.DiceDbClient.DiceDbClient;
 import me.vipulgupta.dice.Command.CommandProto;
 import me.vipulgupta.dice.Exceptions.DiceDbException;
 import me.vipulgupta.dice.Reponse.Response;
-import java.util.List;
-import java.util.concurrent.BlockingQueue;
 
 public interface ClientPool {
 

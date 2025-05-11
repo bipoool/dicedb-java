@@ -1,7 +1,5 @@
 package me.vipulgupta.dice.Client.TcpClient;
 
-import me.vipulgupta.dice.Exceptions.DiceDbException;
-import me.vipulgupta.dice.Exceptions.DiceDbTcpException;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -10,6 +8,8 @@ import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import me.vipulgupta.dice.Exceptions.DiceDbException;
+import me.vipulgupta.dice.Exceptions.DiceDbTcpException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,9 +35,16 @@ public class NettyTcpClientHandler extends SimpleChannelInboundHandler<ByteBuf> 
     return responseQueue;
   }
 
-  public TcpResponse sendSync(byte[] data) throws InterruptedException, DiceDbException {
-    this.writeAndFlush(data);
-    return this.responseQueue.take();
+  public TcpResponse sendSync(byte[] data) throws DiceDbException {
+    try {
+      this.writeAndFlush(data);
+      return this.responseQueue.take();
+    } catch (InterruptedException e) {
+      logger.error("Error while sending data: {}", e.getMessage());
+      throw new DiceDbException("Error while sending data: " + e.getMessage(), e);
+    } finally {
+      this.responseQueue.clear();
+    }
   }
 
   private void writeAndFlush(byte[] data) throws DiceDbException {

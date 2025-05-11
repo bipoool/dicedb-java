@@ -6,4 +6,5 @@ package me.vipulgupta.dice.Reponse;
 public interface HANDSHAKEResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:me.vipulgupta.dice.Reponse.HANDSHAKERes)
     com.google.protobuf.MessageOrBuilder {
+
 }

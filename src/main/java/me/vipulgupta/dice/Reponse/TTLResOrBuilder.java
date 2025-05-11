@@ -9,6 +9,7 @@ public interface TTLResOrBuilder extends
 
   /**
    * <code>int64 seconds = 1;</code>
+   *
    * @return The seconds.
    */
   long getSeconds();

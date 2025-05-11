@@ -6,4 +6,5 @@ package me.vipulgupta.dice.Reponse;
 public interface HGETWATCHResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:me.vipulgupta.dice.Reponse.HGETWATCHRes)
     com.google.protobuf.MessageOrBuilder {
+
 }

@@ -10,12 +10,147 @@ public final class ZRANKRes extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:me.vipulgupta.dice.Reponse.ZRANKRes)
     ZRANKResOrBuilder {
-private static final long serialVersionUID = 0L;
+
+  public static final int ELEMENT_FIELD_NUMBER = 2;
+  private static final long serialVersionUID = 0L;
+  // @@protoc_insertion_point(class_scope:me.vipulgupta.dice.Reponse.ZRANKRes)
+  private static final me.vipulgupta.dice.Reponse.ZRANKRes DEFAULT_INSTANCE;
+  private static final com.google.protobuf.Parser<ZRANKRes>
+      PARSER = new com.google.protobuf.AbstractParser<ZRANKRes>() {
+    @java.lang.Override
+    public ZRANKRes parsePartialFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
+    }
+  };
+
+  static {
+    DEFAULT_INSTANCE = new me.vipulgupta.dice.Reponse.ZRANKRes();
+  }
+
+  private me.vipulgupta.dice.Reponse.ZElement element_;
+  private byte memoizedIsInitialized = -1;
+
   // Use ZRANKRes.newBuilder() to construct.
   private ZRANKRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
   private ZRANKRes() {
+  }
+
+  public static final com.google.protobuf.Descriptors.Descriptor
+  getDescriptor() {
+    return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZRANKRes_descriptor;
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
+      java.nio.ByteBuffer data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
+      java.nio.ByteBuffer data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
+      com.google.protobuf.ByteString data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
+      com.google.protobuf.ByteString data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(byte[] data)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
+      byte[] data,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    return PARSER.parseFrom(data, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseDelimitedFrom(java.io.InputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseDelimitedFrom(
+      java.io.InputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
+      com.google.protobuf.CodedInputStream input)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws java.io.IOException {
+    return com.google.protobuf.GeneratedMessageV3
+        .parseWithIOException(PARSER, input, extensionRegistry);
+  }
+
+  public static Builder newBuilder() {
+    return DEFAULT_INSTANCE.toBuilder();
+  }
+
+  public static Builder newBuilder(me.vipulgupta.dice.Reponse.ZRANKRes prototype) {
+    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+  }
+
+  public static me.vipulgupta.dice.Reponse.ZRANKRes getDefaultInstance() {
+    return DEFAULT_INSTANCE;
+  }
+
+  public static com.google.protobuf.Parser<ZRANKRes> parser() {
+    return PARSER;
   }
 
   @java.lang.Override
@@ -30,37 +165,36 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-    return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZRANKRes_descriptor;
-  }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+  internalGetFieldAccessorTable() {
     return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZRANKRes_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            me.vipulgupta.dice.Reponse.ZRANKRes.class, me.vipulgupta.dice.Reponse.ZRANKRes.Builder.class);
+            me.vipulgupta.dice.Reponse.ZRANKRes.class,
+            me.vipulgupta.dice.Reponse.ZRANKRes.Builder.class);
   }
 
-  public static final int ELEMENT_FIELD_NUMBER = 2;
-  private me.vipulgupta.dice.Reponse.ZElement element_;
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
+   *
    * @return Whether the element field is set.
    */
   @java.lang.Override
   public boolean hasElement() {
     return element_ != null;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
+   *
    * @return The element.
    */
   @java.lang.Override
   public me.vipulgupta.dice.Reponse.ZElement getElement() {
     return element_ == null ? me.vipulgupta.dice.Reponse.ZElement.getDefaultInstance() : element_;
   }
+
   /**
    * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
    */
@@ -69,12 +203,15 @@ private static final long serialVersionUID = 0L;
     return element_ == null ? me.vipulgupta.dice.Reponse.ZElement.getDefaultInstance() : element_;
   }
 
-  private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) return true;
-    if (isInitialized == 0) return false;
+    if (isInitialized == 1) {
+      return true;
+    }
+    if (isInitialized == 0) {
+      return false;
+    }
 
     memoizedIsInitialized = 1;
     return true;
@@ -82,7 +219,7 @@ private static final long serialVersionUID = 0L;
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+      throws java.io.IOException {
     if (element_ != null) {
       output.writeMessage(2, getElement());
     }
@@ -92,12 +229,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
-    if (size != -1) return size;
+    if (size != -1) {
+      return size;
+    }
 
     size = 0;
     if (element_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getElement());
+          .computeMessageSize(2, getElement());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -107,19 +246,25 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof me.vipulgupta.dice.Reponse.ZRANKRes)) {
       return super.equals(obj);
     }
     me.vipulgupta.dice.Reponse.ZRANKRes other = (me.vipulgupta.dice.Reponse.ZRANKRes) obj;
 
-    if (hasElement() != other.hasElement()) return false;
+    if (hasElement() != other.hasElement()) {
+      return false;
+    }
     if (hasElement()) {
       if (!getElement()
-          .equals(other.getElement())) return false;
+          .equals(other.getElement())) {
+        return false;
+      }
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) {
+      return false;
+    }
     return true;
   }
 
@@ -139,84 +284,11 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
-      com.google.protobuf.ByteString data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
-      com.google.protobuf.ByteString data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(byte[] data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    return PARSER.parseFrom(data, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseDelimitedFrom(java.io.InputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
-  }
-  public static me.vipulgupta.dice.Reponse.ZRANKRes parseFrom(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
-    return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+  @java.lang.Override
+  public Builder newBuilderForType() {
+    return newBuilder();
   }
 
-  @java.lang.Override
-  public Builder newBuilderForType() { return newBuilder(); }
-  public static Builder newBuilder() {
-    return DEFAULT_INSTANCE.toBuilder();
-  }
-  public static Builder newBuilder(me.vipulgupta.dice.Reponse.ZRANKRes prototype) {
-    return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-  }
   @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
@@ -229,6 +301,17 @@ private static final long serialVersionUID = 0L;
     Builder builder = new Builder(parent);
     return builder;
   }
+
+  @java.lang.Override
+  public com.google.protobuf.Parser<ZRANKRes> getParserForType() {
+    return PARSER;
+  }
+
+  @java.lang.Override
+  public me.vipulgupta.dice.Reponse.ZRANKRes getDefaultInstanceForType() {
+    return DEFAULT_INSTANCE;
+  }
+
   /**
    * Protobuf type {@code me.vipulgupta.dice.Reponse.ZRANKRes}
    */
@@ -236,18 +319,11 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:me.vipulgupta.dice.Reponse.ZRANKRes)
       me.vipulgupta.dice.Reponse.ZRANKResOrBuilder {
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZRANKRes_descriptor;
-    }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZRANKRes_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              me.vipulgupta.dice.Reponse.ZRANKRes.class, me.vipulgupta.dice.Reponse.ZRANKRes.Builder.class);
-    }
+    private int bitField0_;
+    private me.vipulgupta.dice.Reponse.ZElement element_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        me.vipulgupta.dice.Reponse.ZElement, me.vipulgupta.dice.Reponse.ZElement.Builder, me.vipulgupta.dice.Reponse.ZElementOrBuilder> elementBuilder_;
 
     // Construct using me.vipulgupta.dice.Reponse.ZRANKRes.newBuilder()
     private Builder() {
@@ -259,6 +335,21 @@ private static final long serialVersionUID = 0L;
       super(parent);
 
     }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZRANKRes_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZRANKRes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              me.vipulgupta.dice.Reponse.ZRANKRes.class,
+              me.vipulgupta.dice.Reponse.ZRANKRes.Builder.class);
+    }
+
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -273,7 +364,7 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    getDescriptorForType() {
       return me.vipulgupta.dice.Reponse.ResponseProto.internal_static_me_vipulgupta_dice_Reponse_ZRANKRes_descriptor;
     }
 
@@ -294,7 +385,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public me.vipulgupta.dice.Reponse.ZRANKRes buildPartial() {
       me.vipulgupta.dice.Reponse.ZRANKRes result = new me.vipulgupta.dice.Reponse.ZRANKRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField0_ != 0) {
+        buildPartial0(result);
+      }
       onBuilt();
       return result;
     }
@@ -312,38 +405,44 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.setField(field, value);
     }
+
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof me.vipulgupta.dice.Reponse.ZRANKRes) {
-        return mergeFrom((me.vipulgupta.dice.Reponse.ZRANKRes)other);
+        return mergeFrom((me.vipulgupta.dice.Reponse.ZRANKRes) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -351,7 +450,9 @@ private static final long serialVersionUID = 0L;
     }
 
     public Builder mergeFrom(me.vipulgupta.dice.Reponse.ZRANKRes other) {
-      if (other == me.vipulgupta.dice.Reponse.ZRANKRes.getDefaultInstance()) return this;
+      if (other == me.vipulgupta.dice.Reponse.ZRANKRes.getDefaultInstance()) {
+        return this;
+      }
       if (other.hasElement()) {
         mergeElement(other.getElement());
       }
@@ -403,29 +504,30 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
-    private int bitField0_;
 
-    private me.vipulgupta.dice.Reponse.ZElement element_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZElement, me.vipulgupta.dice.Reponse.ZElement.Builder, me.vipulgupta.dice.Reponse.ZElementOrBuilder> elementBuilder_;
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
+     *
      * @return Whether the element field is set.
      */
     public boolean hasElement() {
       return ((bitField0_ & 0x00000001) != 0);
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
+     *
      * @return The element.
      */
     public me.vipulgupta.dice.Reponse.ZElement getElement() {
       if (elementBuilder_ == null) {
-        return element_ == null ? me.vipulgupta.dice.Reponse.ZElement.getDefaultInstance() : element_;
+        return element_ == null ? me.vipulgupta.dice.Reponse.ZElement.getDefaultInstance()
+            : element_;
       } else {
         return elementBuilder_.getMessage();
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
      */
@@ -442,6 +544,7 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
      */
@@ -456,14 +559,15 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
      */
     public Builder mergeElement(me.vipulgupta.dice.Reponse.ZElement value) {
       if (elementBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          element_ != null &&
-          element_ != me.vipulgupta.dice.Reponse.ZElement.getDefaultInstance()) {
+            element_ != null &&
+            element_ != me.vipulgupta.dice.Reponse.ZElement.getDefaultInstance()) {
           getElementBuilder().mergeFrom(value);
         } else {
           element_ = value;
@@ -475,6 +579,7 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
      */
@@ -488,6 +593,7 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
      */
@@ -496,6 +602,7 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return getElementFieldBuilder().getBuilder();
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
      */
@@ -507,22 +614,24 @@ private static final long serialVersionUID = 0L;
             me.vipulgupta.dice.Reponse.ZElement.getDefaultInstance() : element_;
       }
     }
+
     /**
      * <code>.me.vipulgupta.dice.Reponse.ZElement element = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        me.vipulgupta.dice.Reponse.ZElement, me.vipulgupta.dice.Reponse.ZElement.Builder, me.vipulgupta.dice.Reponse.ZElementOrBuilder> 
-        getElementFieldBuilder() {
+        me.vipulgupta.dice.Reponse.ZElement, me.vipulgupta.dice.Reponse.ZElement.Builder, me.vipulgupta.dice.Reponse.ZElementOrBuilder>
+    getElementFieldBuilder() {
       if (elementBuilder_ == null) {
         elementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             me.vipulgupta.dice.Reponse.ZElement, me.vipulgupta.dice.Reponse.ZElement.Builder, me.vipulgupta.dice.Reponse.ZElementOrBuilder>(
-                getElement(),
-                getParentForChildren(),
-                isClean());
+            getElement(),
+            getParentForChildren(),
+            isClean());
         element_ = null;
       }
       return elementBuilder_;
     }
+
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -535,54 +644,7 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-
     // @@protoc_insertion_point(builder_scope:me.vipulgupta.dice.Reponse.ZRANKRes)
-  }
-
-  // @@protoc_insertion_point(class_scope:me.vipulgupta.dice.Reponse.ZRANKRes)
-  private static final me.vipulgupta.dice.Reponse.ZRANKRes DEFAULT_INSTANCE;
-  static {
-    DEFAULT_INSTANCE = new me.vipulgupta.dice.Reponse.ZRANKRes();
-  }
-
-  public static me.vipulgupta.dice.Reponse.ZRANKRes getDefaultInstance() {
-    return DEFAULT_INSTANCE;
-  }
-
-  private static final com.google.protobuf.Parser<ZRANKRes>
-      PARSER = new com.google.protobuf.AbstractParser<ZRANKRes>() {
-    @java.lang.Override
-    public ZRANKRes parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
-    }
-  };
-
-  public static com.google.protobuf.Parser<ZRANKRes> parser() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public com.google.protobuf.Parser<ZRANKRes> getParserForType() {
-    return PARSER;
-  }
-
-  @java.lang.Override
-  public me.vipulgupta.dice.Reponse.ZRANKRes getDefaultInstanceForType() {
-    return DEFAULT_INSTANCE;
   }
 
 }
