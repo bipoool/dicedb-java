@@ -20,7 +20,7 @@ public class DiceDbClientPool implements ClientPool {
 
   private static final Logger logger = LoggerFactory.getLogger(DiceDbClientPool.class.getName());
   private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
-  private final int JOB_INTERVAL_IN_SECONDS = 10;
+  private final int JOB_INTERVAL_IN_SECONDS = 5;
 
   private final ReentrantLock lock = new ReentrantLock();
 
@@ -28,6 +28,7 @@ public class DiceDbClientPool implements ClientPool {
   int minPoolSize;
   int totalConnections;
   LinkedListPool connectionPool;
+  LinkedListPool watchClients;
   DiceDbClientFactory clientFactory;
 
   public DiceDbClientPool(String host, int port, int minPoolSize, int maxPoolSize)
@@ -36,6 +37,7 @@ public class DiceDbClientPool implements ClientPool {
     this.minPoolSize = minPoolSize;
     this.maxPoolSize = maxPoolSize;
     this.connectionPool = new LinkedListPool(maxPoolSize);
+    this.watchClients = new LinkedListPool(maxPoolSize);
     this.clientFactory = new DiceDbClientFactory(host, port);
 
     for (int i = 0; i < minPoolSize; i++) {
@@ -76,9 +78,8 @@ public class DiceDbClientPool implements ClientPool {
   @Override
   public BlockingQueue<Response> watch(Command command) throws DiceDbException {
     DiceDbClient client = this.getConnection();
-    BlockingQueue<Response> resp = client.watch(command, () -> this.returnConnection(client));
-    this.returnConnection(client);
-    return resp;
+    watchClients.put(client);
+    return client.watch(command, () -> this.returnConnection(client));
   }
 
   @Override
@@ -155,7 +156,7 @@ public class DiceDbClientPool implements ClientPool {
     }
 
     if (connectionsCreated > 0) {
-      logger.debug("Filled up the pool with " + connectionsCreated + " connections.");
+      logger.debug("Filled up the pool with {} connections.", connectionsCreated);
     } else {
       logger.debug("No connections needed to be filled up.");
     }
@@ -175,7 +176,12 @@ public class DiceDbClientPool implements ClientPool {
   @Override
   public void close() {
     scheduler.shutdown();
-    while (!(this.totalConnections == 0 && this.connectionPool.getSize() == 0)) {
+    while (!watchClients.isEmpty()) {
+      DiceDbClient client = watchClients.get();
+      client.close();
+      this.totalConnections--;
+    }
+    while (!connectionPool.isEmpty()) {
       DiceDbClient client = this.connectionPool.get();
       client.close();
       this.totalConnections--;

@@ -63,7 +63,6 @@ public class SimpleDiceDbClient implements DiceDbClient {
         throw new DiceDbException("Error while sending command: " + tcpResponse.exception);
       }
       byte[] response = tcpResponse.data;
-      Thread.sleep(2000);
       return Response.parseFrom(response);
     } catch (InterruptedException e) {
       throw new DiceDbException("Thread interrupted while sending command", e);
@@ -181,9 +180,6 @@ public class SimpleDiceDbClient implements DiceDbClient {
   @Override
   public void close() {
     this.scheduler.shutdown();
-    if (this.watchResponseQueue != null) {
-      this.watchResponseQueue.clear();
-    }
     if (this.tcpClient != null) {
       this.tcpClient.close();
     }

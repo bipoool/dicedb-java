@@ -6,7 +6,7 @@
 
     <groupId>me.vipulgupta.dice</groupId>
     <artifactId>dicedb-java</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <url>https://github.com/bipoool/dicedb-java</url>
     <description>Java SDK for DiceDB with built-in connection pooling</description>
     <scm>
